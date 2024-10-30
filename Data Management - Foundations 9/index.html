@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Management Quiz 9</h1>
+        <h2>By Adam Smith</h2>
+        
+        <!-- Timer Display -->
+        <p id="timer" style="font-size: 18px; color: red;">Time Remaining: 100:00</p>
+        
+        <!-- Start Button -->
+        <button type="button" id="start-btn">Start Quiz</button>
+        
+        <!-- Quiz Form -->
+        <form id="quiz-form" style="display: none;">
+            <!-- Question 1 -->
+			<div class="question">
+				<h3>1. What is a database application?</h3>
+				<label><input type="radio" name="q1" value="A"> A) Software that helps business users interact with database systems.</label><br>
+				<label><input type="radio" name="q1" value="B"> B) A tool that creates databases automatically.</label><br>
+				<label><input type="radio" name="q1" value="C"> C) An operating system for databases.</label><br>
+				<label><input type="radio" name="q1" value="D"> D) A software that only queries data.</label>
+			</div>
+
+			<!-- Question 2 -->
+			<div class="question">
+				<h3>2. What is the role of a database administrator?</h3>
+				<label><input type="radio" name="q2" value="A"> A) Design databases and create ER diagrams.</label><br>
+				<label><input type="radio" name="q2" value="B"> B) Manage security, enforce access rules, and maintain availability.</label><br>
+				<label><input type="radio" name="q2" value="C"> C) Write SQL queries to interact with the database.</label><br>
+				<label><input type="radio" name="q2" value="D"> D) Create tables and insert data.</label>
+			</div>
+
+			<!-- Question 3 -->
+			<div class="question">
+				<h3>3. What does authorization control in a database?</h3>
+				<label><input type="radio" name="q3" value="A"> A) It limits user access to specific tables, columns, or rows.</label><br>
+				<label><input type="radio" name="q3" value="B"> B) It restricts the size of the database.</label><br>
+				<label><input type="radio" name="q3" value="C"> C) It ensures data integrity.</label><br>
+				<label><input type="radio" name="q3" value="D"> D) It defines relationships between tables.</label>
+			</div>
+
+			<!-- Question 4 -->
+			<div class="question">
+				<h3>4. What is the function of the query processor?</h3>
+				<label><input type="radio" name="q4" value="A"> A) Create database tables.</label><br>
+				<label><input type="radio" name="q4" value="B"> B) Insert and delete rows from a database.</label><br>
+				<label><input type="radio" name="q4" value="C"> C) Interpret queries, optimize them, and return query results.</label><br>
+				<label><input type="radio" name="q4" value="D"> D) Manage database user access.</label>
+			</div>
+
+			<!-- Question 5 -->
+			<div class="question">
+				<h3>5. How does the storage manager function in a database system?</h3>
+				<label><input type="radio" name="q5" value="A"> A) Manages user permissions for database access.</label><br>
+				<label><input type="radio" name="q5" value="B"> B) Handles security measures for stored data.</label><br>
+				<label><input type="radio" name="q5" value="C"> C) Translates query instructions into file-system commands.</label><br>
+				<label><input type="radio" name="q5" value="D"> D) Ensures data is in third normal form.</label>
+			</div>
+
+			<!-- Question 6 -->
+			<div class="question">
+				<h3>6. What is the transaction manager responsible for?</h3>
+				<label><input type="radio" name="q6" value="A"> A) Creating the database schema.</label><br>
+				<label><input type="radio" name="q6" value="B"> B) Managing database queries for faster retrieval.</label><br>
+				<label><input type="radio" name="q6" value="C"> C) Ensuring transactions are executed and resolving conflicts between them.</label><br>
+				<label><input type="radio" name="q6" value="D"> D) Authorizing user access to databases.</label>
+			</div>
+
+			<!-- Question 7 -->
+			<div class="question">
+				<h3>7. What database management system is MongoDB classified as?</h3>
+				<label><input type="radio" name="q7" value="A"> A) Relational Database System</label><br>
+				<label><input type="radio" name="q7" value="B"> B) SQL Database</label><br>
+				<label><input type="radio" name="q7" value="C"> C) NoSQL Database</label><br>
+				<label><input type="radio" name="q7" value="D"> D) Data Warehouse System</label>
+			</div>
+
+			<!-- Question 8 -->
+			<div class="question">
+				<h3>8. Name an operation performed by the SQL INSERT statement.</h3>
+				<label><input type="radio" name="q8" value="A"> A) Deletes rows from a table.</label><br>
+				<label><input type="radio" name="q8" value="B"> B) Modifies rows in a table.</label><br>
+				<label><input type="radio" name="q8" value="C"> C) Inserts rows into a table.</label><br>
+				<label><input type="radio" name="q8" value="D"> D) Creates a new table.</label>
+			</div>
+
+			<!-- Question 9 -->
+			<div class="question">
+				<h3>9. What does the SELECT statement do in SQL?</h3>
+				<label><input type="radio" name="q9" value="A"> A) Inserts rows into a table.</label><br>
+				<label><input type="radio" name="q9" value="B"> B) Modifies rows in a table.</label><br>
+				<label><input type="radio" name="q9" value="C"> C) Retrieves data from a table.</label><br>
+				<label><input type="radio" name="q9" value="D"> D) Deletes rows from a table.</label>
+			</div>
+
+			<!-- Question 10 -->
+			<div class="question">
+				<h3>10. What data type is used to store integer values in SQL?</h3>
+				<label><input type="radio" name="q10" value="A"> A) VARCHAR</label><br>
+				<label><input type="radio" name="q10" value="B"> B) DECIMAL</label><br>
+				<label><input type="radio" name="q10" value="C"> C) INT</label><br>
+				<label><input type="radio" name="q10" value="D"> D) DATE</label>
+			</div>
+
+			<!-- Question 11 -->
+			<div class="question">
+				<h3>11. Which SQL data type stores textual values?</h3>
+				<label><input type="radio" name="q11" value="A"> A) INT</label><br>
+				<label><input type="radio" name="q11" value="B"> B) DECIMAL</label><br>
+				<label><input type="radio" name="q11" value="C"> C) VARCHAR</label><br>
+				<label><input type="radio" name="q11" value="D"> D) DATE</label>
+			</div>
+
+			<!-- Question 12 -->
+			<div class="question">
+				<h3>12. Which SQL data type is used to store date values?</h3>
+				<label><input type="radio" name="q12" value="A"> A) VARCHAR</label><br>
+				<label><input type="radio" name="q12" value="B"> B) INT</label><br>
+				<label><input type="radio" name="q12" value="C"> C) DATE</label><br>
+				<label><input type="radio" name="q12" value="D"> D) DECIMAL</label>
+			</div>
+
+			<!-- Question 13 -->
+			<div class="question">
+				<h3>13. What data type is used to store fractional numeric values in SQL?</h3>
+				<label><input type="radio" name="q13" value="A"> A) DATE</label><br>
+				<label><input type="radio" name="q13" value="B"> B) DECIMAL</label><br>
+				<label><input type="radio" name="q13" value="C"> C) VARCHAR</label><br>
+				<label><input type="radio" name="q13" value="D"> D) INT</label>
+			</div>
+
+			<!-- Question 14 -->
+			<div class="question">
+				<h3>14. What is the main focus of the analysis phase in database design?</h3>
+				<label><input type="radio" name="q14" value="A"> A) Specifying database requirements without regard to a specific system.</label><br>
+				<label><input type="radio" name="q14" value="B"> B) Creating tables and adding indexes.</label><br>
+				<label><input type="radio" name="q14" value="C"> C) Identifying foreign keys and primary keys.</label><br>
+				<label><input type="radio" name="q14" value="D"> D) Defining table relationships.</label>
+			</div>
+
+			<!-- Question 15 -->
+			<div class="question">
+				<h3>15. What does logical design involve in database design?</h3>
+				<label><input type="radio" name="q15" value="A"> A) Implementing database requirements as tables, keys, and columns in a specific system.</label><br>
+				<label><input type="radio" name="q15" value="B"> B) Organizing tables on storage media and creating indexes.</label><br>
+				<label><input type="radio" name="q15" value="C"> C) Specifying database requirements without regard to a specific system.</label><br>
+				<label><input type="radio" name="q15" value="D"> D) Defining user access and security rules.</label>
+			</div>
+
+			<!-- Question 16 -->
+			<div class="question">
+				<h3>16. What does physical design focus on in database design?</h3>
+				<label><input type="radio" name="q16" value="A"> A) Implementing database requirements as tables and columns.</label><br>
+				<label><input type="radio" name="q16" value="B"> B) Specifying database requirements without regard to a specific system.</label><br>
+				<label><input type="radio" name="q16" value="C"> C) Organizing tables on storage media and creating indexes to improve query performance.</label><br>
+				<label><input type="radio" name="q16" value="D"> D) Defining relationships between tables and rows.</label>
+			</div>
+
+			<!-- Question 17 -->
+			<div class="question">
+				<h3>17. What does the SQL CREATE TABLE statement do?</h3>
+				<label><input type="radio" name="q17" value="A"> A) Modifies data in a table.</label><br>
+				<label><input type="radio" name="q17" value="B"> B) Creates a new table in a database.</label><br>
+				<label><input type="radio" name="q17" value="C"> C) Deletes data from a table.</label><br>
+				<label><input type="radio" name="q17" value="D"> D) Retrieves data from a table.</label>
+			</div>
+
+			<!-- Question 18 -->
+			<div class="question">
+				<h3>18. What is the purpose of the SQL ALTER TABLE statement?</h3>
+				<label><input type="radio" name="q18" value="A"> A) Deletes rows from a table.</label><br>
+				<label><input type="radio" name="q18" value="B"> B) Modifies or adds columns in an existing table.</label><br>
+				<label><input type="radio" name="q18" value="C"> C) Creates a new table.</label><br>
+				<label><input type="radio" name="q18" value="D"> D) Retrieves data from a table.</label>
+			</div>
+
+			<!-- Question 19 -->
+			<div class="question">
+				<h3>19. What does the DROP TABLE statement do in SQL?</h3>
+				<label><input type="radio" name="q19" value="A"> A) Deletes a table and all of its rows from the database.</label><br>
+				<label><input type="radio" name="q19" value="B"> B) Modifies rows in a table.</label><br>
+				<label><input type="radio" name="q19" value="C"> C) Deletes only specific rows from a table.</label><br>
+				<label><input type="radio" name="q19" value="D"> D) Inserts data into a table.</label>
+			</div>
+
+			<!-- Question 20 -->
+			<div class="question">
+				<h3>20. What SQL operation is performed by the UPDATE statement?</h3>
+				<label><input type="radio" name="q20" value="A"> A) Deletes rows from a table.</label><br>
+				<label><input type="radio" name="q20" value="B"> B) Modifies existing rows in a table.</label><br>
+				<label><input type="radio" name="q20" value="C"> C) Creates a new table.</label><br>
+				<label><input type="radio" name="q20" value="D"> D) Retrieves data from a table.</label>
+			</div>
+			
+			<!-- Question 21 -->
+			<div class="question">
+				<h3>21. What does the SQL DELETE statement do?</h3>
+				<label><input type="radio" name="q21" value="A"> A) Deletes rows from a table.</label><br>
+				<label><input type="radio" name="q21" value="B"> B) Deletes columns from a table.</label><br>
+				<label><input type="radio" name="q21" value="C"> C) Deletes a table from the database.</label><br>
+				<label><input type="radio" name="q21" value="D"> D) Deletes the database.</label>
+			</div>
+
+			<!-- Question 22 -->
+			<div class="question">
+				<h3>22. What is the TRUNCATE statement used for in SQL?</h3>
+				<label><input type="radio" name="q22" value="A"> A) Deletes specific rows based on a condition.</label><br>
+				<label><input type="radio" name="q22" value="B"> B) Deletes all rows from a table without deleting the table itself.</label><br>
+				<label><input type="radio" name="q22" value="C"> C) Modifies rows in a table.</label><br>
+				<label><input type="radio" name="q22" value="D"> D) Deletes columns from a table.</label>
+			</div>
+
+			<!-- Question 23 -->
+			<div class="question">
+				<h3>23. What is a primary key in a database?</h3>
+				<label><input type="radio" name="q23" value="A"> A) A column or group of columns that uniquely identify each row in a table.</label><br>
+				<label><input type="radio" name="q23" value="B"> B) A column that refers to a foreign key in another table.</label><br>
+				<label><input type="radio" name="q23" value="C"> C) A row that holds multiple foreign key references.</label><br>
+				<label><input type="radio" name="q23" value="D"> D) A row that defines relationships between tables.</label>
+			</div>
+
+			<!-- Question 24 -->
+			<div class="question">
+				<h3>24. What is a foreign key in a database?</h3>
+				<label><input type="radio" name="q24" value="A"> A) A column or group of columns that refer to a primary key in another table.</label><br>
+				<label><input type="radio" name="q24" value="B"> B) A column that uniquely identifies a row in the same table.</label><br>
+				<label><input type="radio" name="q24" value="C"> C) A row that contains multiple primary keys.</label><br>
+				<label><input type="radio" name="q24" value="D"> D) A row that identifies relationships between other tables.</label>
+			</div>
+
+			<!-- Question 25 -->
+			<div class="question">
+				<h3>25. What does the FOREIGN KEY constraint ensure?</h3>
+				<label><input type="radio" name="q25" value="A"> A) That foreign keys are unique within the table.</label><br>
+				<label><input type="radio" name="q25" value="B"> B) Referential integrity between tables by preventing invalid key relationships.</label><br>
+				<label><input type="radio" name="q25" value="C"> C) Referential integrity between columns in the same table.</label><br>
+				<label><input type="radio" name="q25" value="D"> D) Foreign key values automatically update when data is inserted.</label>
+			</div>
+
+			<!-- Question 26 -->
+			<div class="question">
+				<h3>26. What is the purpose of the AUTO_INCREMENT column in SQL?</h3>
+				<label><input type="radio" name="q26" value="A"> A) To automatically update the row when a foreign key is inserted.</label><br>
+				<label><input type="radio" name="q26" value="B"> B) To automatically assign an incrementing numeric value when a new row is inserted.</label><br>
+				<label><input type="radio" name="q26" value="C"> C) To automatically delete rows based on a condition.</label><br>
+				<label><input type="radio" name="q26" value="D"> D) To automatically add rows to the table when space allows.</label>
+			</div>
+
+			<!-- Question 27 -->
+			<div class="question">
+				<h3>27. What does the LIKE operator do in SQL?</h3>
+				<label><input type="radio" name="q27" value="A"> A) Matches text against a pattern using wildcard characters like % and _.</label><br>
+				<label><input type="radio" name="q27" value="B"> B) Modifies existing rows in a table.</label><br>
+				<label><input type="radio" name="q27" value="C"> C) Deletes rows from a table based on a condition.</label><br>
+				<label><input type="radio" name="q27" value="D"> D) Creates a new table.</label>
+			</div>
+
+			<!-- Question 28 -->
+			<div class="question">
+				<h3>28. What does the BETWEEN operator do?</h3>
+				<label><input type="radio" name="q28" value="A"> A) Selects rows between two tables.</label><br>
+				<label><input type="radio" name="q28" value="B"> B) Joins tables together.</label><br>
+				<label><input type="radio" name="q28" value="C"> C) Determines if a value lies between two other values.</label><br>
+				<label><input type="radio" name="q28" value="D"> D) Deletes rows between two values.</label>
+			</div>
+
+			<!-- Question 29 -->
+			<div class="question">
+				<h3>29. What does the SQL ABS() function return?</h3>
+				<label><input type="radio" name="q29" value="A"> A) The square root of a number.</label><br>
+				<label><input type="radio" name="q29" value="B"> B) The absolute value of a numeric expression.</label><br>
+				<label><input type="radio" name="q29" value="C"> C) The total sum of all values in a column.</label><br>
+				<label><input type="radio" name="q29" value="D"> D) The average of a numeric column.</label>
+			</div>
+
+			<!-- Question 30 -->
+			<div class="question">
+				<h3>30. What aggregate function would you use to count the number of rows in a result set?</h3>
+				<label><input type="radio" name="q30" value="A"> A) SUM()</label><br>
+				<label><input type="radio" name="q30" value="B"> B) AVG()</label><br>
+				<label><input type="radio" name="q30" value="C"> C) COUNT()</label><br>
+				<label><input type="radio" name="q30" value="D"> D) MAX()</label>
+			</div>
+
+			<!-- Question 31 -->
+			<div class="question">
+				<h3>31. What SQL function returns the lowercase of a string?</h3>
+				<label><input type="radio" name="q31" value="A"> A) UPPER()</label><br>
+				<label><input type="radio" name="q31" value="B"> B) LOWER()</label><br>
+				<label><input type="radio" name="q31" value="C"> C) TRIM()</label><br>
+				<label><input type="radio" name="q31" value="D"> D) CONCAT()</label>
+			</div>
+
+			<!-- Question 32 -->
+			<div class="question">
+				<h3>32. What does an INNER JOIN do?</h3>
+				<label><input type="radio" name="q32" value="A"> A) Combines rows from two tables where there is a match.</label><br>
+				<label><input type="radio" name="q32" value="B"> B) Combines all rows from the left and right tables.</label><br>
+				<label><input type="radio" name="q32" value="C"> C) Combines only unmatched rows from both tables.</label><br>
+				<label><input type="radio" name="q32" value="D"> D) Combines rows from two tables, ignoring matches.</label>
+			</div>
+
+			<!-- Question 33 -->
+			<div class="question">
+				<h3>33. How does a LEFT JOIN differ from an INNER JOIN?</h3>
+				<label><input type="radio" name="q33" value="A"> A) It selects only matching right table rows.</label><br>
+				<label><input type="radio" name="q33" value="B"> B) It selects all rows from the left table and only matching rows from the right table.</label><br>
+				<label><input type="radio" name="q33" value="C"> C) It selects all rows from the right table, regardless of matches.</label><br>
+				<label><input type="radio" name="q33" value="D"> D) It selects only matching rows from both tables.</label>
+			</div>
+
+			<!-- Question 34 -->
+			<div class="question">
+				<h3>34. What is a FULL JOIN?</h3>
+				<label><input type="radio" name="q34" value="A"> A) Combines rows from two tables, including unmatched rows from both.</label><br>
+				<label><input type="radio" name="q34" value="B"> B) Combines rows only from matching left and right tables.</label><br>
+				<label><input type="radio" name="q34" value="C"> C) Combines only unmatched rows from the right table.</label><br>
+				<label><input type="radio" name="q34" value="D"> D) Combines rows from multiple tables without comparing columns.</label>
+			</div>
+
+			<!-- Question 35 -->
+			<div class="question">
+				<h3>35. What is a self-join in SQL?</h3>
+				<label><input type="radio" name="q35" value="A"> A) A join that relates a table to itself.</label><br>
+				<label><input type="radio" name="q35" value="B"> B) A join that relates one column to another within the same table.</label><br>
+				<label><input type="radio" name="q35" value="C"> C) A join that compares two columns across different tables.</label><br>
+				<label><input type="radio" name="q35" value="D"> D) A join that retrieves all rows without any condition.</label>
+			</div>
+
+			<!-- Question 36 -->
+			<div class="question">
+				<h3>36. What is the purpose of normalization in database design?</h3>
+				<label><input type="radio" name="q36" value="A"> A) To merge tables to reduce complexity.</label><br>
+				<label><input type="radio" name="q36" value="B"> B) To reduce redundancy and improve data integrity by organizing data into related tables.</label><br>
+				<label><input type="radio" name="q36" value="C"> C) To add indexes to improve performance.</label><br>
+				<label><input type="radio" name="q36" value="D"> D) To ensure only unique rows are added to the table.</label>
+			</div>
+
+			<!-- Question 37 -->
+			<div class="question">
+				<h3>37. What is a candidate key?</h3>
+				<label><input type="radio" name="q37" value="A"> A) A column that always depends on another column.</label><br>
+				<label><input type="radio" name="q37" value="B"> B) A column or group of columns that can uniquely identify rows and is minimal.</label><br>
+				<label><input type="radio" name="q37" value="C"> C) A group of columns used to refer to another table.</label><br>
+				<label><input type="radio" name="q37" value="D"> D) A column that automatically increments with each row.</label>
+			</div>
+
+			<!-- Question 38 -->
+			<div class="question">
+				<h3>38. What is functional dependence in a relational database?</h3>
+				<label><input type="radio" name="q38" value="A"> A) When one row depends on another.</label><br>
+				<label><input type="radio" name="q38" value="B"> B) When one column depends on another.</label><br>
+				<label><input type="radio" name="q38" value="C"> C) When a table depends on a view.</label><br>
+				<label><input type="radio" name="q38" value="D"> D) When a database depends on a specific user.</label>
+			</div>
+
+			<!-- Question 39 -->
+			<div class="question">
+				<h3>39. What is Boyce-Codd normal form (BCNF)?</h3>
+				<label><input type="radio" name="q39" value="A"> A) The "gold standard" normal form where every non-trivial functional dependency is based on a unique key.</label><br>
+				<label><input type="radio" name="q39" value="B"> B) The first normal form that eliminates duplicates.</label><br>
+				<label><input type="radio" name="q39" value="C"> C) A form of denormalization where redundancy is added for performance.</label><br>
+				<label><input type="radio" name="q39" value="D"> D) The standard normal form that ensures foreign key relationships are maintained.</label>
+			</div>
+
+			<!-- Question 40 -->
+			<div class="question">
+				<h3>40. What is denormalization?</h3>
+				<label><input type="radio" name="q40" value="A"> A) Intentionally introducing redundancy by merging tables to improve performance.</label><br>
+				<label><input type="radio" name="q40" value="B"> B) Removing tables from a database to simplify structure.</label><br>
+				<label><input type="radio" name="q40" value="C"> C) Creating indexes to speed up queries.</label><br>
+				<label><input type="radio" name="q40" value="D"> D) Adding keys to tables to enforce referential integrity.</label>
+			</div>
+
+			<!-- Question 41 -->
+			<div class="question">
+				<h3>41. What is an index in a database?</h3>
+				<label><input type="radio" name="q41" value="A"> A) A structure that improves the speed of data retrieval operations.</label><br>
+				<label><input type="radio" name="q41" value="B"> B) A list of all tables in a database.</label><br>
+				<label><input type="radio" name="q41" value="C"> C) A command used to delete data.</label><br>
+				<label><input type="radio" name="q41" value="D"> D) A function that sorts rows in a table.</label>
+			</div>
+
+			<!-- Question 42 -->
+			<div class="question">
+				<h3>42. What is a CREATE INDEX statement used for?</h3>
+				<label><input type="radio" name="q42" value="A"> A) To create a table.</label><br>
+				<label><input type="radio" name="q42" value="B"> B) To create a key constraint.</label><br>
+				<label><input type="radio" name="q42" value="C"> C) To create an index on specified columns in a table.</label><br>
+				<label><input type="radio" name="q42" value="D"> D) To create a view of a table.</label>
+			</div>
+
+			<!-- Question 43 -->
+			<div class="question">
+				<h3>43. What is the purpose of a hash index?</h3>
+				<label><input type="radio" name="q43" value="A"> A) To organize rows in a hierarchical manner.</label><br>
+				<label><input type="radio" name="q43" value="B"> B) To map rows to buckets for fast data retrieval.</label><br>
+				<label><input type="radio" name="q43" value="C"> C) To organize data in order by a specific column.</label><br>
+				<label><input type="radio" name="q43" value="D"> D) To create relationships between tables.</label>
+			</div>
+
+			<!-- Question 44 -->
+			<div class="question">
+				<h3>44. What is a bitmap index?</h3>
+				<label><input type="radio" name="q44" value="A"> A) An index that uses a list of pointers to rows.</label><br>
+				<label><input type="radio" name="q44" value="B"> B) An index that uses a grid of bits (1s and 0s) to represent values.</label><br>
+				<label><input type="radio" name="q44" value="C"> C) An index that organizes data in ascending order.</label><br>
+				<label><input type="radio" name="q44" value="D"> D) An index that creates a full-text search engine.</label>
+			</div>
+
+			<!-- Question 45 -->
+			<div class="question">
+				<h3>45. What is an entity in ER modeling?</h3>
+				<label><input type="radio" name="q45" value="A"> A) A command used in SQL to create tables.</label><br>
+				<label><input type="radio" name="q45" value="B"> B) A person, place, product, or concept tracked in a database.</label><br>
+				<label><input type="radio" name="q45" value="C"> C) A column in a table.</label><br>
+				<label><input type="radio" name="q45" value="D"> D) A function used to index tables.</label>
+			</div>
+
+			    <!-- Question 46 -->
+			<div class="question">
+				<h3>46. What is a relationship in an ER diagram?</h3>
+				<label><input type="radio" name="q46" value="A"> A) A column in a table that refers to another column.</label><br>
+				<label><input type="radio" name="q46" value="B"> B) A connection or association between two entities.</label><br>
+				<label><input type="radio" name="q46" value="C"> C) A function that defines referential integrity.</label><br>
+				<label><input type="radio" name="q46" value="D"> D) A table that links two foreign keys together.</label>
+			</div>
+
+			<!-- Question 47 -->
+			<div class="question">
+				<h3>47. What is cardinality in ER modeling?</h3>
+				<label><input type="radio" name="q47" value="A"> A) The minimum and maximum number of relationships between two entities.</label><br>
+				<label><input type="radio" name="q47" value="B"> B) The number of columns in a table.</label><br>
+				<label><input type="radio" name="q47" value="C"> C) The number of rows in a table.</label><br>
+				<label><input type="radio" name="q47" value="D"> D) The sum of all primary keys in the database.</label>
+			</div>
+
+			<!-- Question 48 -->
+			<div class="question">
+				<h3>48. What does crow's foot notation represent?</h3>
+				<label><input type="radio" name="q48" value="A"> A) The cardinality of relationships in an ER diagram.</label><br>
+				<label><input type="radio" name="q48" value="B"> B) The data structure for storing tables.</label><br>
+				<label><input type="radio" name="q48" value="C"> C) The sequence of columns in a table.</label><br>
+				<label><input type="radio" name="q48" value="D"> D) The maximum length of a VARCHAR column.</label>
+			</div>
+
+			<!-- Question 49 -->
+			<div class="question">
+				<h3>49. What is a partition in a database?</h3>
+				<label><input type="radio" name="q49" value="A"> A) A division of a supertype entity into mutually exclusive subtypes.</label><br>
+				<label><input type="radio" name="q49" value="B"> B) A list of indexes in a database.</label><br>
+				<label><input type="radio" name="q49" value="C"> C) A section of a table where redundant data is stored.</label><br>
+				<label><input type="radio" name="q49" value="D"> D) A division of a table into multiple schemas.</label>
+			</div>
+
+			<!-- Question 50 -->
+			<div class="question">
+				<h3>50. What is a reflexive relationship in an ER diagram?</h3>
+				<label><input type="radio" name="q50" value="A"> A) A relationship between two different entities.</label><br>
+				<label><input type="radio" name="q50" value="B"> B) A relationship where an entity relates to itself.</label><br>
+				<label><input type="radio" name="q50" value="C"> C) A relationship between two foreign keys.</label><br>
+				<label><input type="radio" name="q50" value="D"> D) A relationship between a table and its index.</label>
+			</div>
+
+			<!-- Question 51 -->
+			<div class="question">
+				<h3>51. What is an artificial key?</h3>
+				<label><input type="radio" name="q51" value="A"> A) A primary key that is generated automatically by the database.</label><br>
+				<label><input type="radio" name="q51" value="B"> B) A primary key created when no natural key exists.</label><br>
+				<label><input type="radio" name="q51" value="C"> C) A foreign key that is auto-generated.</label><br>
+				<label><input type="radio" name="q51" value="D"> D) A combination of primary and foreign keys.</label>
+			</div>
+
+			<!-- Question 52 -->
+			<div class="question">
+				<h3>52. What is an entity instance?</h3>
+				<label><input type="radio" name="q52" value="A"> A) A collection of related tables.</label><br>
+				<label><input type="radio" name="q52" value="B"> B) A specific example of an entity, such as a single employee in a company.</label><br>
+				<label><input type="radio" name="q52" value="C"> C) A reference to a primary key in another table.</label><br>
+				<label><input type="radio" name="q52" value="D"> D) A group of related columns in a table.</label>
+			</div>
+
+			<!-- Question 53 -->
+			<div class="question">
+				<h3>53. What does the CASCADE constraint do?</h3>
+				<label><input type="radio" name="q53" value="A"> A) It restricts inserts, updates, and deletes on foreign key relationships.</label><br>
+				<label><input type="radio" name="q53" value="B"> B) It propagates primary key changes to foreign keys automatically.</label><br>
+				<label><input type="radio" name="q53" value="C"> C) It sets invalid foreign keys to NULL values.</label><br>
+				<label><input type="radio" name="q53" value="D"> D) It prevents updates to primary keys.</label>
+			</div>
+
+			<!-- Question 54 -->
+			<div class="question">
+				<h3>54. What does SET NULL do in SQL?</h3>
+				<label><input type="radio" name="q54" value="A"> A) Sets invalid foreign keys to NULL.</label><br>
+				<label><input type="radio" name="q54" value="B"> B) Sets default values for all NULL columns.</label><br>
+				<label><input type="radio" name="q54" value="C"> C) Deletes rows with NULL values.</label><br>
+				<label><input type="radio" name="q54" value="D"> D) Prevents NULL values from being inserted.</label>
+			</div>
+
+			<!-- Question 55 -->
+			<div class="question">
+				<h3>55. What does SET DEFAULT do in SQL?</h3>
+				<label><input type="radio" name="q55" value="A"> A) Prevents inserts into tables without a default value.</label><br>
+				<label><input type="radio" name="q55" value="B"> B) Sets foreign keys to their default value if they become invalid.</label><br>
+				<label><input type="radio" name="q55" value="C"> C) Automatically deletes invalid rows.</label><br>
+				<label><input type="radio" name="q55" value="D"> D) Disallows NULL values in primary key columns.</label>
+			</div>
+
+			<!-- Question 56 -->
+			<div class="question">
+				<h3>56. What is the purpose of the transaction manager in a database?</h3>
+				<label><input type="radio" name="q56" value="A"> A) To optimize query performance and storage space.</label><br>
+				<label><input type="radio" name="q56" value="B"> B) To ensure transactions are executed without conflict and to restore consistency after a failure.</label><br>
+				<label><input type="radio" name="q56" value="C"> C) To manage foreign key constraints between tables.</label><br>
+				<label><input type="radio" name="q56" value="D"> D) To create, modify, and delete rows based on query results.</label>
+			</div>
+
+			<!-- Question 57 -->
+			<div class="question">
+				<h3>57. What does the MERGE statement do in SQL?</h3>
+				<label><input type="radio" name="q57" value="A"> A) It deletes all rows from a table.</label><br>
+				<label><input type="radio" name="q57" value="B"> B) It selects data from one table and inserts it into another table.</label><br>
+				<label><input type="radio" name="q57" value="C"> C) It merges two tables together into a new one.</label><br>
+				<label><input type="radio" name="q57" value="D"> D) It updates primary key values across tables.</label>
+			</div>
+
+			<!-- Question 58 -->
+			<div class="question">
+				<h3>58. What is a heap table in a database?</h3>
+				<label><input type="radio" name="q58" value="A"> A) A table with no imposed row order, optimized for bulk inserts.</label><br>
+				<label><input type="radio" name="q58" value="B"> B) A table that organizes rows by a specific column.</label><br>
+				<label><input type="radio" name="q58" value="C"> C) A table with a primary key and a foreign key.</label><br>
+				<label><input type="radio" name="q58" value="D"> D) A table that contains multiple indexes.</label>
+			</div>
+
+			<!-- Question 59 -->
+			<div class="question">
+				<h3>59. What is a table cluster in a database?</h3>
+				<label><input type="radio" name="q59" value="A"> A) A group of tables that share the same primary key.</label><br>
+				<label><input type="radio" name="q59" value="B"> B) A structure that interleaves rows of multiple tables in the same storage area.</label><br>
+				<label><input type="radio" name="q59" value="C"> C) A group of tables that share the same schema.</label><br>
+				<label><input type="radio" name="q59" value="D"> D) A collection of tables that are joined together by a foreign key.</label>
+			</div>
+
+			<!-- Question 60 -->
+			<div class="question">
+				<h3>60. What is a table scan in a database?</h3>
+				<label><input type="radio" name="q60" value="A"> A) A database operation that reads table blocks directly, without accessing an index.</label><br>
+				<label><input type="radio" name="q60" value="B"> B) A database operation that reads index blocks sequentially.</label><br>
+				<label><input type="radio" name="q60" value="C"> C) A process of creating a new index.</label><br>
+				<label><input type="radio" name="q60" value="D"> D) A process that joins two tables without matching columns.</label>
+			</div>
+
+			<!-- Question 61 -->
+			<div class="question">
+				<h3>61. What is a dense index in a database?</h3>
+				<label><input type="radio" name="q61" value="A"> A) An index that contains an entry for every table row.</label><br>
+				<label><input type="radio" name="q61" value="B"> B) An index that contains an entry for every table block.</label><br>
+				<label><input type="radio" name="q61" value="C"> C) An index that contains a sparse set of data for optimization.</label><br>
+				<label><input type="radio" name="q61" value="D"> D) An index that organizes data based on hash functions.</label>
+			</div>
+
+			<!-- Question 62 -->
+			<div class="question">
+				<h3>62. What is a bitmap index?</h3>
+				<label><input type="radio" name="q62" value="A"> A) An index that uses a grid of bits to represent values.</label><br>
+				<label><input type="radio" name="q62" value="B"> B) An index that contains an entry for each table row.</label><br>
+				<label><input type="radio" name="q62" value="C"> C) An index that creates a list of primary keys for each table.</label><br>
+				<label><input type="radio" name="q62" value="D"> D) An index that compresses data for optimization.</label>
+			</div>
+
+			<!-- Question 63 -->
+			<div class="question">
+				<h3>63. What is a materialized view in a database?</h3>
+				<label><input type="radio" name="q63" value="A"> A) A view that is always updated in real-time.</label><br>
+				<label><input type="radio" name="q63" value="B"> B) A view whose data is stored and must be refreshed when the underlying data changes.</label><br>
+				<label><input type="radio" name="q63" value="C"> C) A view that cannot be updated.</label><br>
+				<label><input type="radio" name="q63" value="D"> D) A view that shows only the latest data from a table.</label>
+			</div>
+
+			<!-- Question 64 -->
+			<div class="question">
+				<h3>64. What does the WITH CHECK OPTION do in SQL views?</h3>
+				<label><input type="radio" name="q64" value="A"> A) Ensures that updates or inserts comply with the view's WHERE clause.</label><br>
+				<label><input type="radio" name="q64" value="B"> B) Ensures that deletes comply with the view's constraints.</label><br>
+				<label><input type="radio" name="q64" value="C"> C) Disallows updates to the underlying table.</label><br>
+				<label><input type="radio" name="q64" value="D"> D) Prevents the view from being deleted.</label>
+			</div>
+
+			<!-- Question 65 -->
+			<div class="question">
+				<h3>65. What is a subtype entity in ER modeling?</h3>
+				<label><input type="radio" name="q65" value="A"> A) A subset of another entity type, called the supertype entity.</label><br>
+				<label><input type="radio" name="q65" value="B"> B) A table that contains foreign keys only.</label><br>
+				<label><input type="radio" name="q65" value="C"> C) A table that contains only primary keys.</label><br>
+				<label><input type="radio" name="q65" value="D"> D) A duplicate of another table for optimization.</label>
+			</div>
+
+			<!-- Question 66 -->
+			<div class="question">
+				<h3>66. What is an identifying relationship in an ER diagram?</h3>
+				<label><input type="radio" name="q66" value="A"> A) A relationship where one table's foreign key depends on another table's primary key.</label><br>
+				<label><input type="radio" name="q66" value="B"> B) A relationship where a child entity is completely dependent on a parent entity.</label><br>
+				<label><input type="radio" name="q66" value="C"> C) A relationship where two tables share the same primary key.</label><br>
+				<label><input type="radio" name="q66" value="D"> D) A relationship where one table has a composite primary key.</label>
+			</div>
+
+			<!-- Question 67 -->
+			<div class="question">
+				<h3>67. What is an intangible entity in ER modeling?</h3>
+				<label><input type="radio" name="q67" value="A"> A) An entity that is documented in the data model, but not tracked with data in the database.</label><br>
+				<label><input type="radio" name="q67" value="B"> B) An entity that refers to a view of a table.</label><br>
+				<label><input type="radio" name="q67" value="C"> C) An entity that is used to create foreign key constraints.</label><br>
+				<label><input type="radio" name="q67" value="D"> D) An entity that contains a composite primary key.</label>
+			</div>
+
+			<!-- Question 68 -->
+			<div class="question">
+				<h3>68. What is a candidate key in a relational database?</h3>
+				<label><input type="radio" name="q68" value="A"> A) A key that is always a foreign key in another table.</label><br>
+				<label><input type="radio" name="q68" value="B"> B) A simple or composite column that is unique and minimal.</label><br>
+				<label><input type="radio" name="q68" value="C"> C) A key that is used to create a new index.</label><br>
+				<label><input type="radio" name="q68" value="D"> D) A key that allows NULL values in certain columns.</label>
+			</div>
+
+			<!-- Question 69 -->
+			<div class="question">
+				<h3>69. What is a non-key column in a relational database?</h3>
+				<label><input type="radio" name="q69" value="A"> A) A column that refers to a primary key in another table.</label><br>
+				<label><input type="radio" name="q69" value="B"> B) A column that is not contained in a candidate key.</label><br>
+				<label><input type="radio" name="q69" value="C"> C) A column that contains foreign key values.</label><br>
+				<label><input type="radio" name="q69" value="D"> D) A column that is always indexed for faster search.</label>
+			</div>
+
+			<!-- Question 70 -->
+			<div class="question">
+				<h3>70. What is third normal form (3NF) in database design?</h3>
+				<label><input type="radio" name="q70" value="A"> A) A normal form that ensures all non-key columns depend on unique columns only.</label><br>
+				<label><input type="radio" name="q70" value="B"> B) A normal form that eliminates all foreign key dependencies.</label><br>
+				<label><input type="radio" name="q70" value="C"> C) A normal form that eliminates all duplicate rows in a table.</label><br>
+				<label><input type="radio" name="q70" value="D"> D) A normal form that reduces redundancy by merging tables.</label>
+			</div>
+
+
+</body>
+</html>
+
+<button type="button" id="submit-btn">Submit Quiz</button>
+
+
+            
+        </form>
+        
+        <!-- Results Display -->
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

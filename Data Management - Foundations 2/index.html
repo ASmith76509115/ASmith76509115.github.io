@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Management Concepts Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Database Management Concepts Quiz</h1>
+        <h2>by Adam Smith</h2>
+        
+        <!-- Timer Display -->
+        <p id="timer" style="font-size: 18px; color: red;">Time Remaining: 100:00</p>
+        
+        <!-- Start Button -->
+        <button type="button" id="start-btn">Start Quiz</button>
+        
+        <!-- Quiz Form -->
+        <form id="quiz-form" style="display: none;">
+             <!-- Question 1 -->
+			
+		<div class="question">
+			<h3>1. What is normalization?</h3>
+			<label><input type="radio" name="q1" value="A"> A) Process of organizing data to minimize redundancy and ensure data integrity</label>
+			<label><input type="radio" name="q1" value="B"> B) A method for database encryption</label>
+			<label><input type="radio" name="q1" value="C"> C) A type of data storage method</label>
+			<label><input type="radio" name="q1" value="D"> D) A way to increase database size</label>
+		</div>
+
+		<!-- Question 2 -->
+		<div class="question">
+			<h3>2. What is the primary goal of normalization?</h3>
+			<label><input type="radio" name="q2" value="A"> A) To speed up query performance</label>
+			<label><input type="radio" name="q2" value="B"> B) To reduce data redundancy and avoid anomalies</label>
+			<label><input type="radio" name="q2" value="C"> C) To increase storage capacity</label>
+			<label><input type="radio" name="q2" value="D"> D) To improve user access</label>
+		</div>
+
+		<!-- Question 3 -->
+		<div class="question">
+			<h3>3. Define data redundancy.</h3>
+			<label><input type="radio" name="q3" value="A"> A) Storing data in one place only</label>
+			<label><input type="radio" name="q3" value="B"> B) Unnecessary duplication of data in multiple places</label>
+			<label><input type="radio" name="q3" value="C"> C) The process of data encryption</label>
+			<label><input type="radio" name="q3" value="D"> D) Data compression</label>
+		</div>
+
+		<!-- Question 4 -->
+		<div class="question">
+			<h3>4. What is a data anomaly?</h3>
+			<label><input type="radio" name="q4" value="A"> A) A process for speeding up data retrieval</label>
+			<label><input type="radio" name="q4" value="B"> B) Inconsistencies arising from redundant data</label>
+			<label><input type="radio" name="q4" value="C"> C) A type of data encryption method</label>
+			<label><input type="radio" name="q4" value="D"> D) A technique to optimize database queries</label>
+		</div>
+		<!-- Question 5 -->
+		<div class="question">
+			<h3>5. Describe the Hierarchical DBMS model.</h3>
+			<label><input type="radio" name="q5" value="A"> A) Data is stored as flat files</label>
+			<label><input type="radio" name="q5" value="B"> B) Data is organized in a tree-like structure</label>
+			<label><input type="radio" name="q5" value="C"> C) Data is stored in a grid format</label>
+			<label><input type="radio" name="q5" value="D"> D) Data is interconnected with multiple relationships</label>
+		</div>
+
+		<!-- Question 6 -->
+		<div class="question">
+			<h3>6. Describe an update anomaly.</h3>
+			<label><input type="radio" name="q6" value="A"> A) Occurs when data cannot be added due to missing information</label>
+			<label><input type="radio" name="q6" value="B"> B) Occurs when changes to data are not consistently applied across instances</label>
+			<label><input type="radio" name="q6" value="C"> C) Occurs when deleting data unintentionally removes additional data</label>
+			<label><input type="radio" name="q6" value="D"> D) Occurs when data is duplicated across the database</label>
+		</div>
+
+		<!-- Question 7 -->
+		<div class="question">
+			<h3>7. What is an insertion anomaly?</h3>
+			<label><input type="radio" name="q7" value="A"> A) An error that prevents data from being added due to redundant information</label>
+			<label><input type="radio" name="q7" value="B"> B) An error that occurs when data cannot be added due to a non-normalized structure</label>
+			<label><input type="radio" name="q7" value="C"> C) An error that occurs due to insufficient storage</label>
+			<label><input type="radio" name="q7" value="D"> D) An error due to data format incompatibility</label>
+		</div>
+
+		<!-- Question 8 -->
+		<div class="question">
+			<h3>8. Define a deletion anomaly.</h3>
+			<label><input type="radio" name="q8" value="A"> A) An anomaly where deleted data is irrecoverable</label>
+			<label><input type="radio" name="q8" value="B"> B) An anomaly where deleting data inadvertently removes additional data that should be retained</label>
+			<label><input type="radio" name="q8" value="C"> C) An anomaly where data cannot be deleted due to missing dependencies</label>
+			<label><input type="radio" name="q8" value="D"> D) An anomaly where data is duplicated during deletion</label>
+		</div>
+
+		<!-- Question 9 -->
+		<div class="question">
+			<h3>9. Explain the purpose of the First Normal Form (1NF).</h3>
+			<label><input type="radio" name="q9" value="A"> A) To ensure each table is fully dependent on the primary key</label>
+			<label><input type="radio" name="q9" value="B"> B) To eliminate repeating groups by ensuring each column holds atomic values</label>
+			<label><input type="radio" name="q9" value="C"> C) To separate tables with multi-valued dependencies</label>
+			<label><input type="radio" name="q9" value="D"> D) To ensure each table contains unique rows</label>
+		</div>
+
+		<!-- Question 10 -->
+		<div class="question">
+			<h3>10. What does it mean for data to be atomic?</h3>
+			<label><input type="radio" name="q10" value="A"> A) Data is compressed for storage efficiency</label>
+			<label><input type="radio" name="q10" value="B"> B) Data is indivisible, containing the smallest possible units of information</label>
+			<label><input type="radio" name="q10" value="C"> C) Data is encrypted to prevent unauthorized access</label>
+			<label><input type="radio" name="q10" value="D"> D) Data is backed up regularly</label>
+		</div>
+		<!-- Question 11 -->
+		<div class="question">
+			<h3>11. Explain the purpose of the First Normal Form (1NF).</h3>
+			<label><input type="radio" name="q11" value="A"> A) To eliminate all redundant data from the database</label>
+			<label><input type="radio" name="q11" value="B"> B) To ensure each column contains atomic, indivisible values</label>
+			<label><input type="radio" name="q11" value="C"> C) To create relationships between tables</label>
+			<label><input type="radio" name="q11" value="D"> D) To maintain referential integrity between tables</label>
+		</div>
+
+		<!-- Question 12 -->
+		<div class="question">
+			<h3>12. What does it mean for data to be atomic?</h3>
+			<label><input type="radio" name="q12" value="A"> A) Data is organized into groups</label>
+			<label><input type="radio" name="q12" value="B"> B) Data is split into the smallest possible units</label>
+			<label><input type="radio" name="q12" value="C"> C) Data contains only numerical values</label>
+			<label><input type="radio" name="q12" value="D"> D) Data is shared across multiple tables</label>
+		</div>
+
+		<!-- Question 13 -->
+		<div class="question">
+			<h3>13. Define the criteria for Second Normal Form (2NF).</h3>
+			<label><input type="radio" name="q13" value="A"> A) Table is in 1NF and all non-key attributes are dependent on the whole primary key</label>
+			<label><input type="radio" name="q13" value="B"> B) Table is in 1NF and contains no repeating groups</label>
+			<label><input type="radio" name="q13" value="C"> C) Table is in 1NF and contains only atomic data</label>
+			<label><input type="radio" name="q13" value="D"> D) Table is in 1NF and contains multi-valued dependencies</label>
+		</div>
+
+		<!-- Continue similarly for questions 14 to 75 -->
+		<!-- Question 14 -->
+		<div class="question">
+			<h3>14. What is a partial dependency?</h3>
+			<label><input type="radio" name="q14" value="A"> A) When an attribute is dependent on the primary key</label>
+			<label><input type="radio" name="q14" value="B"> B) When a non-key attribute depends on only part of a composite key</label>
+			<label><input type="radio" name="q14" value="C"> C) When an attribute depends on a non-key attribute</label>
+			<label><input type="radio" name="q14" value="D"> D) When an attribute is duplicated in multiple tables</label>
+		</div>
+
+		<!-- Question 15 -->
+		<div class="question">
+			<h3>15. Define Third Normal Form (3NF).</h3>
+			<label><input type="radio" name="q15" value="A"> A) Table is in 2NF and contains no partial dependencies</label>
+			<label><input type="radio" name="q15" value="B"> B) Table is in 2NF and contains only atomic data</label>
+			<label><input type="radio" name="q15" value="C"> C) Table is in 2NF and contains no transitive dependencies</label>
+			<label><input type="radio" name="q15" value="D"> D) Table is in 2NF and contains multi-valued dependencies</label>
+		</div>
+
+		<!-- Question 16 -->
+		<div class="question">
+			<h3>16. What is a transitive dependency?</h3>
+			<label><input type="radio" name="q16" value="A"> A) When a non-key attribute depends on part of a composite key</label>
+			<label><input type="radio" name="q16" value="B"> B) When a non-key attribute depends on another non-key attribute</label>
+			<label><input type="radio" name="q16" value="C"> C) When a key attribute depends on a non-key attribute</label>
+			<label><input type="radio" name="q16" value="D"> D) When an attribute depends directly on the primary key</label>
+		</div>
+
+		<!-- Question 17 -->
+		<div class="question">
+			<h3>17. Why is 3NF considered a standard for relational databases?</h3>
+			<label><input type="radio" name="q17" value="A"> A) It eliminates partial dependencies and ensures data is atomic</label>
+			<label><input type="radio" name="q17" value="B"> B) It removes redundant data by eliminating transitive dependencies</label>
+			<label><input type="radio" name="q17" value="C"> C) It ensures all data is encrypted</label>
+			<label><input type="radio" name="q17" value="D"> D) It allows multi-valued dependencies</label>
+		</div>
+
+		<!-- Question 18 -->
+		<div class="question">
+			<h3>18. Describe the difference between partial and transitive dependencies.</h3>
+			<label><input type="radio" name="q18" value="A"> A) Partial dependency involves non-key attributes; transitive dependency involves only key attributes</label>
+			<label><input type="radio" name="q18" value="B"> B) Partial dependency is a non-key attribute dependent on part of a key; transitive dependency is a non-key attribute dependent on another non-key attribute</label>
+			<label><input type="radio" name="q18" value="C"> C) Both are types of multi-valued dependencies</label>
+			<label><input type="radio" name="q18" value="D"> D) Partial dependency affects BCNF; transitive dependency affects 1NF</label>
+		</div>
+
+		<!-- Question 19 -->
+		<div class="question">
+			<h3>19. What is Boyce-Codd Normal Form (BCNF)?</h3>
+			<label><input type="radio" name="q19" value="A"> A) A form of 3NF that addresses multi-valued dependencies</label>
+			<label><input type="radio" name="q19" value="B"> B) A stricter version of 3NF where every determinant is a candidate key</label>
+			<label><input type="radio" name="q19" value="C"> C) A normalization form that removes redundancy by enforcing atomicity</label>
+			<label><input type="radio" name="q19" value="D"> D) A form that ensures all non-key attributes are fully functionally dependent on the primary key</label>
+		</div>
+
+		
+		<!-- Question 20 -->
+		<div class="question">
+			<h3>20. When is a table considered to be in BCNF?</h3>
+			<label><input type="radio" name="q20" value="A"> A) When every attribute is atomic</label>
+			<label><input type="radio" name="q20" value="B"> B) When every determinant is a candidate key</label>
+			<label><input type="radio" name="q20" value="C"> C) When all non-key attributes depend on part of the primary key</label>
+			<label><input type="radio" name="q20" value="D"> D) When all data anomalies are eliminated</label>
+		</div>
+
+		<!-- Question 21 -->
+		<div class="question">
+			<h3>21. What is a candidate key?</h3>
+			<label><input type="radio" name="q21" value="A"> A) A key that duplicates data</label>
+			<label><input type="radio" name="q21" value="B"> B) An attribute, or set of attributes, that can uniquely identify each record</label>
+			<label><input type="radio" name="q21" value="C"> C) A key that is used only for indexing</label>
+			<label><input type="radio" name="q21" value="D"> D) A key used solely for encryption</label>
+		</div>
+
+		<!-- Question 22 -->
+		<div class="question">
+			<h3>22. Explain Fourth Normal Form (4NF).</h3>
+			<label><input type="radio" name="q22" value="A"> A) A form that removes all types of data anomalies</label>
+			<label><input type="radio" name="q22" value="B"> B) A form that addresses multi-valued dependencies and ensures no data duplication</label>
+			<label><input type="radio" name="q22" value="C"> C) A normalization step that removes all functional dependencies</label>
+			<label><input type="radio" name="q22" value="D"> D) A step that guarantees data encryption</label>
+		</div>
+
+		<!-- Question 23 -->
+		<div class="question">
+			<h3>23. Define multi-valued dependency.</h3>
+			<label><input type="radio" name="q23" value="A"> A) Dependency where an attribute depends on multiple primary keys</label>
+			<label><input type="radio" name="q23" value="B"> B) A condition where one attribute is associated with multiple values of another, independently of the primary key</label>
+			<label><input type="radio" name="q23" value="C"> C) Dependency that involves only composite keys</label>
+			<label><input type="radio" name="q23" value="D"> D) Dependency that requires transitive relationships</label>
+		</div>
+
+		<!-- Continue similarly for questions 24 to 73 -->
+
+		<!-- Question 24 -->
+		<div class="question">
+			<h3>24. Why is 4NF important in database design?</h3>
+			<label><input type="radio" name="q24" value="A"> A) It eliminates all redundant data in a database</label>
+			<label><input type="radio" name="q24" value="B"> B) It addresses multi-valued dependencies, thus preventing redundancy due to multi-valued attributes</label>
+			<label><input type="radio" name="q24" value="C"> C) It improves query speed by removing functional dependencies</label>
+			<label><input type="radio" name="q24" value="D"> D) It simplifies complex relationships within a table</label>
+		</div>
+
+		
+		<!-- Question 25 -->
+		<div class="question">
+			<h3>25. What is the purpose of Fifth Normal Form (5NF)?</h3>
+			<label><input type="radio" name="q25" value="A"> A) To ensure that tables contain only atomic values</label>
+			<label><input type="radio" name="q25" value="B"> B) To handle join dependencies and ensure no data loss during decomposition</label>
+			<label><input type="radio" name="q25" value="C"> C) To remove all primary key dependencies</label>
+			<label><input type="radio" name="q25" value="D"> D) To enable complex multi-valued relationships</label>
+		</div>
+
+		<!-- Question 26 -->
+		<div class="question">
+			<h3>26. What is a join dependency?</h3>
+			<label><input type="radio" name="q26" value="A"> A) A dependency that relates only to primary keys</label>
+			<label><input type="radio" name="q26" value="B"> B) A condition where a table can be reconstructed by joining smaller tables without losing data</label>
+			<label><input type="radio" name="q26" value="C"> C) A dependency that links multi-valued attributes</label>
+			<label><input type="radio" name="q26" value="D"> D) A dependency specific to foreign keys only</label>
+		</div>
+
+		<!-- Question 27 -->
+		<div class="question">
+			<h3>27. How does 5NF address data redundancy?</h3>
+			<label><input type="radio" name="q27" value="A"> A) By preventing atomic value redundancy</label>
+			<label><input type="radio" name="q27" value="B"> B) By ensuring that tables are fully decomposed to prevent redundancy through complex relationships</label>
+			<label><input type="radio" name="q27" value="C"> C) By allowing multi-valued dependencies</label>
+			<label><input type="radio" name="q27" value="D"> D) By creating composite keys</label>
+		</div>
+
+		<!-- Question 28 -->
+		<div class="question">
+			<h3>28. What are the benefits of normalization?</h3>
+			<label><input type="radio" name="q28" value="A"> A) Increased data redundancy and complexity</label>
+			<label><input type="radio" name="q28" value="B"> B) Reduced redundancy, ensured data integrity, and optimized database performance</label>
+			<label><input type="radio" name="q28" value="C"> C) Simplified database structure without data integrity</label>
+			<label><input type="radio" name="q28" value="D"> D) Reduced query performance</label>
+		</div>
+
+		<!-- Question 29 -->
+		<div class="question">
+			<h3>29. What is denormalization?</h3>
+			<label><input type="radio" name="q29" value="A"> A) The process of eliminating all data redundancies</label>
+			<label><input type="radio" name="q29" value="B"> B) The process of intentionally introducing redundancy for performance optimization</label>
+			<label><input type="radio" name="q29" value="C"> C) The process of enforcing stricter normalization</label>
+			<label><input type="radio" name="q29" value="D"> D) The process of removing all functional dependencies</label>
+		</div>
+
+		<!-- Question 30 -->
+		<div class="question">
+			<h3>30. When might denormalization be necessary?</h3>
+			<label><input type="radio" name="q30" value="A"> A) In applications that are write-heavy</label>
+			<label><input type="radio" name="q30" value="B"> B) In read-heavy applications where query performance is prioritized over strict data integrity</label>
+			<label><input type="radio" name="q30" value="C"> C) In applications that prioritize data integrity</label>
+			<label><input type="radio" name="q30" value="D"> D) When aiming to achieve 5NF</label>
+		</div>
+
+		<!-- Question 31 -->
+		<div class="question">
+			<h3>31. How does dependency preservation relate to normalization?</h3>
+			<label><input type="radio" name="q31" value="A"> A) It ensures all non-functional dependencies are removed after normalization</label>
+			<label><input type="radio" name="q31" value="B"> B) It ensures all functional dependencies are maintained in decomposed tables</label>
+			<label><input type="radio" name="q31" value="C"> C) It ensures every table has a surrogate key</label>
+			<label><input type="radio" name="q31" value="D"> D) It ensures data is always in 1NF</label>
+		</div>
+
+		<!-- Question 32 -->
+		<div class="question">
+			<h3>32. Why might a table in BCNF still need further normalization to 4NF?</h3>
+			<label><input type="radio" name="q32" value="A"> A) To address transitive dependencies</label>
+			<label><input type="radio" name="q32" value="B"> B) To handle multi-valued dependencies that BCNF does not cover</label>
+			<label><input type="radio" name="q32" value="C"> C) To add surrogate keys</label>
+			<label><input type="radio" name="q32" value="D"> D) To enforce primary key constraints</label>
+		</div>
+
+		<!-- Question 33 -->
+		<div class="question">
+			<h3>33. Can a table be in 4NF but not in BCNF?</h3>
+			<label><input type="radio" name="q33" value="A"> A) Yes, if it has multi-valued dependencies</label>
+			<label><input type="radio" name="q33" value="B"> B) No, a table must be in BCNF to be in 4NF</label>
+			<label><input type="radio" name="q33" value="C"> C) Yes, if it has composite keys</label>
+			<label><input type="radio" name="q33" value="D"> D) No, because BCNF always comes after 4NF</label>
+		</div>
+
+		<!-- Question 34 -->
+		<div class="question">
+			<h3>34. What is the main disadvantage of over-normalization?</h3>
+			<label><input type="radio" name="q34" value="A"> A) Increased redundancy</label>
+			<label><input type="radio" name="q34" value="B"> B) Reduced query performance due to excessive joins</label>
+			<label><input type="radio" name="q34" value="C"> C) Data anomalies</label>
+			<label><input type="radio" name="q34" value="D"> D) Decreased data integrity</label>
+		</div>
+
+		<!-- Question 35 -->
+		<div class="question">
+			<h3>35. How does 1NF improve data consistency?</h3>
+			<label><input type="radio" name="q35" value="A"> A) By introducing redundancy</label>
+			<label><input type="radio" name="q35" value="B"> B) By requiring atomic values and eliminating repeating groups</label>
+			<label><input type="radio" name="q35" value="C"> C) By creating composite keys</label>
+			<label><input type="radio" name="q35" value="D"> D) By simplifying complex relationships</label>
+		</div>
+
+		<!-- Question 36 -->
+		<div class="question">
+			<h3>36. Why is 3NF preferred over 2NF in most databases?</h3>
+			<label><input type="radio" name="q36" value="A"> A) Because 2NF does not address transitive dependencies</label>
+			<label><input type="radio" name="q36" value="B"> B) Because 3NF allows multi-valued dependencies</label>
+			<label><input type="radio" name="q36" value="C"> C) Because 2NF introduces redundancy</label>
+			<label><input type="radio" name="q36" value="D"> D) Because 3NF enforces primary key constraints</label>
+		</div>
+
+		<!-- Question 37 -->
+		<div class="question">
+			<h3>37. How does BCNF handle non-key attributes?</h3>
+			<label><input type="radio" name="q37" value="A"> A) By allowing transitive dependencies</label>
+			<label><input type="radio" name="q37" value="B"> B) By ensuring non-key attributes do not have any dependencies on attributes that are not candidate keys</label>
+			<label><input type="radio" name="q37" value="C"> C) By allowing partial dependencies</label>
+			<label><input type="radio" name="q37" value="D"> D) By enforcing data redundancy</label>
+		</div>
+
+		<!-- Question 38 -->
+		<div class="question">
+			<h3>38. What does it mean for a table to be “fully normalized”?</h3>
+			<label><input type="radio" name="q38" value="A"> A) It is in 2NF</label>
+			<label><input type="radio" name="q38" value="B"> B) It meets the requirements of the highest applicable normal form, like 5NF</label>
+			<label><input type="radio" name="q38" value="C"> C) It only has surrogate keys</label>
+			<label><input type="radio" name="q38" value="D"> D) It includes no foreign keys</label>
+		</div>
+
+		<!-- Question 39 -->
+		<div class="question">
+			<h3>39. How can a database designer achieve 4NF?</h3>
+			<label><input type="radio" name="q39" value="A"> A) By adding surrogate keys</label>
+			<label><input type="radio" name="q39" value="B"> B) By removing multi-valued dependencies</label>
+			<label><input type="radio" name="q39" value="C"> C) By enforcing foreign key constraints</label>
+			<label><input type="radio" name="q39" value="D"> D) By allowing transitive dependencies</label>
+		</div>
+
+		<!-- Question 40 -->
+		<div class="question">
+			<h3>40. What impact does 3NF have on insertion anomalies?</h3>
+			<label><input type="radio" name="q40" value="A"> A) It increases insertion anomalies</label>
+			<label><input type="radio" name="q40" value="B"> B) It reduces insertion anomalies by eliminating transitive dependencies</label>
+			<label><input type="radio" name="q40" value="C"> C) It does not affect insertion anomalies</label>
+			<label><input type="radio" name="q40" value="D"> D) It removes multi-valued dependencies</label>
+		</div>
+
+		<!-- Question 41 -->
+		<div class="question">
+			<h3>41. Why might a database designer choose not to normalize to 5NF?</h3>
+			<label><input type="radio" name="q41" value="A"> A) Due to the complexity and potential performance trade-offs</label>
+			<label><input type="radio" name="q41" value="B"> B) Because 5NF introduces data anomalies</label>
+			<label><input type="radio" name="q41" value="C"> C) To avoid atomic values</label>
+			<label><input type="radio" name="q41" value="D"> D) Because 5NF is not applicable to relational databases</label>
+		</div>
+
+		<!-- Question 42 -->
+		<div class="question">
+			<h3>42. What is meant by the “lossless join” property?</h3>
+			<label><input type="radio" name="q42" value="A"> A) The process of decomposing tables into 1NF</label>
+			<label><input type="radio" name="q42" value="B"> B) Ensuring that tables can be rejoined without data loss</label>
+			<label><input type="radio" name="q42" value="C"> C) Adding surrogate keys to ensure referential integrity</label>
+			<label><input type="radio" name="q42" value="D"> D) Creating new tables that store metadata</label>
+		</div>
+
+		<!-- Question 43 -->
+		<div class="question">
+			<h3>43. How does 4NF address multi-valued attributes differently from 1NF?</h3>
+			<label><input type="radio" name="q43" value="A"> A) By enforcing atomicity</label>
+			<label><input type="radio" name="q43" value="B"> B) By removing multi-valued dependencies that can vary independently</label>
+			<label><input type="radio" name="q43" value="C"> C) By adding composite keys</label>
+			<label><input type="radio" name="q43" value="D"> D) By introducing surrogate keys</label>
+		</div>
+
+		<!-- Question 44 -->
+		<div class="question">
+			<h3>44. What is a practical example of a multi-valued dependency?</h3>
+			<label><input type="radio" name="q44" value="A"> A) A student’s enrollment status and GPA</label>
+			<label><input type="radio" name="q44" value="B"> B) An employee’s multiple phone numbers and addresses stored independently</label>
+			<label><input type="radio" name="q44" value="C"> C) A department’s budget and location</label>
+			<label><input type="radio" name="q44" value="D"> D) An order’s quantity and date</label>
+		</div>
+
+		<!-- Question 45 -->
+		<div class="question">
+			<h3>45. How does denormalization affect multi-table queries?</h3>
+			<label><input type="radio" name="q45" value="A"> A) It requires more joins</label>
+			<label><input type="radio" name="q45" value="B"> B) It reduces the need for joins by consolidating data into fewer tables</label>
+			<label><input type="radio" name="q45" value="C"> C) It prevents query optimization</label>
+			<label><input type="radio" name="q45" value="D"> D) It slows down database performance</label>
+		</div>
+
+		<!-- Question 46 -->
+		<div class="question">
+			<h3>46. What is a potential drawback of achieving 5NF?</h3>
+			<label><input type="radio" name="q46" value="A"> A) It increases data anomalies</label>
+			<label><input type="radio" name="q46" value="B"> B) It results in a higher number of tables, which can make data retrieval more complex</label>
+			<label><input type="radio" name="q46" value="C"> C) It decreases data integrity</label>
+			<label><input type="radio" name="q46" value="D"> D) It eliminates primary keys</label>
+		</div>
+
+		<!-- Question 47 -->
+		<div class="question">
+			<h3>47. Explain how database partitioning can interact with normalization.</h3>
+			<label><input type="radio" name="q47" value="A"> A) Partitioning adds redundancy to normalized databases</label>
+			<label><input type="radio" name="q47" value="B"> B) Partitioning can enhance performance by dividing tables, especially in highly normalized databases</label>
+			<label><input type="radio" name="q47" value="C"> C) Partitioning is only effective on denormalized databases</label>
+			<label><input type="radio" name="q47" value="D"> D) Partitioning prevents normalization</label>
+		</div>
+
+		<!-- Question 48 -->
+		<div class="question">
+			<h3>48. Define a surrogate key and its role in normalization.</h3>
+			<label><input type="radio" name="q48" value="A"> A) It is a backup of the primary key</label>
+			<label><input type="radio" name="q48" value="B"> B) It is a system-generated unique identifier used when no natural primary key exists, aiding normalization</label>
+			<label><input type="radio" name="q48" value="C"> C) It is used to enforce data redundancy</label>
+			<label><input type="radio" name="q48" value="D"> D) It prevents atomicity</label>
+		</div>
+
+		<!-- Question 49 -->
+		<div class="question">
+			<h3>49. What is the purpose of a unique constraint in normalization?</h3>
+			<label><input type="radio" name="q49" value="A"> A) To ensure only primary keys are unique</label>
+			<label><input type="radio" name="q49" value="B"> B) To ensure that specified columns have distinct values, maintaining data integrity</label>
+			<label><input type="radio" name="q49" value="C"> C) To enforce foreign key constraints</label>
+			<label><input type="radio" name="q49" value="D"> D) To add redundancy</label>
+		</div>
+
+		<!-- Question 50 -->
+		<div class="question">
+			<h3>50. How does 3NF prevent deletion anomalies?</h3>
+			<label><input type="radio" name="q50" value="A"> A) By enforcing primary keys</label>
+			<label><input type="radio" name="q50" value="B"> B) By removing transitive dependencies</label>
+			<label><input type="radio" name="q50" value="C"> C) By preventing multi-valued dependencies</label>
+			<label><input type="radio" name="q50" value="D"> D) By introducing surrogate keys</label>
+		</div>
+
+		<!-- Question 51 -->
+		<div class="question">
+			<h3>51. What is data independence in the context of normalization?</h3>
+			<label><input type="radio" name="q51" value="A"> A) Ensuring data remains unaffected by changes in storage</label>
+			<label><input type="radio" name="q51" value="B"> B) Allowing changes to the database schema without affecting data access</label>
+			<label><input type="radio" name="q51" value="C"> C) Storing data in multiple locations</label>
+			<label><input type="radio" name="q51" value="D"> D) Encrypting data for privacy</label>
+		</div>
+
+		<!-- Question 52 -->
+		<div class="question">
+			<h3>52. How does logical data independence differ from physical data independence?</h3>
+			<label><input type="radio" name="q52" value="A"> A) Logical data independence deals with changes to the physical schema</label>
+			<label><input type="radio" name="q52" value="B"> B) Logical data independence allows changes to the conceptual schema without affecting external schemas</label>
+			<label><input type="radio" name="q52" value="C"> C) Physical data independence allows changes to external schemas</label>
+			<label><input type="radio" name="q52" value="D"> D) Both are unrelated concepts</label>
+		</div>
+
+		<!-- Question 53 -->
+		<div class="question">
+			<h3>53. Describe physical data independence.</h3>
+			<label><input type="radio" name="q53" value="A"> A) Ability to change physical storage without impacting conceptual schema</label>
+			<label><input type="radio" name="q53" value="B"> B) Ability to modify user access levels</label>
+			<label><input type="radio" name="q53" value="C"> C) Ensuring data integrity</label>
+			<label><input type="radio" name="q53" value="D"> D) Protecting data from unauthorized access</label>
+		</div>
+
+		<!-- Question 54 -->
+		<div class="question">
+			<h3>54. Why is BCNF stricter than 3NF?</h3>
+			<label><input type="radio" name="q54" value="A"> A) BCNF does not allow partial dependencies</label>
+			<label><input type="radio" name="q54" value="B"> B) BCNF requires every determinant to be a candidate key</label>
+			<label><input type="radio" name="q54" value="C"> C) BCNF includes multi-valued dependencies</label>
+			<label><input type="radio" name="q54" value="D"> D) BCNF only applies to single-attribute keys</label>
+		</div>
+
+		<!-- Question 55 -->
+		<div class="question">
+			<h3>55. What is the difference between transitive dependency and multi-valued dependency?</h3>
+			<label><input type="radio" name="q55" value="A"> A) Transitive dependency involves one attribute indirectly determining another, while multi-valued dependency relates to multiple independent values</label>
+			<label><input type="radio" name="q55" value="B"> B) Transitive dependency is more complex than multi-valued dependency</label>
+			<label><input type="radio" name="q55" value="C"> C) Both are the same concept</label>
+			<label><input type="radio" name="q55" value="D"> D) Transitive dependency applies only in 2NF</label>
+		</div>
+
+		<!-- Question 56 -->
+		<div class="question">
+			<h3>56. Explain the purpose of dependency preservation in normalization.</h3>
+			<label><input type="radio" name="q56" value="A"> A) To ensure dependencies are removed during decomposition</label>
+			<label><input type="radio" name="q56" value="B"> B) To maintain all functional dependencies in decomposed tables</label>
+			<label><input type="radio" name="q56" value="C"> C) To eliminate redundant data</label>
+			<label><input type="radio" name="q56" value="D"> D) To prevent the use of surrogate keys</label>
+		</div>
+
+		<!-- Question 57 -->
+		<div class="question">
+			<h3>57. How does normalization impact data anomalies?</h3>
+			<label><input type="radio" name="q57" value="A"> A) Normalization can introduce anomalies</label>
+			<label><input type="radio" name="q57" value="B"> B) Normalization reduces data anomalies by organizing data efficiently</label>
+			<label><input type="radio" name="q57" value="C"> C) Normalization has no effect on data anomalies</label>
+			<label><input type="radio" name="q57" value="D"> D) Normalization requires additional storage space</label>
+		</div>
+
+		<!-- Question 58 -->
+		<div class="question">
+			<h3>58. What is the role of 1NF in reducing data redundancy?</h3>
+			<label><input type="radio" name="q58" value="A"> A) It enforces atomicity, preventing multiple values in one column</label>
+			<label><input type="radio" name="q58" value="B"> B) It requires that all tables use surrogate keys</label>
+			<label><input type="radio" name="q58" value="C"> C) It removes transitive dependencies</label>
+			<label><input type="radio" name="q58" value="D"> D) It eliminates multi-valued dependencies</label>
+		</div>
+
+		<!-- Question 59 -->
+		<div class="question">
+			<h3>59. Describe how a composite key affects 2NF.</h3>
+			<label><input type="radio" name="q59" value="A"> A) It introduces redundancy</label>
+			<label><input type="radio" name="q59" value="B"> B) It necessitates that all non-key attributes depend on the entire composite key</label>
+			<label><input type="radio" name="q59" value="C"> C) It only applies to 1NF</label>
+			<label><input type="radio" name="q59" value="D"> D) It prevents normalization</label>
+		</div>
+
+		<!-- Question 60 -->
+		<div class="question">
+			<h3>60. Why is understanding functional dependencies essential for normalization?</h3>
+			<label><input type="radio" name="q60" value="A"> A) It helps eliminate all keys</label>
+			<label><input type="radio" name="q60" value="B"> B) It informs decisions about table structure to reduce redundancy and ensure data integrity</label>
+			<label><input type="radio" name="q60" value="C"> C) It only applies to denormalized databases</label>
+			<label><input type="radio" name="q60" value="D"> D) It is used to create backups</label>
+		</div>
+
+		<!-- Question 61 -->
+		<div class="question">
+			<h3>61. What is a candidate key in relation to BCNF?</h3>
+			<label><input type="radio" name="q61" value="A"> A) Any key that violates normalization</label>
+			<label><input type="radio" name="q61" value="B"> B) An attribute or set of attributes that uniquely identifies records and can be chosen as the primary key</label>
+			<label><input type="radio" name="q61" value="C"> C) A key that only applies to 1NF</label>
+			<label><input type="radio" name="q61" value="D"> D) A key used solely for backups</label>
+		</div>
+
+		<!-- Question 62 -->
+		<div class="question">
+			<h3>62. Why might denormalization be applied in certain scenarios?</h3>
+			<label><input type="radio" name="q62" value="A"> A) To increase redundancy for better data integrity</label>
+			<label><input type="radio" name="q62" value="B"> B) To improve performance, especially in read-heavy applications</label>
+			<label><input type="radio" name="q62" value="C"> C) To reduce storage requirements</label>
+			<label><input type="radio" name="q62" value="D"> D) To prevent data anomalies</label>
+		</div>
+
+		<!-- Question 63 -->
+		<div class="question">
+			<h3>63. Explain the concept of transitive dependency in the context of 3NF.</h3>
+			<label><input type="radio" name="q63" value="A"> A) When an attribute depends on another non-key attribute, rather than the primary key</label>
+			<label><input type="radio" name="q63" value="B"> B) When one non-key attribute determines all other attributes</label>
+			<label><input type="radio" name="q63" value="C"> C) When all non-key attributes depend only on part of a composite key</label>
+			<label><input type="radio" name="q63" value="D"> D) When multi-valued dependencies are eliminated</label>
+		</div>
+
+		<!-- Question 64 -->
+		<div class="question">
+			<h3>64. What is the function of 4NF in the normalization process?</h3>
+			<label><input type="radio" name="q64" value="A"> A) It ensures data independence</label>
+			<label><input type="radio" name="q64" value="B"> B) It eliminates multi-valued dependencies from tables</label>
+			<label><input type="radio" name="q64" value="C"> C) It introduces surrogate keys</label>
+			<label><input type="radio" name="q64" value="D"> D) It removes transitive dependencies</label>
+		</div>
+
+		<!-- Question 65 -->
+		<div class="question">
+			<h3>65. How does a surrogate key facilitate normalization?</h3>
+			<label><input type="radio" name="q65" value="A"> A) By providing a natural key</label>
+			<label><input type="radio" name="q65" value="B"> B) By serving as a unique identifier in cases where no natural primary key exists</label>
+			<label><input type="radio" name="q65" value="C"> C) By allowing multi-valued dependencies</label>
+			<label><input type="radio" name="q65" value="D"> D) By introducing transitive dependencies</label>
+		</div>
+
+		<!-- Question 66 -->
+		<div class="question">
+			<h3>66. Why is BCNF considered stricter than 3NF?</h3>
+			<label><input type="radio" name="q66" value="A"> A) Because BCNF requires all determinants to be candidate keys</label>
+			<label><input type="radio" name="q66" value="B"> B) Because BCNF allows multi-valued dependencies</label>
+			<label><input type="radio" name="q66" value="C"> C) Because BCNF introduces surrogate keys</label>
+			<label><input type="radio" name="q66" value="D"> D) Because BCNF is optional</label>
+		</div>
+
+		<!-- Question 67 -->
+		<div class="question">
+			<h3>67. What is a join dependency in the context of 5NF?</h3>
+			<label><input type="radio" name="q67" value="A"> A) When tables are joined to eliminate redundancy</label>
+			<label><input type="radio" name="q67" value="B"> B) When tables are decomposed and then rejoined without loss of information</label>
+			<label><input type="radio" name="q67" value="C"> C) When tables contain transitive dependencies</label>
+			<label><input type="radio" name="q67" value="D"> D) When tables are decomposed to prevent multi-valued dependencies</label>
+		</div>
+
+		<!-- Question 68 -->
+		<div class="question">
+			<h3>68. How does 5NF improve database design over 4NF?</h3>
+			<label><input type="radio" name="q68" value="A"> A) By introducing composite keys</label>
+			<label><input type="radio" name="q68" value="B"> B) By handling complex join dependencies to prevent redundancy</label>
+			<label><input type="radio" name="q68" value="C"> C) By introducing transitive dependencies</label>
+			<label><input type="radio" name="q68" value="D"> D) By introducing multi-valued dependencies</label>
+		</div>
+
+		<!-- Question 69 -->
+		<div class="question">
+			<h3>69. What is a practical example of multi-valued dependency?</h3>
+			<label><input type="radio" name="q69" value="A"> A) An employee with multiple roles</label>
+			<label><input type="radio" name="q69" value="B"> B) A student with multiple courses that are independent of their advisor</label>
+			<label><input type="radio" name="q69" value="C"> C) A city with multiple postal codes</label>
+			<label><input type="radio" name="q69" value="D"> D) A product with multiple components</label>
+		</div>
+
+		<!-- Question 70 -->
+		<div class="question">
+			<h3>70. How is normalization applied in relational database design?</h3>
+			<label><input type="radio" name="q70" value="A"> A) By adding redundancy to each table</label>
+			<label><input type="radio" name="q70" value="B"> B) By systematically applying rules to organize data into related tables with minimal redundancy</label>
+			<label><input type="radio" name="q70" value="C"> C) By only using composite keys</label>
+			<label><input type="radio" name="q70" value="D"> D) By allowing transitive dependencies</label>
+		</div>
+
+		
+
+		<!-- Question 71 -->
+		<div class="question">
+			<h3>71. What is lossless decomposition?</h3>
+			<label><input type="radio" name="q71" value="A"> A) The process of merging two tables into one</label>
+			<label><input type="radio" name="q71" value="B"> B) Ensuring that a table can be decomposed and rejoined without losing data</label>
+			<label><input type="radio" name="q71" value="C"> C) A technique used only in 5NF</label>
+			<label><input type="radio" name="q71" value="D"> D) Removing transitive dependencies</label>
+		</div>
+
+
+		<!-- Question 72 -->
+		<div class="question">
+			<h3>72. What is a surrogate key, and how does it relate to normalization?</h3>
+			<label><input type="radio" name="q72" value="A"> A) A surrogate key is a key used only for foreign references</label>
+			<label><input type="radio" name="q72" value="B"> B) A surrogate key is a system-generated unique identifier, used when a table lacks a natural primary key</label>
+			<label><input type="radio" name="q72" value="C"> C) A surrogate key is a key that is always composite</label>
+			<label><input type="radio" name="q72" value="D"> D) A surrogate key is a key used exclusively for encryption purposes</label>
+		</div>
+
+
+		<!-- Question 73 -->
+		<div class="question">
+			<h3>73. Explain the purpose of a composite key.</h3>
+			<label><input type="radio" name="q73" value="A"> A) A single column key used to uniquely identify records</label>
+			<label><input type="radio" name="q73" value="B"> B) A combination of columns used to uniquely identify records</label>
+			<label><input type="radio" name="q73" value="C"> C) A backup key for emergency use</label>
+			<label><input type="radio" name="q73" value="D"> D) A key used for encryption</label>
+		</div>
+
+
+		<!-- Question 74 -->
+		<div class="question">
+			<h3>74. Why might a table be decomposed during normalization?</h3>
+			<label><input type="radio" name="q74" value="A"> A) To reduce the size of the database</label>
+			<label><input type="radio" name="q74" value="B"> B) To eliminate redundancy and maintain data integrity</label>
+			<label><input type="radio" name="q74" value="C"> C) To speed up query processing</label>
+			<label><input type="radio" name="q74" value="D"> D) To create more primary keys</label>
+		</div>
+
+		<!-- Question 75 -->
+		<div class="question">
+			<h3>75. How can database partitioning interact with normalization?</h3>
+			<label><input type="radio" name="q75" value="A"> A) Partitioning simplifies the database by combining tables</label>
+			<label><input type="radio" name="q75" value="B"> B) Partitioning helps manage normalized databases by dividing tables into manageable pieces</label>
+			<label><input type="radio" name="q75" value="C"> C) Partitioning removes the need for primary keys</label>
+			<label><input type="radio" name="q75" value="D"> D) Partitioning is a step in achieving BCNF</label>
+		</div>
+
+		<!-- Question 77 -->
+		<div class="question">
+			<h3>77. How does 5NF address data redundancy?</h3>
+			<label><input type="radio" name="q77" value="A"> A) By decomposing tables into smaller ones based on join dependencies</label>
+			<label><input type="radio" name="q77" value="B"> B) By encrypting data to reduce space</label>
+			<label><input type="radio" name="q77" value="C"> C) By storing all data in a single table</label>
+			<label><input type="radio" name="q77" value="D"> D) By compressing data to save storage</label>
+		</div>
+
+
+
+
+            <!-- Additional Questions -->
+            <!-- Add more questions as needed following the same format -->
+            
+            <button type="button" id="submit-btn">Submit Quiz</button>
+        </form>
+        
+        <!-- Results Display -->
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

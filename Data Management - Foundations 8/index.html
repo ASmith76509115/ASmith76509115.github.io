@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Management Quiz 8</h1>
+        <h2>By Adam Smith</h2>
+        
+        <!-- Timer Display -->
+        <p id="timer" style="font-size: 18px; color: red;">Time Remaining: 100:00</p>
+        
+        <!-- Start Button -->
+        <button type="button" id="start-btn">Start Quiz</button>
+        
+        <!-- Quiz Form -->
+        <form id="quiz-form" style="display: none;">
+            
+            <!-- Question 1 -->
+            <div class="question">
+				<h3>1. Which requirement within large, complex databases ensures users have limited access to the database?</h3>
+				<label><input type="radio" name="q1" value="A"> A) Recovery</label>
+				<label><input type="radio" name="q1" value="B"> B) Performance</label>
+				<label><input type="radio" name="q1" value="C"> C) Authorization</label>
+				<label><input type="radio" name="q1" value="D"> D) Confidentiality</label>
+			</div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <h3>2. Which design type specifies database requirements without regard to a specific database system?</h3>
+                <label><input type="radio" name="q2" value="A"> A) Physical Design</label>
+                <label><input type="radio" name="q2" value="B"> B) Logical Design</label>
+                <label><input type="radio" name="q2" value="C"> C) Conceptual Design</label>
+                <label><input type="radio" name="q2" value="D"> D) Database Design</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <h3>3. What characterizes the rules of relational databases?</h3>
+                <label><input type="radio" name="q3" value="A"> A) They maintain data redundancy</label>
+                <label><input type="radio" name="q3" value="B"> B) They ensure data integrity and relationships</label>
+                <label><input type="radio" name="q3" value="C"> C) They are specific to each database</label>
+                <label><input type="radio" name="q3" value="D"> D) They avoid foreign key constraints</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <h3>4. Which event will result in an error code and error description when using MySQL Server?</h3>
+                <label><input type="radio" name="q4" value="A"> A) Dropping a table</label>
+                <label><input type="radio" name="q4" value="B"> B) Trying to create a duplicate primary key</label>
+                <label><input type="radio" name="q4" value="C"> C) Inserting NULL into a non-NULL column</label>
+                <label><input type="radio" name="q4" value="D"> D) Updating a view</label>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <h3>5. Which data type should be used to store whole integer values, such as age?</h3>
+                <label><input type="radio" name="q5" value="A"> A) CHAR</label>
+                <label><input type="radio" name="q5" value="B"> B) DECIMAL</label>
+                <label><input type="radio" name="q5" value="C"> C) INT</label>
+                <label><input type="radio" name="q5" value="D"> D) FLOAT</label>
+            </div>
+
+            <!-- Question 6 -->
+			<div class="question">
+				<h3>6. Which text-based interface is included in the MySQL Server Download?</h3>
+				<label><input type="radio" name="q6" value="A"> A) MySQL Shell</label>
+				<label><input type="radio" name="q6" value="B"> B) MySQL Workbench</label>
+				<label><input type="radio" name="q6" value="C"> C) MySQL CLI</label>
+				<label><input type="radio" name="q6" value="D"> D) MySQL GUI</label>
+			</div>
+
+			<!-- Question 7 -->
+			<div class="question">
+				<h3>7. Which database system includes the World database during its installation?</h3>
+				<label><input type="radio" name="q7" value="A"> A) MySQL</label>
+				<label><input type="radio" name="q7" value="B"> B) PostgreSQL</label>
+				<label><input type="radio" name="q7" value="C"> C) SQL Server</label>
+				<label><input type="radio" name="q7" value="D"> D) Oracle Database</label>
+			</div>
+
+			<!-- Question 8 -->
+			<div class="question">
+				<h3>8. What is the standardized language of relational database systems?</h3>
+				<label><input type="radio" name="q8" value="A"> A) Python</label>
+				<label><input type="radio" name="q8" value="B"> B) SQL</label>
+				<label><input type="radio" name="q8" value="C"> C) Java</label>
+				<label><input type="radio" name="q8" value="D"> D) C++</label>
+			</div>
+
+			<!-- Question 9 -->
+			<div class="question">
+				<h3>9. Which SQL sublanguage is used to manage database access?</h3>
+				<label><input type="radio" name="q9" value="A"> A) DML</label>
+				<label><input type="radio" name="q9" value="B"> B) DDL</label>
+				<label><input type="radio" name="q9" value="C"> C) DCL</label>
+				<label><input type="radio" name="q9" value="D"> D) TCL</label>
+			</div>
+
+			<!-- Question 10 -->
+			<div class="question">
+				<h3>10. Which SQL sublanguage is used to roll back database changes?</h3>
+				<label><input type="radio" name="q10" value="A"> A) DCL</label>
+				<label><input type="radio" name="q10" value="B"> B) DDL</label>
+				<label><input type="radio" name="q10" value="C"> C) TCL</label>
+				<label><input type="radio" name="q10" value="D"> D) DML</label>
+			</div>
+
+			<!-- Question 11 -->
+			<div class="question">
+				<h3>11. Which format is used by the TIME data type in MySQL?</h3>
+				<label><input type="radio" name="q11" value="A"> A) HH:MM:SS</label>
+				<label><input type="radio" name="q11" value="B"> B) YYYY-MM-DD</label>
+				<label><input type="radio" name="q11" value="C"> C) MM:SS</label>
+				<label><input type="radio" name="q11" value="D"> D) DD-MM-YYYY</label>
+			</div>
+
+			<!-- Question 12 -->
+			<div class="question">
+				<h3>12. Which MySQL operator is the last in the order of operator precedence?</h3>
+				<label><input type="radio" name="q12" value="A"> A) AND</label>
+				<label><input type="radio" name="q12" value="B"> B) NOT</label>
+				<label><input type="radio" name="q12" value="C"> C) OR</label>
+				<label><input type="radio" name="q12" value="D"> D) XOR</label>
+			</div>
+
+			<!-- Question 13 -->
+			<div class="question">
+				<h3>13. Which operator is used to compare columns from the left and right tables in MySQL?</h3>
+				<label><input type="radio" name="q13" value="A"> A) =</label>
+				<label><input type="radio" name="q13" value="B"> B) !=</label>
+				<label><input type="radio" name="q13" value="C"> C) LIKE</label>
+				<label><input type="radio" name="q13" value="D"> D) IN</label>
+			</div>
+
+			<!-- Question 14 -->
+			<div class="question">
+				<h3>14. Which type of join combines two tables without comparing columns?</h3>
+				<label><input type="radio" name="q14" value="A"> A) LEFT JOIN</label>
+				<label><input type="radio" name="q14" value="B"> B) RIGHT JOIN</label>
+				<label><input type="radio" name="q14" value="C"> C) CROSS JOIN</label>
+				<label><input type="radio" name="q14" value="D"> D) INNER JOIN</label>
+			</div>
+
+			<!-- Question 15 -->
+			<div class="question">
+				<h3>15. Which type of join compares columns using only the = operator?</h3>
+				<label><input type="radio" name="q15" value="A"> A) INNER JOIN</label>
+				<label><input type="radio" name="q15" value="B"> B) OUTER JOIN</label>
+				<label><input type="radio" name="q15" value="C"> C) CROSS JOIN</label>
+				<label><input type="radio" name="q15" value="D"> D) NATURAL JOIN</label>
+			</div>
+
+			<!-- Question 16 -->
+			<div class="question">
+				<h3>16. Which type of join is demonstrated by the following query?</h3>
+				<code>SELECT Dog.Nickname, Kennel.Address<br>FROM Dog, Kennel<br>WHERE Dog.KennelID = Kennel.ID</code>
+				<label><input type="radio" name="q16" value="A"> A) INNER JOIN</label>
+				<label><input type="radio" name="q16" value="B"> B) LEFT JOIN</label>
+				<label><input type="radio" name="q16" value="C"> C) RIGHT JOIN</label>
+				<label><input type="radio" name="q16" value="D"> D) CROSS JOIN</label>
+			</div>
+
+			<!-- Question 17 -->
+			<div class="question">
+				<h3>17. What is another name for a subquery?</h3>
+				<label><input type="radio" name="q17" value="A"> A) Correlated query</label>
+				<label><input type="radio" name="q17" value="B"> B) Inline view</label>
+				<label><input type="radio" name="q17" value="C"> C) Joins</label>
+				<label><input type="radio" name="q17" value="D"> D) Primary view</label>
+			</div>
+
+			<!-- Question 18 -->
+			<div class="question">
+				<h3>18. Which operator is used to compare against a list of values when determining a match in a WHERE clause?</h3>
+				<label><input type="radio" name="q18" value="A"> A) BETWEEN</label>
+				<label><input type="radio" name="q18" value="B"> B) IN</label>
+				<label><input type="radio" name="q18" value="C"> C) EXISTS</label>
+				<label><input type="radio" name="q18" value="D"> D) LIKE</label>
+			</div>
+
+			<!-- Question 19 -->
+			<div class="question">
+				<h3>19. Which wildcard character is used to represent zero or more characters when searching for a specified pattern using a LIKE operator?</h3>
+				<label><input type="radio" name="q19" value="A"> A) %</label>
+				<label><input type="radio" name="q19" value="B"> B) _</label>
+				<label><input type="radio" name="q19" value="C"> C) * (asterisk)</label>
+				<label><input type="radio" name="q19" value="D"> D) # (hash)</label>
+			</div>
+
+			<!-- Question 20 -->
+			<div class="question">
+				<h3>20. Which function is considered an aggregating function in SQL?</h3>
+				<label><input type="radio" name="q20" value="A"> A) COUNT</label>
+				<label><input type="radio" name="q20" value="B"> B) INSERT</label>
+				<label><input type="radio" name="q20" value="C"> C) SELECT</label>
+				<label><input type="radio" name="q20" value="D"> D) JOIN</label>
+			</div>
+
+			<!-- Question 21 -->
+			<div class="question">
+				<h3>21. Which clause or function is used with aggregate functions to produce summary rows?</h3>
+				<label><input type="radio" name="q21" value="A"> A) GROUP BY</label>
+				<label><input type="radio" name="q21" value="B"> B) ORDER BY</label>
+				<label><input type="radio" name="q21" value="C"> C) HAVING</label>
+				<label><input type="radio" name="q21" value="D"> D) DISTINCT</label>
+			</div>
+
+			<!-- Question 22 -->
+			<div class="question">
+				<h3>22. Which type of join returns only the matching values when selecting rows from two or more tables?</h3>
+				<label><input type="radio" name="q22" value="A"> A) LEFT JOIN</label>
+				<label><input type="radio" name="q22" value="B"> B) RIGHT JOIN</label>
+				<label><input type="radio" name="q22" value="C"> C) FULL OUTER JOIN</label>
+				<label><input type="radio" name="q22" value="D"> D) INNER JOIN</label>
+			</div>
+
+			<!-- Question 23 -->
+			<div class="question">
+				<h3>23. Which join type selects only matching left and right table rows?</h3>
+				<label><input type="radio" name="q23" value="A"> A) LEFT JOIN</label>
+				<label><input type="radio" name="q23" value="B"> B) INNER JOIN</label>
+				<label><input type="radio" name="q23" value="C"> C) RIGHT JOIN</label>
+				<label><input type="radio" name="q23" value="D"> D) OUTER JOIN</label>
+			</div>
+
+			<!-- Question 24 -->
+			<div class="question">
+				<h3>24. Which phrase refers to the view in which data is persisted and is automatically changed as the underlying data is changed?</h3>
+				<label><input type="radio" name="q24" value="A"> A) Dynamic View</label>
+				<label><input type="radio" name="q24" value="B"> B) Static View</label>
+				<label><input type="radio" name="q24" value="C"> C) Inline View</label>
+				<label><input type="radio" name="q24" value="D"> D) Materialized View</label>
+			</div>
+
+			<!-- Question 25 -->
+			<div class="question">
+				<h3>25. Which SQL command uses the correct syntax to update the salary of an employee in the Employee table?</h3>
+				<label><input type="radio" name="q25" value="A"> A) UPDATE Employee SET Salary = 50000 WHERE EmployeeID = 1;</label>
+				<label><input type="radio" name="q25" value="B"> B) MODIFY Employee SET Salary = 50000 WHERE EmployeeID = 1;</label>
+				<label><input type="radio" name="q25" value="C"> C) CHANGE Employee SET Salary = 50000 WHERE EmployeeID = 1;</label>
+				<label><input type="radio" name="q25" value="D"> D) SET Employee Salary = 50000 WHERE EmployeeID = 1;</label>
+			</div>
+
+			<!-- Question 26 -->
+			<div class="question">
+				<h3>26. What describes elements such as column name and data type?</h3>
+				<label><input type="radio" name="q26" value="A"> A) Metadata</label>
+				<label><input type="radio" name="q26" value="B"> B) Tuple</label>
+				<label><input type="radio" name="q26" value="C"> C) Attribute</label>
+				<label><input type="radio" name="q26" value="D"> D) Row</label>
+			</div>
+
+			<!-- Question 27 -->
+			<div class="question">
+				<h3>27. Which term identifies an ordered collection of elements enclosed in parentheses in a tablespace?</h3>
+				<label><input type="radio" name="q27" value="A"> A) Tuple</label>
+				<label><input type="radio" name="q27" value="B"> B) Index</label>
+				<label><input type="radio" name="q27" value="C"> C) List</label>
+				<label><input type="radio" name="q27" value="D"> D) View</label>
+			</div>
+
+			<!-- Question 28 -->
+			<div class="question">
+				<h3>28. Which SQL command uses the correct syntax to select the name and salary columns from the Employee table, where the salary is greater than 50000, and sort the results by salary in descending order?</h3>
+				<label><input type="radio" name="q28" value="A"> A) SELECT name, salary FROM Employee WHERE salary > 50000 ORDER BY salary DESC;</label>
+				<label><input type="radio" name="q28" value="B"> B) SELECT name, salary FROM Employee WHERE salary > 50000 SORT BY salary DESC;</label>
+				<label><input type="radio" name="q28" value="C"> C) SELECT name, salary FROM Employee FILTER BY salary > 50000 SORT BY salary DESC;</label>
+				<label><input type="radio" name="q28" value="D"> D) SELECT name, salary FROM Employee WHERE salary IS GREATER THAN 50000 ORDER BY salary DESC;</label>
+			</div>
+
+			<!-- Question 29 -->
+			<div class="question">
+				<h3>29. Which INSERT statement demonstrates valid syntax in SQL?</h3>
+				<label><input type="radio" name="q29" value="A"> A) INSERT INTO Employee (name, salary) VALUES ('John Doe', 55000);</label>
+				<label><input type="radio" name="q29" value="B"> B) INSERT INTO Employee (name, salary) VALUE ('John Doe', 55000);</label>
+				<label><input type="radio" name="q29" value="C"> C) INSERT Employee (name, salary) VALUES ('John Doe', 55000);</label>
+				<label><input type="radio" name="q29" value="D"> D) INSERT Employee (name, salary) VALUE ('John Doe', 55000);</label>
+			</div>
+
+			<!-- Question 30 -->
+			<div class="question">
+				<h3>30. Which UPDATE statement uses valid syntax in SQL?</h3>
+				<label><input type="radio" name="q30" value="A"> A) MODIFY Employee SET salary = 55000 WHERE EmployeeID = 1;</label>
+				<label><input type="radio" name="q30" value="B"> B) CHANGE Employee SET salary = 55000 WHERE EmployeeID = 1;</label>
+				<label><input type="radio" name="q30" value="C"> C) UPDATE Employee SET salary = 55000 WHERE EmployeeID = 1;</label>
+				<label><input type="radio" name="q30" value="D"> D) INSERT INTO Employee SET salary = 55000 WHERE EmployeeID = 1;</label>
+			</div>
+
+			<!-- Question 31 -->
+			<div class="question">
+				<h3>31. Which statement is used to remove data from temporary tables?</h3>
+				<label><input type="radio" name="q31" value="A"> A) DELETE FROM</label>
+				<label><input type="radio" name="q31" value="B"> B) DROP TABLE</label>
+				<label><input type="radio" name="q31" value="C"> C) REMOVE TEMPORARY</label>
+				<label><input type="radio" name="q31" value="D"> D) TRUNCATE TABLE</label>
+			</div>
+
+			<!-- Question 32 -->
+			<div class="question">
+				<h3>32. Which keyword is a DDL (data definition language) keyword in SQL?</h3>
+				<label><input type="radio" name="q32" value="A"> A) SELECT</label>
+				<label><input type="radio" name="q32" value="B"> B) INSERT</label>
+				<label><input type="radio" name="q32" value="C"> C) DELETE</label>
+				<label><input type="radio" name="q32" value="D"> D) CREATE</label>
+			</div>
+
+			<!-- Question 33 -->
+			<div class="question">
+				<h3>33. Which property is enforced by a primary key field?</h3>
+				<label><input type="radio" name="q33" value="A"> A) Nullability</label>
+				<label><input type="radio" name="q33" value="B"> B) Uniqueness</label>
+				<label><input type="radio" name="q33" value="C"> C) Referential integrity</label>
+				<label><input type="radio" name="q33" value="D"> D) Foreign key constraint</label>
+			</div>
+
+			<!-- Question 34 -->
+			<div class="question">
+				<h3>34. Which property or function allows SQL to insert a field value?</h3>
+				<label><input type="radio" name="q34" value="A"> A) AUTO_INCREMENT</label>
+				<label><input type="radio" name="q34" value="B"> B) DEFAULT</label>
+				<label><input type="radio" name="q34" value="C"> C) INDEX</label>
+				<label><input type="radio" name="q34" value="D"> D) UNIQUE</label>
+			</div>
+
+			<!-- Question 35 -->
+			<div class="question">
+				<h3>35. Which property specifies an expression on one or more columns of a table?</h3>
+				<label><input type="radio" name="q35" value="A"> A) CHECK</label>
+				<label><input type="radio" name="q35" value="B"> B) DEFAULT</label>
+				<label><input type="radio" name="q35" value="C"> C) INDEX</label>
+				<label><input type="radio" name="q35" value="D"> D) PRIMARY KEY</label>
+			</div>
+
+			<!-- Question 36 -->
+			<div class="question">
+				<h3>36. Which type of key is a single column in a table used to identify a row?</h3>
+				<label><input type="radio" name="q36" value="A"> A) Composite key</label>
+				<label><input type="radio" name="q36" value="B"> B) Super key</label>
+				<label><input type="radio" name="q36" value="C"> C) Candidate key</label>
+				<label><input type="radio" name="q36" value="D"> D) Primary key</label>
+			</div>
+
+			<!-- Question 37 -->
+			<div class="question">
+				<h3>37. Which type of key is often represented by parentheses to show multiple columns?</h3>
+				<label><input type="radio" name="q37" value="A"> A) Primary key</label>
+				<label><input type="radio" name="q37" value="B"> B) Composite key</label>
+				<label><input type="radio" name="q37" value="C"> C) Foreign key</label>
+				<label><input type="radio" name="q37" value="D"> D) Super key</label>
+			</div>
+
+			<!-- Question 38 -->
+			<div class="question">
+				<h3>38. Which primary key characteristic means it includes information that is easy to type and store?</h3>
+				<label><input type="radio" name="q38" value="A"> A) Surrogate key</label>
+				<label><input type="radio" name="q38" value="B"> B) Natural key</label>
+				<label><input type="radio" name="q38" value="C"> C) Foreign key</label>
+				<label><input type="radio" name="q38" value="D"> D) Composite key</label>
+			</div>
+
+			<!-- Question 39 -->
+			<div class="question">
+				<h3>39. Which part of a junction table in a relational database establishes a many-to-many relationship between two tables?</h3>
+				<label><input type="radio" name="q39" value="A"> A) Primary key</label>
+				<label><input type="radio" name="q39" value="B"> B) Foreign key</label>
+				<label><input type="radio" name="q39" value="C"> C) Composite key</label>
+				<label><input type="radio" name="q39" value="D"> D) Super key</label>
+			</div>
+
+			<!-- Question 40 -->
+			<div class="question">
+				<h3>40. Which type of relationship is established by a foreign key in a relational database?</h3>
+				<label><input type="radio" name="q40" value="A"> A) One-to-one</label>
+				<label><input type="radio" name="q40" value="B"> B) One-to-many</label>
+				<label><input type="radio" name="q40" value="C"> C) Many-to-many</label>
+				<label><input type="radio" name="q40" value="D"> D) Many-to-one</label>
+			</div>
+
+			<!-- Question 41 -->
+			<div class="question">
+				<h3>41. Which statements may be rejected when a foreign key constraint is specified?</h3>
+				<label><input type="radio" name="q41" value="A"> A) Statements that violate referential integrity</label>
+				<label><input type="radio" name="q41" value="B"> B) Statements that involve auto-increment fields</label>
+				<label><input type="radio" name="q41" value="C"> C) Statements that have primary keys</label>
+				<label><input type="radio" name="q41" value="D"> D) Statements that use wildcard characters</label>
+			</div>
+
+			<!-- Question 42 -->
+			<div class="question">
+				<h3>42. Which key describes the unique columns in a table that do not contain a primary key?</h3>
+				<label><input type="radio" name="q42" value="A"> A) Primary Key</label>
+				<label><input type="radio" name="q42" value="B"> B) Foreign Key</label>
+				<label><input type="radio" name="q42" value="C"> C) Candidate Key</label>
+				<label><input type="radio" name="q42" value="D"> D) Alternate Key</label>
+			</div>
+
+			<!-- Question 43 -->
+			<div class="question">
+				<h3>43. Which type of index stores column values and row pointers in a hierarchy?</h3>
+				<label><input type="radio" name="q43" value="A"> A) B-Tree Index</label>
+				<label><input type="radio" name="q43" value="B"> B) Hash Index</label>
+				<label><input type="radio" name="q43" value="C"> C) Bitmap Index</label>
+				<label><input type="radio" name="q43" value="D"> D) Clustered Index</label>
+			</div>
+
+			<!-- Question 44 -->
+			<div class="question">
+				<h3>44. Which type of index refers to entries that are assigned to buckets?</h3>
+				<label><input type="radio" name="q44" value="A"> A) B-Tree Index</label>
+				<label><input type="radio" name="q44" value="B"> B) Hash Index</label>
+				<label><input type="radio" name="q44" value="C"> C) Bitmap Index</label>
+				<label><input type="radio" name="q44" value="D"> D) Full-text Index</label>
+			</div>
+
+			<!-- Question 45 -->
+			<div class="question">
+				<h3>45. Which type of index is a grid of bits where each index row corresponds to a unique row in a table?</h3>
+				<label><input type="radio" name="q45" value="A"> A) B-Tree Index</label>
+				<label><input type="radio" name="q45" value="B"> B) Hash Index</label>
+				<label><input type="radio" name="q45" value="C"> C) Bitmap Index</label>
+				<label><input type="radio" name="q45" value="D"> D) Clustered Index</label>
+			</div>
+
+			<!-- Question 46 -->
+			<div class="question">
+				<h3>46. Which phrase refers to the view in which data is persisted and is automatically changed as the underlying data is changed?</h3>
+				<label><input type="radio" name="q46" value="A"> A) Materialized View</label>
+				<label><input type="radio" name="q46" value="B"> B) Logical View</label>
+				<label><input type="radio" name="q46" value="C"> C) Snapshot View</label>
+				<label><input type="radio" name="q46" value="D"> D) Dynamic View</label>
+			</div>
+
+			<!-- Question 47 -->
+			<div class="question">
+				<h3>47. Which type of development activity is used to convert an entity-relationship model (ERM) into tables, columns, and keys?</h3>
+				<label><input type="radio" name="q47" value="A"> A) Database Modeling</label>
+				<label><input type="radio" name="q47" value="B"> B) Database Normalization</label>
+				<label><input type="radio" name="q47" value="C"> C) Database Implementation</label>
+				<label><input type="radio" name="q47" value="D"> D) Database Design</label>
+			</div>
+
+			<!-- Question 48 -->
+			<div class="question">
+				<h3>48. Which term describes the process of denormalization?</h3>
+				<label><input type="radio" name="q48" value="A"> A) The process of splitting tables to reduce redundancy</label>
+				<label><input type="radio" name="q48" value="B"> B) The process of merging tables to increase performance</label>
+				<label><input type="radio" name="q48" value="C"> C) The process of eliminating many-to-many relationships</label>
+				<label><input type="radio" name="q48" value="D"> D) The process of eliminating duplicate rows</label>
+			</div>
+
+			<!-- Question 49 -->
+			<div class="question">
+				<h3>49. A database designer is working with a table that has a primary key and no duplicate rows. What can be concluded about the table?</h3>
+				<label><input type="radio" name="q49" value="A"> A) The table is in First Normal Form (1NF)</label>
+				<label><input type="radio" name="q49" value="B"> B) The table is in Third Normal Form (3NF)</label>
+				<label><input type="radio" name="q49" value="C"> C) The table is fully normalized</label>
+				<label><input type="radio" name="q49" value="D"> D) The table has a foreign key relationship</label>
+			</div>
+
+			<!-- Question 50 -->
+			<div class="question">
+				<h3>50. Which process eliminates redundancy by decomposing a table into two or more tables in a higher normal form?</h3>
+				<label><input type="radio" name="q50" value="A"> A) Denormalization</label>
+				<label><input type="radio" name="q50" value="B"> B) Normalization</label>
+				<label><input type="radio" name="q50" value="C"> C) Indexing</label>
+				<label><input type="radio" name="q50" value="D"> D) Data Mining</label>
+			</div>
+
+			<!-- Question 51 -->
+			<div class="question">
+				<h3>51. Which term describes the optimal normal form for frequent inserts, updates, and deletes of data?</h3>
+				<label><input type="radio" name="q51" value="A"> A) First Normal Form (1NF)</label>
+				<label><input type="radio" name="q51" value="B"> B) Second Normal Form (2NF)</label>
+				<label><input type="radio" name="q51" value="C"> C) Third Normal Form (3NF)</label>
+				<label><input type="radio" name="q51" value="D"> D) Boyce-Codd Normal Form (BCNF)</label>
+			</div>
+
+			<!-- Question 52 -->
+            <div class="question">
+                <h3>52. Which relationship is depicted in the following entity-relationship (ER) diagram?</h3>
+                <!-- Logic to add Diagram 52 -->
+                <img src="path_to_your_image/diagram_52.png" alt="ER Diagram for Question 52" style="width:300px; height:auto;">
+                <label><input type="radio" name="q52" value="A"> A) One-to-One</label>
+                <label><input type="radio" name="q52" value="B"> B) One-to-Many</label>
+                <label><input type="radio" name="q52" value="C"> C) Many-to-Many</label>
+                <label><input type="radio" name="q52" value="D"> D) Many-to-One</label>
+            </div>
+
+			<!-- Question 53 -->
+			<div class="question">
+				<h3>53. Which relationship or association exists between a supertype entity and its subtype entities?</h3>
+				<label><input type="radio" name="q53" value="A"> A) One-to-One</label>
+				<label><input type="radio" name="q53" value="B"> B) One-to-Many</label>
+				<label><input type="radio" name="q53" value="C"> C) Many-to-Many</label>
+				<label><input type="radio" name="q53" value="D"> D) Many-to-One</label>
+			</div>
+
+			<!-- Question 54 -->
+			<div class="question">
+				<h3>54. Which symbol is used in an entity-relationship (ER) diagram for an entity?</h3>
+				<label><input type="radio" name="q54" value="A"> A) Rectangle</label>
+				<label><input type="radio" name="q54" value="B"> B) Ellipse</label>
+				<label><input type="radio" name="q54" value="C"> C) Diamond</label>
+				<label><input type="radio" name="q54" value="D"> D) Circle</label>
+			</div>
+
+			<!-- Question 55 -->
+			<div class="question">
+				<h3>55. Which symbol is used in an entity-relationship (ER) diagram to indicate an attribute?</h3>
+				<label><input type="radio" name="q55" value="A"> A) Rectangle</label>
+				<label><input type="radio" name="q55" value="B"> B) Ellipse</label>
+				<label><input type="radio" name="q55" value="C"> C) Diamond</label>
+				<label><input type="radio" name="q55" value="D"> D) Triangle</label>
+			</div>
+			<!-- Question 56 -->
+			<div class="question">
+				<h3>56. What must be done before creating supertype and subtype entities?</h3>
+				<label><input type="radio" name="q56" value="A"> A) Identify common attributes</label>
+				<label><input type="radio" name="q56" value="B"> B) Identify unique attributes</label>
+				<label><input type="radio" name="q56" value="C"> C) Identify relationships</label>
+				<label><input type="radio" name="q56" value="D"> D) Identify functional dependencies</label>
+			</div>			
+			<!-- Question 57 -->
+			<div class="question">
+				<h3>57. Which term addresses columns of A being a subset of the columns of B, with A always depending on B?</h3>
+				<label><input type="radio" name="q57" value="A"> A) Functional Dependency</label>
+				<label><input type="radio" name="q57" value="B"> B) Partial Dependency</label>
+				<label><input type="radio" name="q57" value="C"> C) Transitive Dependency</label>
+				<label><input type="radio" name="q57" value="D"> D) Foreign Dependency</label>
+			</div>
+
+			<!-- Question 58 -->
+			<div class="question">
+				<h3>58. Which item in an entity-relationship (ER) diagram follows the attribute name and is placed outside of parentheses?</h3>
+				<img src="path_to_image/diagram_58.png" alt="ER Diagram for Question 58" style="width:300px; height:auto;">
+				<label><input type="radio" name="q58" value="A"> A) Attribute</label>
+				<label><input type="radio" name="q58" value="B"> B) Primary Key</label>
+				<label><input type="radio" name="q58" value="C"> C) Foreign Key</label>
+				<label><input type="radio" name="q58" value="D"> D) Surrogate Key</label>
+			</div>
+
+			<!-- Question 59 -->
+			<div class="question">
+				<h3>59. Which strategy can be used to identify primary keys when investigating data relationships?</h3>
+				<label><input type="radio" name="q59" value="A"> A) Look for unique fields</label>
+				<label><input type="radio" name="q59" value="B"> B) Look for indexed columns</label>
+				<label><input type="radio" name="q59" value="C"> C) Look for foreign keys</label>
+				<label><input type="radio" name="q59" value="D"> D) Look for composite keys</label>
+			</div>
+
+			  <!-- Question 60 -->
+            <div class="question">
+                <h3>60. How should an entity relationship phrase be read to correctly understand how one entity relates to another entity in an entity-relationship diagram (ER diagram)?</h3>
+                <!-- Logic to add Diagram 60 -->
+                <img src="path_to_your_image/diagram_60.png" alt="ER Diagram for Question 60" style="width:300px; height:auto;">
+                <label><input type="radio" name="q60" value="A"> A) Read left to right</label>
+                <label><input type="radio" name="q60" value="B"> B) Read top to bottom</label>
+                <label><input type="radio" name="q60" value="C"> C) Read right to left</label>
+                <label><input type="radio" name="q60" value="D"> D) Read bottom to top</label>
+            </div>
+
+			<!-- Question 61 -->
+			<div class="question">
+				<h3>61. Which index stores column values and row pointers in a hierarchy?</h3>
+				<img src="path_to_image/diagram_61.png" alt="ER Diagram for Question 61" style="width:300px; height:auto;">
+				<label><input type="radio" name="q61" value="A"> A) B-Tree Index</label>
+				<label><input type="radio" name="q61" value="B"> B) Hash Index</label>
+				<label><input type="radio" name="q61" value="C"> C) Bitmap Index</label>
+				<label><input type="radio" name="q61" value="D"> D) Full-text Index</label>
+			</div>
+
+			<!-- Question 62 -->
+			<div class="question">
+				<h3>62. Which term describes the optimal normal form for frequent inserts, updates, and deletes of data?</h3>
+				<label><input type="radio" name="q62" value="A"> A) First Normal Form (1NF)</label>
+				<label><input type="radio" name="q62" value="B"> B) Second Normal Form (2NF)</label>
+				<label><input type="radio" name="q62" value="C"> C) Third Normal Form (3NF)</label>
+				<label><input type="radio" name="q62" value="D"> D) Boyce-Codd Normal Form (BCNF)</label>
+			</div>
+
+			<!-- Question 63 -->
+			<div class="question">
+				<h3>63. Which relationship or association exists between a supertype entity and its subtype entities?</h3>
+				<label><input type="radio" name="q63" value="A"> A) One-to-One</label>
+				<label><input type="radio" name="q63" value="B"> B) One-to-Many</label>
+				<label><input type="radio" name="q63" value="C"> C) Many-to-Many</label>
+				<label><input type="radio" name="q63" value="D"> D) Many-to-One</label>
+			</div>
+
+			<!-- Question 64 -->
+			<div class="question">
+				<h3>64. Which symbol is used in an entity-relationship (ER) diagram for an entity?</h3>
+				<label><input type="radio" name="q64" value="A"> A) Rectangle</label>
+				<label><input type="radio" name="q64" value="B"> B) Ellipse</label>
+				<label><input type="radio" name="q64" value="C"> C) Diamond</label>
+				<label><input type="radio" name="q64" value="D"> D) Circle</label>
+			</div>
+
+			<!-- Question 65 -->
+			<div class="question">
+				<h3>65. Which symbol is used in an entity-relationship (ER) diagram to indicate an attribute?</h3>
+				<label><input type="radio" name="q65" value="A"> A) Rectangle</label>
+				<label><input type="radio" name="q65" value="B"> B) Ellipse</label>
+				<label><input type="radio" name="q65" value="C"> C) Diamond</label>
+				<label><input type="radio" name="q65" value="D"> Triangle</label>
+			</div>
+			<!-- Question 66 -->
+			<div class="question">
+				<h3>66. What must be done before creating supertype and subtype entities?</h3>
+				<label><input type="radio" name="q66" value="A"> A) Define each entity's attributes.</label>
+				<label><input type="radio" name="q66" value="B"> B) Identify common attributes in the supertype.</label>
+				<label><input type="radio" name="q66" value="C"> C) Create foreign keys for each subtype.</label>
+				<label><input type="radio" name="q66" value="D"> D) Implement inheritance in the database.</label>
+			</div>			
+			<!-- Question 67 -->
+			<div class="question">
+				<h3>67. Which term describes the process of denormalization?</h3>
+				<label><input type="radio" name="q67" value="A"> A) Breaking a table into multiple related tables</label>
+				<label><input type="radio" name="q67" value="B"> B) Reducing redundancy by creating foreign keys</label>
+				<label><input type="radio" name="q67" value="C"> C) Combining normalized tables to improve performance</label>
+				<label><input type="radio" name="q67" value="D"> D) Creating an index for a column</label>
+			</div>
+
+			<!-- Question 68 -->
+			<div class="question">
+				<h3>68. What is the term used for the entity that stores key information in a many-to-many relationship?</h3>
+				<label><input type="radio" name="q68" value="A"> A) Junction Table</label>
+				<label><input type="radio" name="q68" value="B"> B) Foreign Key</label>
+				<label><input type="radio" name="q68" value="C"> C) Primary Key</label>
+				<label><input type="radio" name="q68" value="D"> D) Superkey</label>
+			</div>
+
+            <!-- Question 69 -->
+            <div class="question">
+                <h3>69. How should an entity relationship phrase be read to correctly understand how one entity relates to another entity in an entity-relationship diagram (ER diagram)?</h3>
+                <label><input type="radio" name="q69" value="A"> A) From left to right</label>
+                <label><input type="radio" name="q69" value="B"> B) From right to left</label>
+                <label><input type="radio" name="q69" value="C"> C) Both directions</label>
+                <label><input type="radio" name="q69" value="D"> D) Depends on the context</label>
+            </div>
+
+            <button type="button" id="submit-btn">Submit Quiz</button>
+        </form>
+        
+        <!-- Results Display -->
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

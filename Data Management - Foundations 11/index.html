@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management Quiz 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Management Quiz 11</h1>
+        <h2>By Adam Smith</h2>
+        
+        <!-- Timer Display -->
+        <p id="timer" style="font-size: 18px; color: red;">Time Remaining: 100:00</p>
+        
+        <!-- Start Button -->
+        <button type="button" id="start-btn">Start Quiz</button>
+        
+        <!-- Quiz Form -->
+        <form id="quiz-form" style="display: none;">
+
+        <!-- Questions from 1 to 75 -->
+        <div class="question">
+            <h3>1. What does the Audit component in MySQL Enterprise Edition track?</h3>
+            <label><input type="radio" name="q1" value="A"> A) All database changes, including time and user details</label><br>
+            <label><input type="radio" name="q1" value="B"> B) User login times</label><br>
+            <label><input type="radio" name="q1" value="C"> C) The most frequently executed queries</label><br>
+            <label><input type="radio" name="q1" value="D"> D) Database schema changes</label>
+        </div>
+
+        <div class="question">
+            <h3>2. The LIKE operator is used to:</h3>
+            <label><input type="radio" name="q2" value="A"> A) Compare two values for equality</label><br>
+            <label><input type="radio" name="q2" value="B"> B) Search for a specified pattern in a column</label><br>
+            <label><input type="radio" name="q2" value="C"> C) Convert data types</label><br>
+            <label><input type="radio" name="q2" value="D"> D) Create a new table</label>
+        </div>
+
+        <div class="question">
+            <h3>3. In which type of table is no specific order imposed on rows?</h3>
+            <label><input type="radio" name="q3" value="A"> A) Sorted table</label><br>
+            <label><input type="radio" name="q3" value="B"> B) Hash table</label><br>
+            <label><input type="radio" name="q3" value="C"> C) Table cluster</label><br>
+            <label><input type="radio" name="q3" value="D"> D) Heap table</label>
+        </div>
+
+        <!-- Question 4 -->
+		<div class="question">
+			<h3>4. What is a database?</h3>
+			<label><input type="radio" name="q4" value="A"> A) A structured collection of data.</label><br>
+			<label><input type="radio" name="q4" value="B"> B) A list of files.</label><br>
+			<label><input type="radio" name="q4" value="C"> C) A collection of text files.</label><br>
+			<label><input type="radio" name="q4" value="D"> D) A type of spreadsheet.</label>
+		</div>
+
+		<!-- Question 5 -->
+		<div class="question">
+			<h3>5. What describes the 'heap table' structure's approach to managing free space after row deletion?</h3>
+			<label><input type="radio" name="q5" value="A"> A) Tracks free space as a linked list for future inserts.</label><br>
+			<label><input type="radio" name="q5" value="B"> B) Moves rows to the top of the table.</label><br>
+			<label><input type="radio" name="q5" value="C"> C) Replaces deleted rows with null values.</label><br>
+			<label><input type="radio" name="q5" value="D"> D) Ignores the free space.</label>
+		</div>
+
+		<!-- Question 6 -->
+		<div class="question">
+			<h3>6. What is the purpose of an ER Diagram?</h3>
+			<label><input type="radio" name="q6" value="A"> A) To visually represent the data model of a system.</label><br>
+			<label><input type="radio" name="q6" value="B"> B) To represent database performance.</label><br>
+			<label><input type="radio" name="q6" value="C"> C) To create an index in a database.</label><br>
+			<label><input type="radio" name="q6" value="D"> D) None of the above.</label>
+		</div>
+
+		<!-- Question 7 -->
+		<div class="question">
+			<h3>7. To convert a string to lower case in SQL, which function is used?</h3>
+			<label><input type="radio" name="q7" value="A"> A) LOWER().</label><br>
+			<label><input type="radio" name="q7" value="B"> B) UPPER().</label><br>
+			<label><input type="radio" name="q7" value="C"> C) INITCAP().</label><br>
+			<label><input type="radio" name="q7" value="D"> D) CONCAT().</label>
+		</div>
+
+		<!-- Question 8 -->
+		<div class="question">
+			<h3>8. Which relationship involves a salesperson and products they sell?</h3>
+			<label><input type="radio" name="q8" value="A"> A) Binary relationship.</label><br>
+			<label><input type="radio" name="q8" value="B"> B) Unary relationship.</label><br>
+			<label><input type="radio" name="q8" value="C"> C) Ternary relationship.</label><br>
+			<label><input type="radio" name="q8" value="D"> D) None of the above.</label>
+		</div>
+
+		<!-- Question 9 -->
+		<div class="question">
+			<h3>9. What is an attribute in the context of ER modeling?</h3>
+			<label><input type="radio" name="q9" value="A"> A) A descriptive property or characteristic of an entity.</label><br>
+			<label><input type="radio" name="q9" value="B"> B) A relationship between two entities.</label><br>
+			<label><input type="radio" name="q9" value="C"> C) A data type in SQL.</label><br>
+			<label><input type="radio" name="q9" value="D"> D) None of the above.</label>
+		</div>
+
+		<!-- Question 10 -->
+		<div class="question">
+			<h3>10. Which term describes the process of denormalization?</h3>
+			<label><input type="radio" name="q10" value="A"> A) Merging Tables.</label><br>
+			<label><input type="radio" name="q10" value="B"> B) Normalizing Data.</label><br>
+			<label><input type="radio" name="q10" value="C"> C) Creating indexes.</label><br>
+			<label><input type="radio" name="q10" value="D"> D) Removing duplicates.</label>
+		</div>
+
+		<!-- Question 11 -->
+		<div class="question">
+			<h3>11. The BETWEEN operator checks if a value is:</h3>
+			<label><input type="radio" name="q11" value="A"> A) Between an inclusive range of two values.</label><br>
+			<label><input type="radio" name="q11" value="B"> B) Between two exclusive values.</label><br>
+			<label><input type="radio" name="q11" value="C"> C) Outside of a given range.</label><br>
+			<label><input type="radio" name="q11" value="D"> D) Not equal to the given range.</label>
+		</div>
+
+		<!-- Question 12 -->
+		<div class="question">
+			<h3>12. The storage engine in MySQL is also known as:</h3>
+			<label><input type="radio" name="q12" value="A"> A) Storage manager.</label><br>
+			<label><input type="radio" name="q12" value="B"> B) Query engine.</label><br>
+			<label><input type="radio" name="q12" value="C"> C) SQL interpreter.</label><br>
+			<label><input type="radio" name="q12" value="D"> D) Data manager.</label>
+		</div>
+
+		<!-- Question 13 -->
+		<div class="question">
+			<h3>13. What describes data in terms of scope, format, and access?</h3>
+			<label><input type="radio" name="q13" value="A"> A) Data characteristics.</label><br>
+			<label><input type="radio" name="q13" value="B"> B) Data normalization.</label><br>
+			<label><input type="radio" name="q13" value="C"> C) Referential integrity.</label><br>
+			<label><input type="radio" name="q13" value="D"> D) Index keys.</label>
+		</div>
+
+		<!-- Question 14 -->
+		<div class="question">
+			<h3>14. Which normal form does the Order table currently satisfy IF: 1) Each OrderID has a unique value (primary key), and 2) Each entry is atomic (no repeating groups or arrays)?</h3>
+			<label><input type="radio" name="q14" value="A"> A) First Normal Form (1NF).</label><br>
+			<label><input type="radio" name="q14" value="B"> B) Second Normal Form (2NF).</label><br>
+			<label><input type="radio" name="q14" value="C"> C) Third Normal Form (3NF).</label><br>
+			<label><input type="radio" name="q14" value="D"> D) Fourth Normal Form (4NF).</label>
+		</div>
+
+		<!-- Question 15 -->
+		<div class="question">
+			<h3>15. What is an entity in an ER model?</h3>
+			<label><input type="radio" name="q15" value="A"> A) A person, place, product, concept, or activity.</label><br>
+			<label><input type="radio" name="q15" value="B"> B) A relationship between tables.</label><br>
+			<label><input type="radio" name="q15" value="C"> C) A key constraint on a table.</label><br>
+			<label><input type="radio" name="q15" value="D"> D) An index on a database.</label>
+		</div>
+
+		<!-- Question 16 -->
+		<div class="question">
+			<h3>16. In which normal form are all non-key attributes fully functionally dependent on the primary key?</h3>
+			<label><input type="radio" name="q16" value="A"> A) Second Normal Form (2NF).</label><br>
+			<label><input type="radio" name="q16" value="B"> B) First Normal Form (1NF).</label><br>
+			<label><input type="radio" name="q16" value="C"> C) Third Normal Form (3NF).</label><br>
+			<label><input type="radio" name="q16" value="D"> D) None of the above.</label>
+		</div>
+
+		<!-- Question 17 -->
+		<div class="question">
+			<h3>17. The MySQL Enterprise Edition includes components for:</h3>
+			<label><input type="radio" name="q17" value="A"> A) High-end commercial installations, like backup and security.</label><br>
+			<label><input type="radio" name="q17" value="B"> B) Only backup features.</label><br>
+			<label><input type="radio" name="q17" value="C"> C) Security patches only.</label><br>
+			<label><input type="radio" name="q17" value="D"> D) None of the above.</label>
+		</div>
+
+		<!-- Question 18 -->
+		<div class="question">
+			<h3>18. What is a binary relationship in ER modeling?</h3>
+			<label><input type="radio" name="q18" value="A"> A) A relationship between two entity types.</label><br>
+			<label><input type="radio" name="q18" value="B"> B) A relationship between one entity type.</label><br>
+			<label><input type="radio" name="q18" value="C"> C) A relationship between three entities.</label><br>
+			<label><input type="radio" name="q18" value="D"> D) None of the above.</label>
+		</div>
+
+		<!-- Question 19 -->
+		<div class="question">
+			<h3>19. Referring to the ER Diagram, how is the "Schedules" relationship read?</h3>
+			<label><input type="radio" name="q19" value="A"> A) Airline-Schedules-Flight.</label><br>
+			<label><input type="radio" name="q19" value="B"> B) Flight-Schedules-Airline.</label><br>
+			<label><input type="radio" name="q19" value="C"> C) Passenger-Schedules-Flight.</label><br>
+			<label><input type="radio" name="q19" value="D"> D) None of the above.</label>
+		</div>
+
+		<!-- Question 20 -->
+		<div class="question">
+			<h3>20. Which of the following best describes the role of a database administrator?</h3>
+			<label><input type="radio" name="q20" value="A"> A) All of the above (Designs data layout, secures database, and monitors performance).</label><br>
+			<label><input type="radio" name="q20" value="B"> B) Only designs data layout.</label><br>
+			<label><input type="radio" name="q20" value="C"> C) Only secures the database.</label><br>
+			<label><input type="radio" name="q20" value="D"> D) Only monitors performance.</label>
+		</div>
+
+		<!-- Question 21 -->
+		<div class="question">
+			<h3>21. What is a primary function of a Database Management System (DBMS)?</h3>
+			<label><input type="radio" name="q21" value="A"> A) Managing database security and access.</label><br>
+			<label><input type="radio" name="q21" value="B"> B) Generating database reports.</label><br>
+			<label><input type="radio" name="q21" value="C"> C) Scheduling queries for performance tuning.</label><br>
+			<label><input type="radio" name="q21" value="D"> D) Creating data visualization.</label>
+		</div>
+
+		<!-- Question 22 -->
+		<div class="question">
+			<h3>22. Which symbol represents a one-to-many relationship in ER Diagrams?</h3>
+			<label><input type="radio" name="q22" value="A"> A) A crow's foot.</label><br>
+			<label><input type="radio" name="q22" value="B"> B) A solid line.</label><br>
+			<label><input type="radio" name="q22" value="C"> C) A dashed line.</label><br>
+			<label><input type="radio" name="q22" value="D"> D) A triangle.</label>
+		</div>
+
+		<!-- Question 23 -->
+		<div class="question">
+			<h3>23. How are weak entities represented in an ER Diagram?</h3>
+			<label><input type="radio" name="q23" value="A"> A) With a double rectangle.</label><br>
+			<label><input type="radio" name="q23" value="B"> B) With a solid rectangle.</label><br>
+			<label><input type="radio" name="q23" value="C"> C) With a triangle.</label><br>
+			<label><input type="radio" name="q23" value="D"> D) With a dashed line.</label>
+		</div>
+
+		<!-- Question 24 -->
+		<div class="question">
+			<h3>24. Which function would you use to find the least/lowest value in a set?</h3>
+			<label><input type="radio" name="q24" value="A"> A) MIN().</label><br>
+			<label><input type="radio" name="q24" value="B"> B) MAX().</label><br>
+			<label><input type="radio" name="q24" value="C"> C) AVG().</label><br>
+			<label><input type="radio" name="q24" value="D"> D) SUM().</label>
+		</div>
+		<!-- Question 25 -->
+		<div class="question">
+			<h3>25. Which SQL function returns the current date?</h3>
+			<label><input type="radio" name="q25" value="A"> A) CURDATE().</label><br>
+			<label><input type="radio" name="q25" value="B"> B) CURRENT().</label><br>
+			<label><input type="radio" name="q25" value="C"> C) NOW().</label><br>
+			<label><input type="radio" name="q25" value="D"> D) SYSDATE().</label>
+		</div>
+
+		<!-- Question 26 -->
+		<div class="question">
+			<h3>26. The IN operator is used in a WHERE clause to:</h3>
+			<label><input type="radio" name="q26" value="A"> A) Check if a value matches any value in a list.</label><br>
+			<label><input type="radio" name="q26" value="B"> B) Exclude certain rows.</label><br>
+			<label><input type="radio" name="q26" value="C"> C) Check if a column is NULL.</label><br>
+			<label><input type="radio" name="q26" value="D"> D) Perform a JOIN operation.</label>
+		</div>
+
+		<!-- Question 27 -->
+		<div class="question">
+			<h3>27. MySQL architecture is organized into how many layers?</h3>
+			<label><input type="radio" name="q27" value="A"> A) Two.</label><br>
+			<label><input type="radio" name="q27" value="B"> B) Three.</label><br>
+			<label><input type="radio" name="q27" value="C"> C) Four.</label><br>
+			<label><input type="radio" name="q27" value="D"> D) Five.</label>
+		</div>
+
+		<!-- Question 28 -->
+		<div class="question">
+			<h3>28. MySQL Workbench is designed for:</h3>
+			<label><input type="radio" name="q28" value="A"> A) Only database administrators.</label><br>
+			<label><input type="radio" name="q28" value="B"> B) Only developers.</label><br>
+			<label><input type="radio" name="q28" value="C"> C) Both database administrators and users.</label><br>
+			<label><input type="radio" name="q28" value="D"> D) Only database users.</label>
+		</div>
+
+		<!-- Question 29 -->
+		<div class="question">
+			<h3>29. Which operation combines rows from two tables based on related columns?</h3>
+			<label><input type="radio" name="q29" value="A"> A) JOIN.</label><br>
+			<label><input type="radio" name="q29" value="B"> B) INSERT.</label><br>
+			<label><input type="radio" name="q29" value="C"> C) DELETE.</label><br>
+			<label><input type="radio" name="q29" value="D"> D) UPDATE.</label>
+		</div>
+
+		<!-- Question 30 -->
+		<div class="question">
+			<h3>30. Which SQL statement is used to remove rows of data from a database?</h3>
+			<label><input type="radio" name="q30" value="A"> A) DROP.</label><br>
+			<label><input type="radio" name="q30" value="B"> B) DELETE.</label><br>
+			<label><input type="radio" name="q30" value="C"> C) REMOVE.</label><br>
+			<label><input type="radio" name="q30" value="D"> D) CLEAR.</label>
+		</div>
+
+		<!-- Question 31 -->
+		<div class="question">
+			<h3>31. What does SQL stand for?</hh3>
+			<label><input type="radio" name="q31" value="A"> A) Simple Query Language.</label><br>
+			<label><input type="radio" name="q31" value="B"> B) Structured Query Language.</label><br>
+			<label><input type="radio" name="q31" value="C"> C) System Query Language.</label><br>
+			<label><input type="radio" name="q31" value="D"> D) Syntax Query Language.</label>
+		</div>
+
+		<!-- Question 32 -->
+		<div class="question">
+			<h3>32. What is a composite attribute?</h3>
+			<label><input type="radio" name="q32" value="A"> A) An attribute that can be divided into smaller parts, each representing a more basic attribute.</label><br>
+			<label><input type="radio" name="q32" value="B"> B) An attribute that combines multiple entities.</label><br>
+			<label><input type="radio" name="q32" value="C"> C) A primary key with multiple columns.</label><br>
+			<label><input type="radio" name="q32" value="D"> D) An attribute used in foreign keys.</label>
+		</div>
+
+		<!-- Question 33 -->
+		<div class="question">
+			<h3>33. To combine two or more columns or strings into a single string in SQL, you would use:</h3>
+			<label><input type="radio" name="q33" value="A"> A) CONCAT().</label><br>
+			<label><input type="radio" name="q33" value="B"> B) SPLIT().</label><br>
+			<label><input type="radio" name="q33" value="C"> C) MERGE().</label><br>
+			<label><input type="radio" name="q33" value="D"> D) UNION().</label>
+		</div>
+
+		<!-- Question 34 -->
+		<div class="question">
+			<h3>34. The GROUP BY statement is used to:</h3>
+			<label><input type="radio" name="q34" value="A"> A) Aggregate rows of data based on a common criterion.</label><br>
+			<label><input type="radio" name="q34" value="B"> B) Filter rows based on a condition.</label><br>
+			<label><input type="radio" name="q34" value="C"> C) Combine data from multiple tables.</label><br>
+			<label><input type="radio" name="q34" value="D"> D) Sort rows of data.</label>
+		</div>
+
+		<!-- Question 35 -->
+		<div class="question">
+			<h3>35. Which statement about NoSQL databases is true?</h3>
+			<label><input type="radio" name="q35" value="A"> A) They are optimized for big data.</label><br>
+			<label><input type="radio" name="q35" value="B"> B) They are relational databases.</label><br>
+			<label><input type="radio" name="q35" value="C"> C) They are used for structured data only.</label><br>
+			<label><input type="radio" name="q35" value="D"> D) They cannot handle unstructured data.</label>
+		</div>
+
+		<!-- Question 36 -->
+		<div class="question">
+			<h3>36. A column in Table B has been indexed. Which action would cause the index to be updated?</h3>
+			<label><input type="radio" name="q36" value="A"> A) A row is deleted from Table B.</label><br>
+			<label><input type="radio" name="q36" value="B"> B) A query is executed on Table B.</label><br>
+			<label><input type="radio" name="q36" value="C"> C) Table B is exported.</label><br>
+			<label><input type="radio" name="q36" value="D"> D) A row is selected from Table B.</label>
+		</div>
+
+		<!-- Question 37 -->
+		<div class="question">
+			<h3>37. Which of the following best describes a strong entity?</h3>
+			<label><input type="radio" name="q37" value="A"> A) An entity that has a unique identifying attribute.</label><br>
+			<label><input type="radio" name="q37" value="B"> B) An entity with no identifying attributes.</label><br>
+			<label><input type="radio" name="q37" value="C"> C) An entity that exists only in relation to another entity.</label><br>
+			<label><input type="radio" name="q37" value="D"> D) An entity without a primary key.</label>
+		</div>
+
+		<!-- Question 38 -->
+		<div class="question">
+			<h3>38. What is the result of a SELECT statement?</h3>
+			<label><input type="radio" name="q38" value="A"> A) A set of tuples.</label><br>
+			<label><input type="radio" name="q38" value="B"> B) A column of data.</label><br>
+			<label><input type="radio" name="q38" value="C"> C) A row of data.</label><br>
+			<label><input type="radio" name="q38" value="D"> D) An ordered list.</label>
+		</div>
+
+		<!-- Question 39 -->
+		<div class="question">
+			<h3>39. Who introduced the relational model?</h3>
+			<label><input type="radio" name="q39" value="A"> A) E.F. Codd.</label><br>
+			<label><input type="radio" name="q39" value="B"> B) Larry Ellison.</label><br>
+			<label><input type="radio" name="q39" value="C"> C) Bill Gates.</label><br>
+			<label><input type="radio" name="q39" value="D"> D) Steve Jobs.</label>
+		</div>
+
+		<!-- Question 40 -->
+		<div class="question">
+			<h3>40. Which layer of MySQL architecture manages connections from multiple users?</h3>
+			<label><input type="radio" name="q40" value="A"> A) Query processor.</label><br>
+			<label><input type="radio" name="q40" value="B"> B) Storage manager.</label><br>
+			<label><input type="radio" name="q40" value="C"> C) Transaction manager.</label><br>
+			<label><input type="radio" name="q40" value="D"> D) SQL optimizer.</label>
+		</div>
+
+		<!-- Question 41 -->
+		<div class="question">
+			<h3>41. What is the term for a row in a relational database?</h3>
+			<label><input type="radio" name="q41" value="A"> A) Tuple.</label><br>
+			<label><input type="radio" name="q41" value="B"> B) Record.</label><br>
+			<label><input type="radio" name="q41" value="C"> C) Attribute.</label><br>
+			<label><input type="radio" name="q41" value="D"> D) Column.</label>
+		</div>
+
+		<!-- Question 42 -->
+		<div class="question">
+			<h3>42. What does the query processor layer in MySQL do?</h3>
+			<label><input type="radio" name="q42" value="A"> A) Compiles queries into low-level instructions.</label><br>
+			<label><input type="radio" name="q42" value="B"> B) Stores data on disk.</label><br>
+			<label><input type="radio" name="q42" value="C"> C) Establishes connections.</label><br>
+			<label><input type="radio" name="q42" value="D"> D) Handles transaction management.</label>
+		</div>
+
+		<!-- Question 43 -->
+		<div class="question">
+			<h3>43. Which of the following is NOT a characteristic of a database system?</h3>
+			<label><input type="radio" name="q43" value="A"> A) Stores data in an unstructured format.</label><br>
+			<label><input type="radio" name="q43" value="B"> B) Ensures data integrity and consistency.</label><br>
+			<label><input type="radio" name="q43" value="C"> C) Supports multiple users simultaneously.</label><br>
+			<label><input type="radio" name="q43" value="D"> D) Manages access to data.</label>
+		</div>
+
+		<!-- Question 44 -->
+		<div class="question">
+			<h3>44. Which constraint ensures uniqueness in a table's column?</h3>
+			<label><input type="radio" name="q44" value="A"> A) UNIQUE KEY.</label><br>
+			<label><input type="radio" name="q44" value="B"> B) FOREIGN KEY.</label><br>
+			<label><input type="radio" name="q44" value="C"> C) PRIMARY KEY.</label><br>
+			<label><input type="radio" name="q44" value="D"> D) DEFAULT.</label>
+		</div>
+
+		<!-- Question 45 -->
+		<div class="question">
+			<h3>45. What does CRUD stand for in the context of database operations?</h3>
+			<label><input type="radio" name="q45" value="A"> A) Create, Read, Update, Delete.</label><br>
+			<label><input type="radio" name="q45" value="B"> B) Create, Remove, Update, Destroy.</label><br>
+			<label><input type="radio" name="q45" value="C"> C) Calculate, Read, Update, Define.</label><br>
+			<label><input type="radio" name="q45" value="D"> D) Combine, Review, Update, Delete.</label>
+		</div>
+
+		<!-- Question 46 -->
+		<div class="question">
+			<h3>46. In ER modeling, what describes the relationship between a salesperson and an office space/cubicle?</h3>
+			<label><input type="radio" name="q46" value="A"> A) One-to-One.</label><br>
+			<label><input type="radio" name="q46" value="B"> B) One-to-Many.</label><br>
+			<label><input type="radio" name="q46" value="C"> C) Many-to-One.</label><br>
+			<label><input type="radio" name="q46" value="D"> D) Many-to-Many.</label>
+		</div>
+
+		<!-- Question 47 -->
+		<div class="question">
+			<h3>47. To find the number of non-NULL rows in a column, you would use:</h3>
+			<label><input type="radio" name="q47" value="A"> A) COUNT().</label><br>
+			<label><input type="radio" name="q47" value="B"> B) SUM().</label><br>
+			<label><input type="radio" name="q47" value="C"> C) MAX().</label><br>
+			<label><input type="radio" name="q47" value="D"> D) MIN().</label>
+		</div>
+
+		<!-- Question 48 -->
+		<div class="question">
+			<h3>48. Which SQL command is used to delete a table?</h3>
+			<label><input type="radio" name="q48" value="A"> A) DROP TABLE.</label><br>
+			<label><input type="radio" name="q48" value="B"> B) DELETE TABLE.</label><br>
+			<label><input type="radio" name="q48" value="C"> C) REMOVE TABLE.</label><br>
+			<label><input type="radio" name="q48" value="D"> D) CLEAR TABLE.</label>
+		</div>
+
+		<!-- Question 49 -->
+		<div class="question">
+			<h3>49. In SQL, which command is used to add a row of new data into a table?</h3>
+			<label><input type="radio" name="q49" value="A"> A) INSERT INTO.</label><br>
+			<label><input type="radio" name="q49" value="B"> B) ADD ROW.</label><br>
+			<label><input type="radio" name="q49" value="C"> C) CREATE ROW.</label><br>
+			<label><input type="radio" name="q49" value="D"> D) UPDATE ROW.</label>
+		</div>
+
+		<!-- Question 50 -->
+		<div class="question">
+			<h3>50. Which component is responsible for executing instructions from the query processor?</h3>
+			<label><input type="radio" name="q50" value="A"> A) Storage engine.</label><br>
+			<label><input type="radio" name="q50" value="B"> B) Transaction manager.</label><br>
+			<label><input type="radio" name="q50" value="C"> C) SQL engine.</label><br>
+			<label><input type="radio" name="q50" value="D"> D) Security manager.</label>
+		</div>
+
+		<!-- Question 51 -->
+		<div class="question">
+			<h3>51. Which SQL clause is used to filter rows in a SELECT statement?</h3>
+			<label><input type="radio" name="q51" value="A"> A) WHERE.</label><br>
+			<label><input type="radio" name="q51" value="B"> B) FILTER.</label><br>
+			<label><input type="radio" name="q51" value="C"> C) SORT BY.</label><br>
+			<label><input type="radio" name="q51" value="D"> D) GROUP BY.</label>
+		</div>
+
+		<!-- Question 52 -->
+		<div class="question">
+			<h3>52. What is the main advantage of a sorted table?</h3>
+			<label><input type="radio" name="q52" value="A"> A) Optimal for queries that read data in sort order.</label><br>
+			<label><input type="radio" name="q52" value="B"> B) Faster data modification.</label><br>
+			<label><input type="radio" name="q52" value="C"> C) Better suited for transactional data.</label><br>
+			<label><input type="radio" name="q52" value="D"> D) Easier to delete rows.</label>
+		</div>
+
+		<!-- Question 53 -->
+		<div class="question">
+			<h3>53. In a unary relationship, what kind of relationship is described?</h3>
+			<label><input type="radio" name="q53" value="A"> A) A relationship where an entity is related to itself.</label><br>
+			<label><input type="radio" name="q53" value="B"> B) A relationship between two entities.</label><br>
+			<label><input type="radio" name="q53" value="C"> C) A one-to-one relationship.</label><br>
+			<label><input type="radio" name="q53" value="D"> D) A many-to-many relationship.</label>
+		</div>
+
+		<!-- Question 54 -->
+		<div class="question">
+			<h3>54. What does modality represent in an ER Diagram?</h3>
+			<label><input type="radio" name="q54" value="A"> A) The minimum number of entity occurrences that can be involved in a relationship.</label><br>
+			<label><input type="radio" name="q54" value="B"> B) The maximum number of entity occurrences.</label><br>
+			<label><input type="radio" name="q54" value="C"> C) The unique identifier of the relationship.</label><br>
+			<label><input type="radio" name="q54" value="D"> D) The total number of attributes.</label>
+		</div>
+
+		<!-- Question 55 -->
+		<div class="question">
+			<h3>55. What is an associative entity?</h3>
+			<label><input type="radio" name="q55" value="A"> A) An entity that is used to represent a many-to-many relationship with attributes.</label><br>
+			<label><input type="radio" name="q55" value="B"> B) An entity that links one-to-one relationships.</label><br>
+			<label><input type="radio" name="q55" value="C"> C) An entity that holds all foreign key constraints.</label><br>
+			<label><input type="radio" name="q55" value="D"> D) An entity used for normalization.</label>
+		</div>
+
+		<!-- Question 56 -->
+		<div class="question">
+			<h3>56. Which of the following is a valid SQL data type?</h3>
+			<label><input type="radio" name="q56" value="A"> A) VARCHAR.</label><br>
+			<label><input type="radio" name="q56" value="B"> B) NUM.</label><br>
+			<label><input type="radio" name="q56" value="C"> C) STR.</label><br>
+			<label><input type="radio" name="q56" value="D"> D) TXT.</label>
+		</div>
+
+		<!-- Question 57 -->
+		<div class="question">
+			<h3>57. What characterizes a table cluster?</h3>
+			<label><input type="radio" name="q57" value="A"> A) Interleaves rows of two or more tables in the same storage area.</label><br>
+			<label><input type="radio" name="q57" value="B"> B) Stores all rows of a table sequentially.</label><br>
+			<label><input type="radio" name="q57" value="C"> C) Uses a primary key for each table in the cluster.</label><br>
+			<label><input type="radio" name="q57" value="D"> D) Splits rows between different storage areas.</label>
+		</div>
+
+		<!-- Question 58 -->
+		<div class="question">
+			<h3>58. Which storage media has the fastest access time?</h3>
+			<label><input type="radio" name="q58" value="A"> A) Main memory (RAM).</label><br>
+			<label><input type="radio" name="q58" value="B"> B) Hard disk drives (HDD).</label><br>
+			<label><input type="radio" name="q58" value="C"> C) Solid-state drives (SSD).</label><br>
+			<label><input type="radio" name="q58" value="D"> D) Magnetic tape.</label>
+		</div>
+
+		<!-- Question 59 -->
+		<div class="question">
+			<h3>59. What does the cardinality of a relationship indicate?</h3>
+			<label><input type="radio" name="q59" value="A"> A) The maximum and minimum number of entity instances that can be involved in a relationship.</label><br>
+			<label><input type="radio" name="q59" value="B"> B) The number of attributes per entity.</label><br>
+			<label><input type="radio" name="q59" value="C"> C) The total number of relationships.</label><br>
+			<label><input type="radio" name="q59" value="D"> D) The number of tables in the database.</label>
+		</div>
+
+		<!-- Question 60 -->
+		<div class="question">
+			<h3>60. What is the main purpose of the MySQL Monitor in the Enterprise Edition?</h3>
+			<label><input type="radio" name="q60" value="A"> A) To collect and display system performance information.</label><br>
+			<label><input type="radio" name="q60" value="B"> B) To manage user accounts.</label><br>
+			<label><input type="radio" name="q60" value="C"> C) To automate backups.</label><br>
+			<label><input type="radio" name="q60" value="D"> D) To optimize query performance.</label>
+		</div>
+
+		<!-- Question 61 -->
+		<div class="question">
+			<h3>61. What ensures the consistency and validity of relationships between tables?</h3>
+			<label><input type="radio" name="q61" value="A"> A) Referential integrity.</label><br>
+			<label><input type="radio" name="q61" value="B"> B) Entity integrity.</label><br>
+			<label><input type="radio" name="q61" value="C"> C) Attribute integrity.</label><br>
+			<label><input type="radio" name="q61" value="D"> D) Tuple integrity.</label>
+		</div>
+
+		<!-- Question 62 -->
+		<div class="question">
+			<h3>62. Which normal form removes partial dependencies?</h3>
+			<label><input type="radio" name="q62" value="A"> A) Second Normal Form (2NF).</label><br>
+			<label><input type="radio" name="q62" value="B"> B) First Normal Form (1NF).</label><br>
+			<label><input type="radio" name="q62" value="C"> C) Third Normal Form (3NF).</label><br>
+			<label><input type="radio" name="q62" value="D"> D) Boyce-Codd Normal Form (BCNF).</label>
+		</div>
+
+		<!-- Question 63 -->
+		<div class="question">
+			<h3>63. What does a unique attribute signify in ER modeling?</h3>
+			<label><input type="radio" name="q63" value="A"> A) An attribute that identifies each entity instance uniquely.</label><br>
+			<label><input type="radio" name="q63" value="B"> B) An attribute shared between entities.</label><br>
+			<label><input type="radio" name="q63" value="C"> C) An attribute that can be NULL.</label><br>
+			<label><input type="radio" name="q63" value="D"> D) An attribute that does not repeat.</label>
+		</div>
+
+		<!-- Question 64 -->
+		<div class="question">
+			<h3>64. To calculate the square root of a number in SQL, you would use:</h3>
+			<label><input type="radio" name="q64" value="A"> A) SQRT().</label><br>
+			<label><input type="radio" name="q64" value="B"> B) POWER().</label><br>
+			<label><input type="radio" name="q64" value="C"> C) ROUND().</label><br>
+			<label><input type="radio" name="q64" value="D"> D) CEIL().</label>
+		</div>
+
+		<!-- Question 65 -->
+		<div class="question">
+			<h3>65. What is a significant disadvantage of table clusters for certain queries?</h3>
+			<label><input type="radio" name="q65" value="A"> A) Performs poorly for joins on non-cluster key columns.</label><br>
+			<label><input type="radio" name="q65" value="B"> B) Slower data retrieval.</label><br>
+			<label><input type="radio" name="q65" value="C"> C) Requires more storage space.</label><br>
+			<label><input type="radio" name="q65" value="D"> D) Makes queries more complex.</label>
+		</div>
+
+		<!-- Question 66 -->
+		<div class="question">
+			<h3>66. How does a hash table determine the bucket containing each row?</h3>
+			<label><input type="radio" name="q66" value="A"> A) Using a hash function and hash key.</label><br>
+			<label><input type="radio" name="q66" value="B"> B) Sorting rows based on a key.</label><br>
+			<label><input type="radio" name="q66" value="C"> C) Dividing rows based on clusters.</label><br>
+			<label><input type="radio" name="q66" value="D"> D) Using row offsets and tablespaces.</label>
+		</div>
+
+		<!-- Question 67 -->
+		<div class="question">
+			<h3>67. What is a primary feature of relational databases?</h3>
+			<label><input type="radio" name="q67" value="A"> A) Tables.</label><br>
+			<label><input type="radio" name="q67" value="B"> B) Unstructured data.</label><br>
+			<label><input type="radio" name="q67" value="C"> C) Indexes.</label><br>
+			<label><input type="radio" name="q67" value="D"> D) Logs.</label>
+		</div>
+
+		<!-- Question 68 -->
+		<div class="question">
+			<h3>68. Which normal form removes partial dependencies?</h3>
+			<label><input type="radio" name="q68" value="A"> A) Second Normal Form (2NF).</label><br>
+			<label><input type="radio" name="q68" value="B"> B) First Normal Form (1NF).</label><br>
+			<label><input type="radio" name="q68" value="C"> C) Third Normal Form (3NF).</label><br>
+			<label><input type="radio" name="q68" value="D"> D) Boyce-Codd Normal Form (BCNF).</label>
+		</div>
+
+		<!-- Question 69 -->
+		<div class="question">
+			<h3>69. What does a unique attribute signify in ER modeling?</h3>
+			<label><input type="radio" name="q69" value="A"> A) An attribute that identifies each entity instance uniquely.</label><br>
+			<label><input type="radio" name="q69" value="B"> B) An attribute shared between entities.</label><br>
+			<label><input type="radio" name="q69" value="C"> C) An attribute that can be NULL.</label><br>
+			<label><input type="radio" name="q69" value="D"> D) An attribute that does not repeat.</label>
+		</div>
+		<!-- Question 70 -->
+		<div class="question">
+			<h3>70. What is third normal form (3NF) in database design?</h3>
+			<label><input type="radio" name="q70" value="A"> A) A normal form that ensures all non-key columns depend on unique columns only.</label><br>
+			<label><input type="radio" name="q70" value="B"> B) A normal form that eliminates all foreign key dependencies.</label><br>
+			<label><input type="radio" name="q70" value="C"> C) A normal form that eliminates all duplicate rows in a table.</label><br>
+			<label><input type="radio" name="q70" value="D"> D) A normal form that reduces redundancy by merging tables.</label>
+		</div>
+		<!-- Question 71 -->
+		<div class="question">
+			<h3>71. Which of the following best represents a ternary relationship?</h3>
+			<label><input type="radio" name="q71" value="A"> A) A relationship involving three different entity types.</label><br>
+			<label><input type="radio" name="q71" value="B"> B) A relationship involving two entity types.</label><br>
+			<label><input type="radio" name="q71" value="C"> C) A relationship with one entity type.</label><br>
+			<label><input type="radio" name="q71" value="D"> D) A relationship that loops back on itself.</label>
+		</div>
+
+		<!-- Question 72 -->
+		<div class="question">
+			<h3>72. Which SQL command is used to create a new table?</h3>
+			<label><input type="radio" name="q72" value="A"> A) CREATE TABLE.</label><br>
+			<label><input type="radio" name="q72" value="B"> B) INSERT TABLE.</label><br>
+			<label><input type="radio" name="q72" value="C"> C) ALTER TABLE.</label><br>
+			<label><input type="radio" name="q72" value="D"> D) ADD TABLE.</label>
+		</div>
+
+		<!-- Question 73 -->
+		<div class="question">
+			<h3>73. What is the purpose of the ON clause in SQL joins?</h3>
+			<label><input type="radio" name="q73" value="A"> A) Specifies the condition for the join between the two tables.</label><br>
+			<label><input type="radio" name="q73" value="B"> B) Defines the columns to retrieve.</label><br>
+			<label><input type="radio" name="q73" value="C"> C) Sets the filter criteria.</label><br>
+			<label><input type="radio" name="q73" value="D"> D) Aggregates results for the JOIN.</label>
+		</div>
+
+		<!-- Question 74 -->
+		<div class="question">
+			<h3>74. What represents a relationship in an ER Diagram?</h3>
+			<label><input type="radio" name="q74" value="A"> A) A line connecting entities.</label><br>
+			<label><input type="radio" name="q74" value="B"> B) A circle representing an attribute.</label><br>
+			<label><input type="radio" name="q74" value="C"> C) A double rectangle for weak entities.</label><br>
+			<label><input type="radio" name="q74" value="D"> D) A diamond shape representing a foreign key.</label>
+		</div>
+
+
+		
+
+		<!-- Question 75 -->
+		<div class="question">
+			<h3>75. What is intersection data in an ER Diagram?</h3>
+			<label><input type="radio" name="q75" value="A"> A) Data that describes the relationship between two entities.</label><br>
+			<label><input type="radio" name="q75" value="B"> B) Data stored across two tables.</label><br>
+			<label><input type="radio" name="q75" value="C"> C) Data used to connect foreign keys.</label><br>
+			<label><input type="radio" name="q75" value="D"> D) None of the above.</label>
+		</div>
+
+
+
+       
+
+
+
+        <!-- End of quiz form -->
+        <button type="submit" id="submit-btn">Submit Quiz</button>
+        </form>
+        
+        <!-- Results Display -->
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

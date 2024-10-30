@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Basics and Queries Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SQL Basics and Queries Quiz</h1>
+        <h2>by Adam Smith</h2>
+        
+        <!-- Timer Display -->
+        <p id="timer" style="font-size: 18px; color: red;">Time Remaining: 100:00</p>
+        
+        <!-- Start Button -->
+        <button type="button" id="start-btn">Start Quiz</button>
+        
+        <!-- Quiz Form -->
+        <form id="quiz-form" style="display: none;">
+            
+            <!-- Question 1 -->
+		<div class="question">
+			<h3>1. What is a primary key?</h3>
+			<label><input type="radio" name="q1" value="A"> A) A key that can contain duplicate values</label>
+			<label><input type="radio" name="q1" value="B"> B) A unique identifier for each row in a table.</label>
+			<label><input type="radio" name="q1" value="C"> C) A key that links two tables</label>
+			<label><input type="radio" name="q1" value="D"> D) A key that can be NULL</label>
+		</div>
+
+		<!-- Question 2 -->
+		<div class="question">
+			<h3>2. Can a table have multiple primary keys?</h3>
+			<label><input type="radio" name="q2" value="A"> A) Yes, it can have as many as needed</label>
+			<label><input type="radio" name="q2" value="B"> B) No, but it can have a composite primary key.</label>
+			<label><input type="radio" name="q2" value="C"> C) Yes, only if there are multiple columns</label>
+			<label><input type="radio" name="q2" value="D"> D) Yes, if they all contain unique values</label>
+		</div>
+
+		<!-- Question 3 -->
+		<div class="question">
+			<h3>3. Define composite primary key.</h3>
+			<label><input type="radio" name="q3" value="A"> A) A key that uses one column</label>
+			<label><input type="radio" name="q3" value="B"> B) A key made up of multiple columns to ensure uniqueness.</label>
+			<label><input type="radio" name="q3" value="C"> C) A foreign key that links to another table</label>
+			<label><input type="radio" name="q3" value="D"> D) A key that allows duplicates</label>
+		</div>
+
+		<!-- Question 4 -->
+		<div class="question">
+			<h3>4. What is a foreign key?</h3>
+			<label><input type="radio" name="q4" value="A"> A) A unique identifier for a table</label>
+			<label><input type="radio" name="q4" value="B"> B) A link between two tables that maintains referential integrity.</label>
+			<label><input type="radio" name="q4" value="C"> C) A column that allows duplicates</label>
+			<label><input type="radio" name="q4" value="D"> D) A column that cannot be NULL</label>
+		</div>
+
+		<!-- Question 5 -->
+		<div class="question">
+			<h3>5. How does a foreign key ensure referential integrity?</h3>
+			<label><input type="radio" name="q5" value="A"> A) By allowing NULL values</label>
+			<label><input type="radio" name="q5" value="B"> B) It restricts values to only those that exist in the referenced table.</label>
+			<label><input type="radio" name="q5" value="C"> C) By removing duplicates</label>
+			<label><input type="radio" name="q5" value="D"> D) By allowing multiple primary keys</label>
+		</div>
+		
+
+		<!-- Question 6 -->
+		<div class="question">
+			<h3>6. What happens if a foreign key constraint is violated?</h3>
+			<label><input type="radio" name="q6" value="A"> A) The database allows the operation</label>
+			<label><input type="radio" name="q6" value="B"> B) The database prevents the operation to preserve data integrity.</label>
+			<label><input type="radio" name="q6" value="C"> C) The database removes all rows</label>
+			<label><input type="radio" name="q6" value="D"> D) The database duplicates the entry</label>
+		</div>
+		<!-- Question 7 -->
+		<div class="question">
+			<h3>7. Can a foreign key contain NULL values?</h3>
+			<label><input type="radio" name="q7" value="A"> A) No, it cannot contain NULL values</label>
+			<label><input type="radio" name="q7" value="B"> B) Yes, unless it is part of a primary key.</label>
+			<label><input type="radio" name="q7" value="C"> C) Only if the primary key allows NULL</label>
+			<label><input type="radio" name="q7" value="D"> D) NULL values are not allowed in any constraint</label>
+		</div>
+
+		<!-- Question 8 -->
+		<div class="question">
+			<h3>8. What is a unique constraint?</h3>
+			<label><input type="radio" name="q8" value="A"> A) It ensures all values in a column are identical</label>
+			<label><input type="radio" name="q8" value="B"> B) Ensures all values in a column are unique.</label>
+			<label><input type="radio" name="q8" value="C"> C) It guarantees all values are NULL</label>
+			<label><input type="radio" name="q8" value="D"> D) Only allows numeric values</label>
+		</div>
+
+		<!-- Question 9 -->
+		<div class="question">
+			<h3>9. How is a unique constraint different from a primary key?</h3>
+			<label><input type="radio" name="q9" value="A"> A) Both allow duplicates</label>
+			<label><input type="radio" name="q9" value="B"> B) A primary key cannot be NULL, while a unique constraint can allow one NULL.</label>
+			<label><input type="radio" name="q9" value="C"> C) Primary keys allow more than one unique value</label>
+			<label><input type="radio" name="q9" value="D"> D) Unique constraints allow duplicates</label>
+		</div>
+
+		<!-- Question 10 -->
+		<div class="question">
+			<h3>10. Can a table have multiple unique constraints?</h3>
+			<label><input type="radio" name="q10" value="A"> A) No, only one per table</label>
+			<label><input type="radio" name="q10" value="B"> B) Yes, on different columns.</label>
+			<label><input type="radio" name="q10" value="C"> C) Only if all columns are unique</label>
+			<label><input type="radio" name="q10" value="D"> D) Only on the primary key column</label>
+		</div>
+
+		<!-- Question 11 -->
+		<div class="question">
+			<h3>11. What is a CHECK constraint?</h3>
+			<label><input type="radio" name="q11" value="A"> A) Ensures all values are unique</label>
+			<label><input type="radio" name="q11" value="B"> B) It enforces specific conditions on column values.</label>
+			<label><input type="radio" name="q11" value="C"> C) Allows only NULL values</label>
+			<label><input type="radio" name="q11" value="D"> D) Restricts data to numeric types</label>
+		</div>
+
+		<!-- Question 12 -->
+		<div class="question">
+			<h3>12. What is a DEFAULT constraint?</h3>
+			<label><input type="radio" name="q12" value="A"> A) Ensures all columns are filled</label>
+			<label><input type="radio" name="q12" value="B"> B) Sets a default value when none is provided.</label>
+			<label><input type="radio" name="q12" value="C"> C) Prevents NULL values</label>
+			<label><input type="radio" name="q12" value="D"> D) Restricts values to primary keys</label>
+		</div>
+
+		<!-- Question 13 -->
+		<div class="question">
+			<h3>13. What does a NOT NULL constraint enforce?</h3>
+			<label><input type="radio" name="q13" value="A"> A) Allows only NULL values</label>
+			<label><input type="radio" name="q13" value="B"> B) Prohibits NULL values in a column.</label>
+			<label><input type="radio" name="q13" value="C"> C) Only accepts numeric data</label>
+			<label><input type="radio" name="q13" value="D"> D) Prevents duplicates</label>
+		</div>
+
+		<!-- Question 14 -->
+		<div class="question">
+			<h3>14. How is a CHECK constraint different from a UNIQUE constraint?</h3>
+			<label><input type="radio" name="q14" value="A"> A) CHECK allows duplicates</label>
+			<label><input type="radio" name="q14" value="B"> B) CHECK enforces specific conditions; UNIQUE ensures no duplicates.</label>
+			<label><input type="radio" name="q14" value="C"> C) Both allow NULL values</label>
+			<label><input type="radio" name="q14" value="D"> D) UNIQUE only allows numbers</label>
+		</div>
+
+		<!-- Question 15 -->
+		<div class="question">
+			<h3>15. What is referential integrity?</h3>
+			<label><input type="radio" name="q15" value="A"> A) Ensuring all values are NULL</label>
+			<label><input type="radio" name="q15" value="B"> B) Ensures relationships between tables remain consistent.</label>
+			<label><input type="radio" name="q15" value="C"> C) Allowing duplicate values in tables</label>
+			<label><input type="radio" name="q15" value="D"> D) Removing primary keys from a table</label>
+		</div>
+
+		<!-- Question 16 -->
+		<div class="question">
+			<h3>16. What does CASCADE DELETE do in a foreign key relationship?</h3>
+			<label><input type="radio" name="q16" value="A"> A) It duplicates all child records</label>
+			<label><input type="radio" name="q16" value="B"> B) Deleting a record in a parent table deletes corresponding records in the child table.</label>
+			<label><input type="radio" name="q16" value="C"> C) It only allows updates</label>
+			<label><input type="radio" name="q16" value="D"> D) Sets all foreign keys to default values</label>
+		</div>
+
+		<!-- Question 17 -->
+		<div class="question">
+			<h3>17. What is ON DELETE SET NULL?</h3>
+			<label><input type="radio" name="q17" value="A"> A) Sets primary keys to NULL on deletion</label>
+			<label><input type="radio" name="q17" value="B"> B) Sets foreign key values to NULL when the referenced record is deleted.</label>
+			<label><input type="radio" name="q17" value="C"> C) Deletes all NULL values</label>
+			<label><input type="radio" name="q17" value="D"> D) Allows duplicate foreign keys</label>
+		</div>
+
+		<!-- Question 18 -->
+		<div class="question">
+			<h3>18. What does ON UPDATE CASCADE do?</h3>
+			<label><input type="radio" name="q18" value="A"> A) Sets all columns to default</label>
+			<label><input type="radio" name="q18" value="B"> B) Automatically updates foreign key values if the referenced primary key changes.</label>
+			<label><input type="radio" name="q18" value="C"> C) Only allows INSERT operations</label>
+			<label><input type="radio" name="q18" value="D"> D) Disallows updates in all tables</label>
+		</div>
+
+		<!-- Question 19 -->
+		<div class="question">
+			<h3>19. What is a candidate key?</h3>
+			<label><input type="radio" name="q19" value="A"> A) A key that allows duplicates</label>
+			<label><input type="radio" name="q19" value="B"> B) A column or set of columns that can uniquely identify rows but is not the primary key.</label>
+			<label><input type="radio" name="q19" value="C"> C) A foreign key used across tables</label>
+			<label><input type="radio" name="q19" value="D"> D) Only numeric keys are candidates</label>
+		</div>
+
+		<!-- Question 20 -->
+		<div class="question">
+			<h3>20. Can a primary key be changed in a table?</h3>
+			<label><input type="radio" name="q20" value="A"> A) No, it can never be changed</label>
+			<label><input type="radio" name="q20" value="B"> B) Yes, but it requires updating references in related tables.</label>
+			<label><input type="radio" name="q20" value="C"> C) Only if it contains NULL values</label>
+			<label><input type="radio" name="q20" value="D"> D) Only if the table is empty</label>
+		</div>
+
+				<!-- Question 21 -->
+		<div class="question">
+			<h3>21. What is a surrogate key?</h3>
+			<label><input type="radio" name="q21" value="A"> A) A key derived from application data</label>
+			<label><input type="radio" name="q21" value="B"> B) An artificial, unique identifier not derived from application data.</label>
+			<label><input type="radio" name="q21" value="C"> C) A key that must be composed of multiple columns</label>
+			<label><input type="radio" name="q21" value="D"> D) A key only used in composite keys</label>
+		</div>
+
+		<!-- Question 22 -->
+		<div class="question">
+			<h3>22. When would you use a composite foreign key?</h3>
+			<label><input type="radio" name="q22" value="A"> A) When multiple columns are needed to reference a composite primary key.</label>
+			<label><input type="radio" name="q22" value="B"> B) When only one column is needed to enforce uniqueness</label>
+			<label><input type="radio" name="q22" value="C"> C) When you only want to restrict NULL values</label>
+			<label><input type="radio" name="q22" value="D"> D) When a single primary key is sufficient</label>
+		</div>
+
+		<!-- Question 23 -->
+		<div class="question">
+			<h3>23. What is a self-referencing foreign key?</h3>
+			<label><input type="radio" name="q23" value="A"> A) A key that references a column in a different table</label>
+			<label><input type="radio" name="q23" value="B"> B) A foreign key that references a column within the same table.</label>
+			<label><input type="radio" name="q23" value="C"> C) A key that allows duplicate values</label>
+			<label><input type="radio" name="q23" value="D"> D) A key that is used only in composite keys</label>
+		</div>
+
+		<!-- Question 24 -->
+		<div class="question">
+			<h3>24. Explain the purpose of a UNIQUE constraint on multiple columns.</h3>
+			<label><input type="radio" name="q24" value="A"> A) Ensures each column contains unique values</label>
+			<label><input type="radio" name="q24" value="B"> B) Ensures the combination of column values is unique.</label>
+			<label><input type="radio" name="q24" value="C"> C) Ensures all values are NULL</label>
+			<label><input type="radio" name="q24" value="D"> D) Ensures only one column is unique</label>
+		</div>
+
+		<!-- Question 25 -->
+		<div class="question">
+			<h3>25. Can a foreign key reference multiple columns?</h3>
+			<label><input type="radio" name="q25" value="A"> A) No, it must reference only one column</label>
+			<label><input type="radio" name="q25" value="B"> B) Yes, it can reference a composite primary key.</label>
+			<label><input type="radio" name="q25" value="C"> C) Yes, but only if all columns are primary keys</label>
+			<label><input type="radio" name="q25" value="D"> D) No, only single columns are allowed</label>
+		</div>
+
+		<!-- Question 26 -->
+		<div class="question">
+			<h3>26. What is a composite key?</h3>
+			<label><input type="radio" name="q26" value="A"> A) A single column unique identifier</label>
+			<label><input type="radio" name="q26" value="B"> B) A combination of two or more columns that uniquely identifies a record.</label>
+			<label><input type="radio" name="q26" value="C"> C) A key that must be foreign</label>
+			<label><input type="radio" name="q26" value="D"> D) A key that can be NULL</label>
+		</div>
+
+		<!-- Question 27 -->
+		<div class="question">
+			<h3>27. How does a CHECK constraint enforce business rules?</h3>
+			<label><input type="radio" name="q27" value="A"> A) By validating data against specific conditions.</label>
+			<label><input type="radio" name="q27" value="B"> B) By allowing NULL values</label>
+			<label><input type="radio" name="q27" value="C"> C) By duplicating rows</label>
+			<label><input type="radio" name="q27" value="D"> D) By enforcing uniqueness</label>
+		</div>
+
+		<!-- Question 28 -->
+		<div class="question">
+			<h3>28. Can a CHECK constraint reference columns from other tables?</h3>
+			<label><input type="radio" name="q28" value="A"> A) Yes, it can reference any table</label>
+			<label><input type="radio" name="q28" value="B"> B) No, CHECK constraints can only reference columns within the same table.</label>
+			<label><input type="radio" name="q28" value="C"> C) Only if it’s a primary key</label>
+			<label><input type="radio" name="q28" value="D"> D) Only if there are unique constraints</label>
+		</div>
+
+		<!-- Question 29 -->
+		<div class="question">
+			<h3>29. What is an alternate key?</h3>
+			<label><input type="radio" name="q29" value="A"> A) A candidate key that is not chosen as the primary key.</label>
+			<label><input type="radio" name="q29" value="B"> B) A key that must be unique</label>
+			<label><input type="radio" name="q29" value="C"> C) A foreign key across multiple tables</label>
+			<label><input type="radio" name="q29" value="D"> D) A key that is always composite</label>
+		</div>
+
+		<!-- Question 30 -->
+		<div class="question">
+			<h3>30. What is an exclusion constraint?</h3>
+			<label><input type="radio" name="q30" value="A"> A) A constraint that allows duplicates</label>
+			<label><input type="radio" name="q30" value="B"> B) Ensures no two rows match a specified combination of columns.</label>
+			<label><input type="radio" name="q30" value="C"> C) Ensures all values are unique</label>
+			<label><input type="radio" name="q30" value="D"> D) Ensures all columns are NULL</label>
+		</div>
+
+		<!-- Question 31 -->
+		<div class="question">
+			<h3>31. What is an index?</h3>
+			<label><input type="radio" name="q31" value="A"> A) A column that allows duplicates</label>
+			<label><input type="radio" name="q31" value="B"> B) A database object that speeds up data retrieval by providing quick lookup.</label>
+			<label><input type="radio" name="q31" value="C"> C) A column that must be NULL</label>
+			<label><input type="radio" name="q31" value="D"> D) A column that references a primary key</label>
+		</div>
+
+		<!-- Question 32 -->
+		<div class="question">
+			<h3>32. How does an index improve query performance?</h3>
+			<label><input type="radio" name="q32" value="A"> A) By allowing direct access to rows without scanning the entire table.</label>
+			<label><input type="radio" name="q32" value="B"> B) By removing duplicates</label>
+			<label><input type="radio" name="q32" value="C"> C) By allowing multiple primary keys</label>
+			<label><input type="radio" name="q32" value="D"> D) By allowing NULL values</label>
+		</div>
+
+		<!-- Question 33 -->
+		<div class="question">
+			<h3>33. What is a clustered index?</h3>
+			<label><input type="radio" name="q33" value="A"> A) An index that creates a separate structure from the data table</label>
+			<label><input type="radio" name="q33" value="B"> B) An index that organizes the data rows in the table based on the index key.</label>
+			<label><input type="radio" name="q33" value="C"> C) An index that allows duplicates</label>
+			<label><input type="radio" name="q33" value="D"> D) An index that only applies to NULL columns</label>
+		</div>
+		<!-- Question 34 -->
+		<div class="question">
+			<h3>34. How does a non-clustered index differ from a clustered index?</h3>
+			<label><input type="radio" name="q34" value="A"> A) It organizes data rows physically on disk</label>
+			<label><input type="radio" name="q34" value="B"> B) It creates a separate structure from the data table.</label>
+			<label><input type="radio" name="q34" value="C"> C) It allows only unique values</label>
+			<label><input type="radio" name="q34" value="D"> D) It only applies to primary keys</label>
+		</div>
+
+		<!-- Question 35 -->
+		<div class="question">
+			<h3>35. What is a unique index?</h3>
+			<label><input type="radio" name="q35" value="A"> A) An index that allows duplicates</label>
+			<label><input type="radio" name="q35" value="B"> B) An index that ensures all values in the indexed column(s) are unique.</label>
+			<label><input type="radio" name="q35" value="C"> C) An index that only works on foreign keys</label>
+			<label><input type="radio" name="q35" value="D"> D) An index that stores NULL values</label>
+		</div>
+
+		<!-- Question 36 -->
+		<div class="question">
+			<h3>36. Can a table have multiple clustered indexes?</h3>
+			<label><input type="radio" name="q36" value="A"> A) Yes, it can have several</label>
+			<label><input type="radio" name="q36" value="B"> B) No, only one clustered index is allowed per table.</label>
+			<label><input type="radio" name="q36" value="C"> C) Yes, if they are unique</label>
+			<label><input type="radio" name="q36" value="D"> D) No, unless the table is indexed on all columns</label>
+		</div>
+
+		<!-- Question 37 -->
+		<div class="question">
+			<h3>37. What is a covering index?</h3>
+			<label><input type="radio" name="q37" value="A"> A) An index that contains all rows in the table</label>
+			<label><input type="radio" name="q37" value="B"> B) An index that includes all the columns needed by a query, eliminating the need to access the table itself.</label>
+			<label><input type="radio" name="q37" value="C"> C) An index that only allows unique values</label>
+			<label><input type="radio" name="q37" value="D"> D) An index for foreign key columns only</label>
+		</div>
+
+		<!-- Question 38 -->
+		<div class="question">
+			<h3>38. When would you use a partial index?</h3>
+			<label><input type="radio" name="q38" value="A"> A) To index the entire table</label>
+			<label><input type="radio" name="q38" value="B"> B) To index a subset of rows based on a condition.</label>
+			<label><input type="radio" name="q38" value="C"> C) To index only unique rows</label>
+			<label><input type="radio" name="q38" value="D"> D) To index all foreign key columns</label>
+		</div>
+
+		<!-- Question 39 -->
+		<div class="question">
+			<h3>39. What is a composite index?</h3>
+			<label><input type="radio" name="q39" value="A"> A) An index on a single column</label>
+			<label><input type="radio" name="q39" value="B"> B) An index on multiple columns to improve multi-column queries.</label>
+			<label><input type="radio" name="q39" value="C"> C) An index for unique values only</label>
+			<label><input type="radio" name="q39" value="D"> D) An index that only applies to primary keys</label>
+		</div>
+
+		<!-- Question 40 -->
+		<div class="question">
+			<h3>40. How does indexing affect inserts and updates?</h3>
+			<label><input type="radio" name="q40" value="A"> A) It speeds them up</label>
+			<label><input type="radio" name="q40" value="B"> B) It can slow down these operations as the index must also be updated.</label>
+			<label><input type="radio" name="q40" value="C"> C) It has no effect</label>
+			<label><input type="radio" name="q40" value="D"> D) It only affects deletes</label>
+		</div>
+
+		<!-- Question 41 -->
+		<div class="question">
+			<h3>41. What is a primary key index?</h3>
+			<label><input type="radio" name="q41" value="A"> A) An index that allows duplicates</label>
+			<label><input type="radio" name="q41" value="B"> B) An index automatically created on the primary key column(s) to ensure uniqueness.</label>
+			<label><input type="radio" name="q41" value="C"> C) An index that stores only NULL values</label>
+			<label><input type="radio" name="q41" value="D"> D) An index for foreign keys only</label>
+		</div>
+
+		<!-- Question 42 -->
+		<div class="question">
+			<h3>42. What is a bitmap index?</h3>
+			<label><input type="radio" name="q42" value="A"> A) An index for columns with many unique values</label>
+			<label><input type="radio" name="q42" value="B"> B) An index efficient for columns with a limited number of distinct values.</label>
+			<label><input type="radio" name="q42" value="C"> C) An index that only applies to primary keys</label>
+			<label><input type="radio" name="q42" value="D"> D) An index that allows NULL values</label>
+		</div>
+
+		<!-- Question 43 -->
+		<div class="question">
+			<h3>43. When is a hash index useful?</h3>
+			<label><input type="radio" name="q43" value="A"> A) For range queries</label>
+			<label><input type="radio" name="q43" value="B"> B) For fast equality comparisons, not for range queries.</label>
+			<label><input type="radio" name="q43" value="C"> C) For textual data only</label>
+			<label><input type="radio" name="q43" value="D"> D) For joins only</label>
+		</div>
+
+		<!-- Question 44 -->
+		<div class="question">
+			<h3>44. How do you create an index on a column?</h3>
+			<label><input type="radio" name="q44" value="A"> A) Using the ALTER statement</label>
+			<label><input type="radio" name="q44" value="B"> B) Using the CREATE INDEX statement.</label>
+			<label><input type="radio" name="q44" value="C"> C) Using the UPDATE statement</label>
+			<label><input type="radio" name="q44" value="D"> D) Using the DELETE statement</label>
+		</div>
+
+		<!-- Question 45 -->
+		<div class="question">
+			<h3>45. What is the syntax to drop an index?</h3>
+			<label><input type="radio" name="q45" value="A"> A) DELETE INDEX index_name;</label>
+			<label><input type="radio" name="q45" value="B"> B) DROP INDEX index_name;</label>
+			<label><input type="radio" name="q45" value="C"> C) REMOVE INDEX index_name;</label>
+			<label><input type="radio" name="q45" value="D"> D) ALTER INDEX index_name;</label>
+		</div>
+
+		<!-- Question 46 -->
+		<div class="question">
+			<h3>46. What is the purpose of an index on a foreign key column?</h3>
+			<label><input type="radio" name="q46" value="A"> A) To slow down joins</label>
+			<label><input type="radio" name="q46" value="B"> B) To speed up joins and ensure referential integrity checks.</label>
+			<label><input type="radio" name="q46" value="C"> C) To create duplicate rows</label>
+			<label><input type="radio" name="q46" value="D"> D) To only allow NULL values</label>
+		</div>
+		<!-- Question 47 -->
+		<div class="question">
+			<h3>47. What does the EXPLAIN statement do?</h3>
+			<label><input type="radio" name="q47" value="A"> A) Deletes rows</label>
+			<label><input type="radio" name="q47" value="B"> B) Shows the execution plan for a query.</label>
+			<label><input type="radio" name="q47" value="C"> C) Inserts new rows</label>
+			<label><input type="radio" name="q47" value="D"> D) Creates a new index</label>
+		</div>
+
+		<!-- Question 48 -->
+		<div class="question">
+			<h3>48. How does a unique index impact performance?</h3>
+			<label><input type="radio" name="q48" value="A"> A) Slows down all operations</label>
+			<label><input type="radio" name="q48" value="B"> B) Speeds up queries but can add overhead on inserts and updates.</label>
+			<label><input type="radio" name="q48" value="C"> C) Only affects DELETE operations</label>
+			<label><input type="radio" name="q48" value="D"> D) Has no impact on performance</label>
+		</div>
+
+		<!-- Question 49 -->
+		<div class="question">
+			<h3>49. What is an indexed view?</h3>
+			<label><input type="radio" name="q49" value="A"> A) A view that stores rows in a separate table</label>
+			<label><input type="radio" name="q49" value="B"> B) A view with an index to improve query performance.</label>
+			<label><input type="radio" name="q49" value="C"> C) A view that removes NULL values</label>
+			<label><input type="radio" name="q49" value="D"> D) A view that duplicates rows</label>
+		</div>
+
+		<!-- Question 50 -->
+		<div class="question">
+			<h3>50. How does indexing affect disk space?</h3>
+			<label><input type="radio" name="q50" value="A"> A) It reduces disk usage</label>
+			<label><input type="radio" name="q50" value="B"> B) It increases disk usage due to additional storage for indexes.</label>
+			<label><input type="radio" name="q50" value="C"> C) It has no effect</label>
+			<label><input type="radio" name="q50" value="D"> D) It only affects foreign keys</label>
+		</div>
+
+		<!-- Question 51 -->
+		<div class="question">
+			<h3>51. What is a filtered index?</h3>
+			<label><input type="radio" name="q51" value="A"> A) An index for all rows</label>
+			<label><input type="radio" name="q51" value="B"> B) An index that includes only rows meeting a specific condition.</label>
+			<label><input type="radio" name="q51" value="C"> C) An index for only unique rows</label>
+			<label><input type="radio" name="q51" value="D"> D) An index for all columns</label>
+		</div>
+
+		<!-- Question 52 -->
+		<div class="question">
+			<h3>52. Can a computed column be indexed?</h3>
+			<label><input type="radio" name="q52" value="A"> A) No, computed columns cannot be indexed</label>
+			<label><input type="radio" name="q52" value="B"> B) Yes, but only if it is deterministic.</label>
+			<label><input type="radio" name="q52" value="C"> C) Yes, if it is NULL</label>
+			<label><input type="radio" name="q52" value="D"> D) Only on primary keys</label>
+		</div>
+
+		<!-- Question 53 -->
+		<div class="question">
+			<h3>53. What is index fragmentation?</h3>
+			<label><input type="radio" name="q53" value="A"> A) All rows are sorted</label>
+			<label><input type="radio" name="q53" value="B"> B) Non-contiguous index pages that can reduce performance.</label>
+			<label><input type="radio" name="q53" value="C"> C) A single row per page</label>
+			<label><input type="radio" name="q53" value="D"> D) A view that only stores NULL values</label>
+		</div>
+
+		<!-- Question 54 -->
+		<div class="question">
+			<h3>54. How can you fix index fragmentation?</h3>
+			<label><input type="radio" name="q54" value="A"> A) By deleting the table</label>
+			<label><input type="radio" name="q54" value="B"> B) By rebuilding or reorganizing the index.</label>
+			<label><input type="radio" name="q54" value="C"> C) By adding NULL values</label>
+			<label><input type="radio" name="q54" value="D"> D) By adding more columns</label>
+		</div>
+
+		<!-- Question 55 -->
+		<div class="question">
+			<h3>55. What is a full-text index?</h3>
+			<label><input type="radio" name="q55" value="A"> A) An index for binary data</label>
+			<label><input type="radio" name="q55" value="B"> B) An index optimized for text searching.</label>
+			<label><input type="radio" name="q55" value="C"> C) An index for foreign keys</label>
+			<label><input type="radio" name="q55" value="D"> D) An index that only stores unique values</label>
+		</div>
+
+		<!-- Question 56 -->
+		<div class="question">
+			<h3>56. When would you use a spatial index?</h3>
+			<label><input type="radio" name="q56" value="A"> A) For large tables</label>
+			<label><input type="radio" name="q56" value="B"> B) For querying geographical or spatial data.</label>
+			<label><input type="radio" name="q56" value="C"> C) For unique constraints</label>
+			<label><input type="radio" name="q56" value="D"> D) For text searching only</label>
+		</div>
+
+		<!-- Question 57 -->
+		<div class="question">
+			<h3>57. How does indexing impact read and write operations?</h3>
+			<label><input type="radio" name="q57" value="A"> A) Speeds up both reads and writes</label>
+			<label><input type="radio" name="q57" value="B"> B) Speeds up reads but can slow down writes.</label>
+			<label><input type="radio" name="q57" value="C"> C) Slows down both reads and writes</label>
+			<label><input type="radio" name="q57" value="D"> D) Has no effect on performance</label>
+		</div>
+
+		<!-- Question 58 -->
+		<div class="question">
+			<h3>58. What is an index scan?</h3>
+			<label><input type="radio" name="q58" value="A"> A) A search through the entire index to find rows.</label>
+			<label><input type="radio" name="q58" value="B"> B) A direct row lookup</label>
+			<label><input type="radio" name="q58" value="C"> C) An insert operation</label>
+			<label><input type="radio" name="q58" value="D"> D) A search for NULL values</label>
+		</div>
+
+		<!-- Question 59 -->
+		<div class="question">
+			<h3>59. What is an index seek?</h3>
+			<label><input type="radio" name="q59" value="A"> A) A full scan of all rows</label>
+			<label><input type="radio" name="q59" value="B"> B) A direct lookup to quickly locate rows that meet a condition.</label>
+			<label><input type="radio" name="q59" value="C"> C) An operation that affects only foreign keys</label>
+			<label><input type="radio" name="q59" value="D"> D) An update operation</label>
+		</div>
+		<!-- Question 60 -->
+		<div class="question">
+			<h3>60. What is the purpose of a descending index?</h3>
+			<label><input type="radio" name="q60" value="A"> A) It speeds up DELETE operations</label>
+			<label><input type="radio" name="q60" value="B"> B) It optimizes queries that order by descending.</label>
+			<label><input type="radio" name="q60" value="C"> C) It only works on primary keys</label>
+			<label><input type="radio" name="q60" value="D"> D) It restricts NULL values</label>
+		</div>
+
+		<!-- Question 61 -->
+		<div class="question">
+			<h3>61. Why should indexes be analyzed periodically?</h3>
+			<label><input type="radio" name="q61" value="A"> A) To create more duplicates</label>
+			<label><input type="radio" name="q61" value="B"> B) To ensure they align with query patterns and improve efficiency.</label>
+			<label><input type="radio" name="q61" value="C"> C) To allow for NULL values</label>
+			<label><input type="radio" name="q61" value="D"> D) To enforce referential integrity</label>
+		</div>
+
+		<!-- Question 62 -->
+		<div class="question">
+			<h3>62. Can having too many indexes slow down a database?</h3>
+			<label><input type="radio" name="q62" value="A"> A) No, indexes always improve performance</label>
+			<label><input type="radio" name="q62" value="B"> B) Yes, excessive indexes can reduce write performance.</label>
+			<label><input type="radio" name="q62" value="C"> C) No, they only affect reads</label>
+			<label><input type="radio" name="q62" value="D"> D) Yes, they only affect DELETE operations</label>
+		</div>
+
+		<!-- Question 63 -->
+		<div class="question">
+			<h3>63. What is the trade-off with indexing?</h3>
+			<label><input type="radio" name="q63" value="A"> A) Faster writes, slower reads</label>
+			<label><input type="radio" name="q63" value="B"> B) Faster reads, slower writes.</label>
+			<label><input type="radio" name="q63" value="C"> C) No impact on performance</label>
+			<label><input type="radio" name="q63" value="D"> D) Faster performance in all cases</label>
+		</div>
+
+		<!-- Question 64 -->
+		<div class="question">
+			<h3>64. How does a covering index reduce I/O operations?</h3>
+			<label><input type="radio" name="q64" value="A"> A) By storing all tables in memory</label>
+			<label><input type="radio" name="q64" value="B"> B) By containing all columns needed for a query, reducing the need to access the base table.</label>
+			<label><input type="radio" name="q64" value="C"> C) By duplicating rows</label>
+			<label><input type="radio" name="q64" value="D"> D) By allowing NULL values</label>
+		</div>
+
+		<!-- Question 65 -->
+		<div class="question">
+			<h3>65. Which columns should be avoided for indexing?</h3>
+			<label><input type="radio" name="q65" value="A"> A) Frequently updated columns with many unique values.</label>
+			<label><input type="radio" name="q65" value="B"> B) Primary key columns</label>
+			<label><input type="radio" name="q65" value="C"> C) Foreign key columns</label>
+			<label><input type="radio" name="q65" value="D"> D) Text columns</label>
+		</div>
+
+		<!-- Question 66 -->
+		<div class="question">
+			<h3>66. What should be considered when indexing large tables?</h3>
+			<label><input type="radio" name="q66" value="A"> A) Only indexing numeric columns</label>
+			<label><input type="radio" name="q66" value="B"> B) The potential storage and performance impact.</label>
+			<label><input type="radio" name="q66" value="C"> C) Only indexing foreign keys</label>
+			<label><input type="radio" name="q66" value="D"> D) The uniqueness of the data</label>
+		</div>
+
+		<!-- Question 67 -->
+		<div class="question">
+			<h3>67. What is a materialized view?</h3>
+			<label><input type="radio" name="q67" value="A"> A) A temporary table</label>
+			<label><input type="radio" name="q67" value="B"> B) A view that stores query results as a table and can be indexed.</label>
+			<label><input type="radio" name="q67" value="C"> C) A view that duplicates rows</label>
+			<label><input type="radio" name="q67" value="D"> D) A view that only stores NULL values</label>
+		</div>
+
+		<!-- Question 68 -->
+		<div class="question">
+			<h3>68. What is a full-table scan?</h3>
+			<label><input type="radio" name="q68" value="A"> A) A search that examines every row in a table.</label>
+			<label><input type="radio" name="q68" value="B"> B) A search that examines only indexed rows</label>
+			<label><input type="radio" name="q68" value="C"> C) An operation that only affects foreign keys</label>
+			<label><input type="radio" name="q68" value="D"> D) A search that only examines NULL values</label>
+		</div>
+
+		<!-- Question 69 -->
+		<div class="question">
+			<h3>69. What is index pruning?</h3>
+			<label><input type="radio" name="q69" value="A"> A) Removing unused indexes to improve performance.</label>
+			<label><input type="radio" name="q69" value="B"> B) Adding new indexes</label>
+			<label><input type="radio" name="q69" value="C"> C) Changing all indexes to primary keys</label>
+			<label><input type="radio" name="q69" value="D"> D) Rebuilding all indexes</label>
+		</div>
+
+		<!-- Question 70 -->
+		<div class="question">
+			<h3>70. Why should foreign keys be indexed for joins?</h3>
+			<label><input type="radio" name="q70" value="A"> A) To slow down the database</label>
+			<label><input type="radio" name="q70" value="B"> B) To speed up join operations by providing quick access to related data.</label>
+			<label><input type="radio" name="q70" value="C"> C) To enforce uniqueness</label>
+			<label><input type="radio" name="q70" value="D"> D) To create duplicates</label>
+		</div>
+
+		<!-- Question 71 -->
+		<div class="question">
+			<h3>71. What is the difference between a dense and sparse index?</h3>
+			<label><input type="radio" name="q71" value="A"> A) Dense index has an entry for every row; sparse has entries only for some rows.</label>
+			<label><input type="radio" name="q71" value="B"> B) Sparse index has an entry for every row; dense has entries only for some rows.</label>
+			<label><input type="radio" name="q71" value="C"> C) Dense indexes are faster</label>
+			<label><input type="radio" name="q71" value="D"> D) Sparse indexes use more storage</label>
+		</div>
+
+		<!-- Question 72 -->
+		<div class="question">
+			<h3>72. When should you rebuild an index?</h3>
+			<label><input type="radio" name="q72" value="A"> A) Only after a backup</label>
+			<label><input type="radio" name="q72" value="B"> B) When fragmentation affects performance.</label>
+			<label><input type="radio" name="q72" value="C"> C) Only on small tables</label>
+			<label><input type="radio" name="q72" value="D"> D) After each insert</label>
+		</div>
+
+		<!-- Question 73 -->
+		<div class="question">
+			<h3>73. What is an indexed view?</h3>
+			<label><input type="radio" name="q73" value="A"> A) A view that automatically updates all tables</label>
+			<label><input type="radio" name="q73" value="B"> B) A view with an index that can improve query performance on complex joins.</label>
+			<label><input type="radio" name="q73" value="C"> C) A view that stores only numeric data</label>
+			<label><input type="radio" name="q73" value="D"> D) A view that restricts NULL values</label>
+		</div>
+
+
+		<!-- Question 74 -->
+		<div class="question">
+			<h3>74. What is the difference between a dense and sparse index?</h3>
+			<label><input type="radio" name="q74" value="A"> A) Dense index has an entry for every row; sparse has entries only for some rows.</label>
+			<label><input type="radio" name="q74" value="B"> B) Sparse index has an entry for every row; dense has entries only for some rows.</label>
+			<label><input type="radio" name="q74" value="C"> C) Dense indexes are faster</label>
+			<label><input type="radio" name="q74" value="D"> D) Sparse indexes use more storage</label>
+		</div>
+
+		<!-- Question 75 -->
+		<div class="question">
+			<h3>75. When should you rebuild an index?</h3>
+			<label><input type="radio" name="q75" value="A"> A) Only after a backup</label>
+			<label><input type="radio" name="q75" value="B"> B) When fragmentation affects performance.</label>
+			<label><input type="radio" name="q75" value="C"> C) Only on small tables</label>
+			<label><input type="radio" name="q75" value="D"> D) After each insert</label>
+		</div>
+
+
+            <button type="button" id="submit-btn">Submit Quiz</button>
+        </form>
+        
+        <!-- Results Display -->
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

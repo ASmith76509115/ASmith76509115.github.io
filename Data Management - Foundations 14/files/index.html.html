@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Management Quiz</h1>
+        <h2>By Adam Smith</h2>
+        
+        <!-- Timer Display -->
+        <p id="timer" style="font-size: 18px; color: red;">Time Remaining: 100:00</p>
+        
+        <!-- Start Button -->
+        <button type="button" id="start-btn">Start Quiz</button>
+        
+        <!-- Quiz Form -->
+        <form id="quiz-form" style="display: none;">
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. Arranged in hierarchy</h3>
+            <label><input type="radio" name="q1" value="A"> A) Web architecture</label><br>
+            <label><input type="radio" name="q1" value="B"> B) File System</label><br>
+            <label><input type="radio" name="q1" value="C"> C) Hash Index</label><br>
+            <label><input type="radio" name="q1" value="D"> D) Multi-tier architecture</label><br>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. Specifies indexes, table structures, and partitions. Specifies how tables are organized on storage media.</h3>
+            <label><input type="radio" name="q2" value="A"> A) Connection Manager</label><br>
+            <label><input type="radio" name="q2" value="B"> B) Architecture</label><br>
+            <label><input type="radio" name="q2" value="C"> C) Logical Design</label><br>
+            <label><input type="radio" name="q2" value="D"> D) Physical Design</label><br>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. Depict foreign keys. Starts at the foreign key and points to the referenced table. RESTRICT, CASCADE, or SET NULL appears on the arrow.</h3>
+            <label><input type="radio" name="q3" value="A"> A) Arrows</label><br>
+            <label><input type="radio" name="q3" value="B"> B) Pointers</label><br>
+            <label><input type="radio" name="q3" value="C"> C) Bullets</label><br>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. Rejects an insert, update, or delete that violates referential integrity.</h3>
+            <label><input type="radio" name="q4" value="A"> A) NULL</label><br>
+            <label><input type="radio" name="q4" value="B"> B) DEFAULT</label><br>
+            <label><input type="radio" name="q4" value="C"> C) RESTRAIN</label><br>
+            <label><input type="radio" name="q4" value="D"> D) RESTRICT</label><br>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. Column A ______________________________ Column B means that each B value is related to at most one A value.</h3>
+            <label><input type="radio" name="q5" value="A"> A) Related To</label><br>
+            <label><input type="radio" name="q5" value="B"> B) Minus</label><br>
+            <label><input type="radio" name="q5" value="C"> C) Depends On</label><br>
+            <label><input type="radio" name="q5" value="D"> D) Combined With</label><br>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <h3>6. Refers to the maxima and minima of relationships and attributes.</h3>
+            <label><input type="radio" name="q6" value="A"> A) Minimum</label><br>
+            <label><input type="radio" name="q6" value="B"> B) Maximum</label><br>
+            <label><input type="radio" name="q6" value="C"> C) Functionality</label><br>
+            <label><input type="radio" name="q6" value="D"> D) Cardinality</label><br>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <h3>7. Similar to hash but partition expression determined automatically by database.</h3>
+            <label><input type="radio" name="q7" value="A"> A) Range Partition</label><br>
+            <label><input type="radio" name="q7" value="B"> B) List Partition</label><br>
+            <label><input type="radio" name="q7" value="C"> C) Key Partition</label><br>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <h3>8. Returns only matching values.</h3>
+            <label><input type="radio" name="q8" value="A"> A) Full Outer Join</label><br>
+            <label><input type="radio" name="q8" value="B"> B) Cross Join</label><br>
+            <label><input type="radio" name="q8" value="C"> C) Inner Join</label><br>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <h3>9. Runs on a parallel computer or cluster</h3>
+            <label><input type="radio" name="q9" value="A"> A) Parallel Database</label><br>
+            <label><input type="radio" name="q9" value="B"> B) Local Transaction</label><br>
+            <label><input type="radio" name="q9" value="C"> C) Cluster</label><br>
+            <label><input type="radio" name="q9" value="D"> D) Distributed Database</label><br>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <h3>10. List of partition expression values using VALUES IN keywords.</h3>
+            <label><input type="radio" name="q10" value="A"> A) Hash Partition</label><br>
+            <label><input type="radio" name="q10" value="B"> B) List Partition</label><br>
+            <label><input type="radio" name="q10" value="C"> C) Range Partition</label><br>
+            <label><input type="radio" name="q10" value="D"> D) Key Partition</label><br>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <h3>11. Used to remove unwanted database objects from the database. Will permanently remove the object and all associated data!</h3>
+            <label><input type="radio" name="q11" value="A"> A) ALTER</label><br>
+            <label><input type="radio" name="q11" value="B"> B) DELETE</label><br>
+            <label><input type="radio" name="q11" value="C"> C) DROP</label><br>
+            <label><input type="radio" name="q11" value="D"> D) REMOVE</label><br>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <h3>12. Unmatched data from either table is included. Will result in empty fields.</h3>
+            <label><input type="radio" name="q12" value="A"> A) Full Outer Join</label><br>
+            <label><input type="radio" name="q12" value="B"> B) Inner Join</label><br>
+            <label><input type="radio" name="q12" value="C"> C) Right Outer Join</label><br>
+            <label><input type="radio" name="q12" value="D"> D) Cross Join</label><br>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <h3>13. The data about the data. Describes elements such as columns, names, and data type.</h3>
+            <label><input type="radio" name="q13" value="A"> A) Tuple</label><br>
+            <label><input type="radio" name="q13" value="B"> B) Logical Data</label><br>
+            <label><input type="radio" name="q13" value="C"> C) Binary</label><br>
+            <label><input type="radio" name="q13" value="D"> D) Metadata</label><br>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <h3>14. _______________ is when a subquery's WHERE clause references a column from the outer query.</h3>
+            <label><input type="radio" name="q14" value="A"> A) Exists</label><br>
+            <label><input type="radio" name="q14" value="B"> B) Correlated</label><br>
+            <label><input type="radio" name="q14" value="C"> C) Dependent</label><br>
+            <label><input type="radio" name="q14" value="D"> D) Regressed</label><br>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <h3>15. Ordered collection of elements in parentheses.</h3>
+            <label><input type="radio" name="q15" value="A"> A) Metadata</label><br>
+            <label><input type="radio" name="q15" value="B"> B) Tuple</label><br>
+            <label><input type="radio" name="q15" value="C"> C) Logical Data</label><br>
+            <label><input type="radio" name="q15" value="D"> D) Truncate</label><br>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question">
+            <h3>16. Specifies tables, columns, and keys. Implements database requirements in a specific database system. Also called a schema.</h3>
+            <label><input type="radio" name="q16" value="A"> A) Query Processor</label><br>
+            <label><input type="radio" name="q16" value="B"> B) Logical Design</label><br>
+            <label><input type="radio" name="q16" value="C"> C) Architecture</label><br>
+            <label><input type="radio" name="q16" value="D"> D) Physical Design</label><br>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question">
+            <h3>17. Range of partition expression values (VALUES LESS THAN, MAXVALUE)</h3>
+            <label><input type="radio" name="q17" value="A"> A) List Partition</label><br>
+            <label><input type="radio" name="q17" value="B"> B) Range Partition</label><br>
+            <label><input type="radio" name="q17" value="C"> C) Key Partition</label><br>
+            <label><input type="radio" name="q17" value="D"> D) Hash Partition</label><br>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question">
+            <h3>18. Creates connections and manages communication between tools and query parser.</h3>
+            <label><input type="radio" name="q18" value="A"> A) Cache Manager</label><br>
+            <label><input type="radio" name="q18" value="B"> B) Storage Engine</label><br>
+            <label><input type="radio" name="q18" value="C"> C) Connection Manager</label><br>
+            <label><input type="radio" name="q18" value="D"> D) File System</label><br>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question">
+            <h3>19. Analytic database of raw, unprocessed data copied from multiple data sources.</h3>
+            <label><input type="radio" name="q19" value="A"> A) Data Mart</label><br>
+            <label><input type="radio" name="q19" value="B"> B) Data Lake</label><br>
+            <label><input type="radio" name="q19" value="C"> C) Data Warehouse</label><br>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question">
+            <h3>20. Putting tables back together into a single table for business needs. Used in place of a join to speed up a query, but it uses more space, data redundant, modification anomalies.</h3>
+            <label><input type="radio" name="q20" value="A"> A) Analysis</label><br>
+            <label><input type="radio" name="q20" value="B"> B) Normalization</label><br>
+            <label><input type="radio" name="q20" value="C"> C) Denormalization</label><br>
+            <label><input type="radio" name="q20" value="D"> D) Business need</label><br>
+        </div>
+
+        <!-- End of quiz form -->
+        <button type="submit" id="submit-btn">Submit Quiz</button>
+        </form>
+        
+        <!-- Results Display -->
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

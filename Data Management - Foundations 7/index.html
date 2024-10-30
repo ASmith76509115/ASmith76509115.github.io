@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Management Quiz 7 - Pretest</h1>
+        <h2>By Adam Smith</h2>
+        
+        <!-- Timer Display -->
+        <p id="timer" style="font-size: 18px; color: red;">Time Remaining: 100:00</p>
+        
+        <!-- Start Button -->
+        <button type="button" id="start-btn">Start Quiz</button>
+        
+        <!-- Quiz Form -->
+        <form id="quiz-form" style="display: none;">
+            <!-- Question 1 -->
+            <div class="question">
+                <h3>1. A record consists of a ____.</h3>
+                <label><input type="radio" name="q1" value="A"> A) character</label>
+                <label><input type="radio" name="q1" value="B"> B) collection of related records</label>
+                <label><input type="radio" name="q1" value="C"> C) set of one or more fields</label>
+                <label><input type="radio" name="q1" value="D"> D) group of files</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <h3>2. A DBMS performs several important functions. Which of the following is NOT one of those functions?</h3>
+                <label><input type="radio" name="q2" value="A"> A) Data integrity management</label>
+                <label><input type="radio" name="q2" value="B"> B) Data storage management</label>
+                <label><input type="radio" name="q2" value="C"> C) Data reports</label>
+                <label><input type="radio" name="q2" value="D"> D) Security management</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <h3>3. Which item is unstructured data?</h3>
+                <label><input type="radio" name="q3" value="A"> A) A record representing one student</label>
+                <label><input type="radio" name="q3" value="B"> B) A video</label>
+                <label><input type="radio" name="q3" value="C"> C) A table that holds student data</label>
+                <label><input type="radio" name="q3" value="D"> D) A relational database that holds course registration data</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <h3>4. Data is/are ____.</h3>
+                <label><input type="radio" name="q4" value="A"> A) information</label>
+                <label><input type="radio" name="q4" value="B"> B) raw facts</label>
+                <label><input type="radio" name="q4" value="C"> C) processed information</label>
+                <label><input type="radio" name="q4" value="D"> D) a DBMS</label>
+            </div>
+
+            <!-- Question 5 with an image -->
+			<div class="question">
+				<h3>5. Which classification is correct for the box marked “Registration” in the given E-R Diagram?</h3>
+				<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_5.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">				
+				<label><input type="radio" name="q5" value="A"> A) Intersection data</label>
+				<label><input type="radio" name="q5" value="B"> B) Modality data</label>
+				<label><input type="radio" name="q5" value="C"> C) Cardinality data</label>
+				<label><input type="radio" name="q5" value="D"> D) Student data</label>
+			</div>
+
+			<!-- Question 6 with an image -->
+			<div class="question">
+				<h3>6. Which type of relationship exists between Student and Course?</h3>
+				<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_6.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">	
+				<label><input type="radio" name="q6" value="A"> A) One-to-many binary</label>
+				<label><input type="radio" name="q6" value="B"> B) Many-to-many binary</label>
+				<label><input type="radio" name="q6" value="C"> C) One-to-many unary</label>
+				<label><input type="radio" name="q6" value="D"> D) Many-to-many unary</label>
+			</div>
+
+			<!-- Question 7 with an image -->
+			<div class="question">
+				<h3>7. What is the E-R Diagram about an online pet food vendor showing?</h3>
+				<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_7.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+				<label><input type="radio" name="q7" value="A"> A) An Invoice Line can include many Items</label>
+				<label><input type="radio" name="q7" value="B"> B) An item can only be included in one Invoice Line</label>
+				<label><input type="radio" name="q7" value="C"> C) One Invoice Line must include a minimum of one and a maximum of one Item</label>
+				<label><input type="radio" name="q7" value="D"> D) The relationship between Item and Invoice Line is many-to-many</label>
+			</div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <h3>8. A pet owner can have many pets; a specific pet is linked to one pet owner. Which kind of binary relationship is described in this example?</h3>
+                <label><input type="radio" name="q8" value="A"> A) One-to-one</label>
+                <label><input type="radio" name="q8" value="B"> B) One-to-many</label>
+                <label><input type="radio" name="q8" value="C"> C) Many-to-many</label>
+                <label><input type="radio" name="q8" value="D"> D) Associative</label>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <h3>9. Database models were developed to ____.</h3>
+                <label><input type="radio" name="q9" value="A"> A) model real-world events or conditions</label>
+                <label><input type="radio" name="q9" value="B"> B) deposit data within a single file</label>
+                <label><input type="radio" name="q9" value="C"> C) keep data within multiple data repositories</label>
+                <label><input type="radio" name="q9" value="D"> D) allow DBMSs to maintain loose control over the database activities</label>
+            </div>
+			<!-- Question 10 with an image -->
+			<div class="question">
+				<h3>10. What is the correct way to read the modality on the right side of the association?</h3>
+				<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_10.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+				<label><input type="radio" name="q10" value="A"> A) A maximum of one activity</label>
+				<label><input type="radio" name="q10" value="B"> B) A maximum of zero activities</label>
+				<label><input type="radio" name="q10" value="C"> C) A minimum of zero activities</label>
+				<label><input type="radio" name="q10" value="D"> D) A maximum of many activities</label>
+			</div>
+
+			<!-- Question 11 with an image -->
+			<div class="question">
+				<h3>11. What is the modality of Volunteer?</h3>
+				<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_11.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+				<label><input type="radio" name="q11" value="A"> A) Two or more</label>
+				<label><input type="radio" name="q11" value="B"> B) Two</label>
+				<label><input type="radio" name="q11" value="C"> C) Dependent on registration date</label>
+				<label><input type="radio" name="q11" value="D"> D) At least one</label>
+			</div>
+
+			<!-- Question 12 -->
+			<div class="question">
+				<h3>12. What type of relationship is expressed with the phrase "A Painter paints one or more Paintings"?</h3>
+				<label><input type="radio" name="q12" value="A"> A) 1:M</label>
+				<label><input type="radio" name="q12" value="B"> B) 1:1</label>
+				<label><input type="radio" name="q12" value="C"> C) M:1</label>
+				<label><input type="radio" name="q12" value="D"> D) M:N</label>
+			</div>
+
+			<!-- Question 13 -->
+			<div class="question">
+				<h3>13. The entity integrity rule requires that ____.</h3>
+				<label><input type="radio" name="q13" value="A"> A) all primary key entries are unique</label>
+				<label><input type="radio" name="q13" value="B"> B) a part of the key may be null</label>
+				<label><input type="radio" name="q13" value="C"> C) foreign key values do not reference primary key values</label>
+				<label><input type="radio" name="q13" value="D"> D) duplicate object values are allowed</label>
+			</div>
+
+			<!-- Question 14 -->
+			<div class="question">
+				<h3>14. What does the 'refer' in referential integrity mean?</h3>
+				<label><input type="radio" name="q14" value="A"> A) The relationships between entities and attributes, also called referrals</label>
+				<label><input type="radio" name="q14" value="B"> B) Reference points that databases place in each record during backups</label>
+				<label><input type="radio" name="q14" value="C"> C) A foreign key in a table must refer to a valid primary key in another table</label>
+				<label><input type="radio" name="q14" value="D"> D) You delete a row in one table whose primary key does not have a matching foreign key value in another table</label>
+			</div>
+
+			<!-- Question 15 -->
+			<div class="question">
+				<h3>15. A table is perceived as a ____.</h3>
+				<label><input type="radio" name="q15" value="A"> A) flat structure</label>
+				<label><input type="radio" name="q15" value="B"> B) two-dimensional structure</label>
+				<label><input type="radio" name="q15" value="C"> C) linked structure</label>
+				<label><input type="radio" name="q15" value="D"> D) graph</label>
+			</div>
+
+			<!-- Question 16 -->
+			<div class="question">
+				<h3>16. Another word for the term "relation" is ____.</h3>
+				<label><input type="radio" name="q16" value="A"> A) datafile</label>
+				<label><input type="radio" name="q16" value="B"> B) data index</label>
+				<label><input type="radio" name="q16" value="C"> C) table</label>
+				<label><input type="radio" name="q16" value="D"> D) data query</label>
+			</div>
+
+			<!-- Question 17 -->
+			<div class="question">
+				<h3>17. DISTINCT filters the results to remove duplicates. ORDER BY ____.</h3>
+				<label><input type="radio" name="q17" value="A"> A) does the same thing</label>
+				<label><input type="radio" name="q17" value="B"> B) alters the order of the rows in a table</label>
+				<label><input type="radio" name="q17" value="C"> C) modifies the presentation by changing the order of the result set</label>
+				<label><input type="radio" name="q17" value="D"> D) removes duplicates in the table</label>
+			</div>
+
+			<!-- Question 18 -->
+			<div class="question">
+				<h3>18. A primary key ____.</h3>
+				<label><input type="radio" name="q18" value="A"> A) is a minimal superkey</label>
+				<label><input type="radio" name="q18" value="B"> B) is always the first field in each table</label>
+				<label><input type="radio" name="q18" value="C"> C) must be numeric</label>
+				<label><input type="radio" name="q18" value="D"> D) must be unique</label>
+			</div>
+
+			<!-- Question 19 -->
+			<div class="question">
+				<h3>19. A table can be logically connected to another table by defining a ____.</h3>
+				<label><input type="radio" name="q19" value="A"> A) hyperlink</label>
+				<label><input type="radio" name="q19" value="B"> B) common attribute</label>
+				<label><input type="radio" name="q19" value="C"> C) primary key</label>
+				<label><input type="radio" name="q19" value="D"> D) logic key</label>
+			</div>
+
+			<!-- Question 20 -->
+			<div class="question">
+				<h3>20. A relational operator that allows for the combination of information from two or more tables is known as the ____ operator.</h3>
+				<label><input type="radio" name="q20" value="A"> A) SELECT</label>
+				<label><input type="radio" name="q20" value="B"> B) PROJECT</label>
+				<label><input type="radio" name="q20" value="C"> C) JOIN</label>
+				<label><input type="radio" name="q20" value="D"> D) DIFFERENCE</label>
+			</div>
+            <!-- Question 21 -->
+			<div class="question">
+				<h3>21. Which of the following statements concerning the primary key is true?</h3>
+				<label><input type="radio" name="q21" value="A"> A) All primary key entries are unique</label>
+				<label><input type="radio" name="q21" value="B"> B) The primary key may be null</label>
+				<label><input type="radio" name="q21" value="C"> C) The primary key is not required for all tables</label>
+				<label><input type="radio" name="q21" value="D"> D) The primary key data do not have to be unique</label>
+			</div>
+
+			<!-- Question 22 -->
+			<div class="question">
+				<h3>22. We can describe a link by observing that ____.</h3>
+				<label><input type="radio" name="q22" value="A"> A) a primary key of one table appears again as a primary key in a related table</label>
+				<label><input type="radio" name="q22" value="B"> B) a foreign key of one table appears again as a foreign key in a related table</label>
+				<label><input type="radio" name="q22" value="C"> C) a primary key of one table appears again as a foreign key in a related table</label>
+				<label><input type="radio" name="q22" value="D"> D) a foreign key of one table appears again as a surrogate key in a related table</label>
+			</div>
+
+			<!-- Question 23 -->
+			<div class="question">
+				<h3>23. When designing a new database, it is a good idea to ____.</h3>
+				<label><input type="radio" name="q23" value="A"> A) minimize data redundancy</label>
+				<label><input type="radio" name="q23" value="B"> B) include redundant fields</label>
+				<label><input type="radio" name="q23" value="C"> C) include a common field in all tables</label>
+				<label><input type="radio" name="q23" value="D"> D) use composite keys</label>
+			</div>
+
+			<!-- Question 24 -->
+			<div class="question">
+				<h3>24. An attribute (or combination of attributes) that uniquely identifies each entity in a table is called a ____.</h3>
+				<label><input type="radio" name="q24" value="A"> A) superkey</label>
+				<label><input type="radio" name="q24" value="B"> B) foreign key</label>
+				<label><input type="radio" name="q24" value="C"> C) master key</label>
+				<label><input type="radio" name="q24" value="D"> D) secondary key</label>
+			</div>
+
+			<!-- Question 25 -->
+			<div class="question">
+				<h3>25. A foreign key must ____.</h3>
+				<label><input type="radio" name="q25" value="A"> A) be numeric</label>
+				<label><input type="radio" name="q25" value="B"> B) be unique</label>
+				<label><input type="radio" name="q25" value="C"> C) be defined in all tables within the database</label>
+				<label><input type="radio" name="q25" value="D"> D) match the value of a primary key in a related table</label>
+			</div>
+
+			<!-- Question 26 -->
+			<div class="question">
+				<h3>26. The ERD is used to graphically represent the ____ database model.</h3>
+				<label><input type="radio" name="q26" value="A"> A) condensed</label>
+				<label><input type="radio" name="q26" value="B"> B) physical</label>
+				<label><input type="radio" name="q26" value="C"> C) logical</label>
+				<label><input type="radio" name="q26" value="D"> D) conceptual</label>
+			</div>
+
+			<!-- Question 27 -->
+			<div class="question">
+				<h3>27. A derived attribute ____.</h3>
+				<label><input type="radio" name="q27" value="A"> A) must be stored physically within the database</label>
+				<label><input type="radio" name="q27" value="B"> B) need not be physically stored within the database</label>
+				<label><input type="radio" name="q27" value="C"> C) has many values</label>
+				<label><input type="radio" name="q27" value="D"> D) must be based on the value of three or more attributes</label>
+			</div>
+
+			<!-- Question 28 -->
+			<div class="question">
+				<h3>28. A relationship is an association between ____.</h3>
+				<label><input type="radio" name="q28" value="A"> A) objects</label>
+				<label><input type="radio" name="q28" value="B"> B) entities</label>
+				<label><input type="radio" name="q28" value="C"> C) databases</label>
+				<label><input type="radio" name="q28" value="D"> D) fields</label>
+			</div>
+
+			<!-- Question 29 -->
+			<div class="question">
+				<h3>29. A ____ key is a key that consists of more than one attribute.</h3>
+				<label><input type="radio" name="q29" value="A"> A) primary</label>
+				<label><input type="radio" name="q29" value="B"> B) foreign</label>
+				<label><input type="radio" name="q29" value="C"> C) composite</label>
+				<label><input type="radio" name="q29" value="D"> D) domain</label>
+			</div>
+
+			<!-- Question 30 -->
+			<div class="question">
+				<h3>30. A ____ attribute is one that cannot be subdivided.</h3>
+				<label><input type="radio" name="q30" value="A"> A) composite</label>
+				<label><input type="radio" name="q30" value="B"> B) atomic</label>
+				<label><input type="radio" name="q30" value="C"> C) binary-valued</label>
+				<label><input type="radio" name="q30" value="D"> D) multivalued</label>
+			</div>
+
+			
+
+			<!-- Question 31 -->
+			<div class="question">
+				<h3>31. If an entity can exist apart from one or more related entities, it is said to be ____-independent.</h3>
+				<label><input type="radio" name="q31" value="A"> A) existence</label>
+				<label><input type="radio" name="q31" value="B"> B) relationship</label>
+				<label><input type="radio" name="q31" value="C"> C) business</label>
+				<label><input type="radio" name="q31" value="D"> D) weak</label>
+			</div>
+
+			<!-- Question 32 -->
+			<div class="question">
+				<h3>32. A ____ relationship exists when three entities are associated.</h3>
+				<label><input type="radio" name="q32" value="A"> A) unary</label>
+				<label><input type="radio" name="q32" value="B"> B) binary</label>
+				<label><input type="radio" name="q32" value="C"> C) ternary</label>
+				<label><input type="radio" name="q32" value="D"> D) weak</label>
+			</div>
+
+			<!-- Question 33 -->
+			<div class="question">
+				<h3>33. The set of possible values for an attribute is a ____.</h3>
+				<label><input type="radio" name="q33" value="A"> A) domain</label>
+				<label><input type="radio" name="q33" value="B"> B) range</label>
+				<label><input type="radio" name="q33" value="C"> C) set</label>
+				<label><input type="radio" name="q33" value="D"> D) key</label>
+			</div>
+
+			<!-- Question 34 -->
+			<div class="question">
+				<h3>34. Which attribute(s) make up the primary key in the table definition: CLASS (CRS_CODE, CLASS_SECTION, CLASS_TIME, CLASS_ROOM, PROF_NUM)?</h3>
+				<label><input type="radio" name="q34" value="A"> A) CRS_CODE</label>
+				<label><input type="radio" name="q34" value="B"> B) CLASS_SECTION</label>
+				<label><input type="radio" name="q34" value="C"> C) CRS_CODE and CLASS_SECTION</label>
+				<label><input type="radio" name="q34" value="D"> D) There is no primary key</label>
+			</div>
+
+			<!-- Question 35 -->
+			<div class="question">
+				<h3>35. A table that has all key attributes defined, has no repeating groups, and all its attributes are dependent on the primary key, is said to be in ____.</h3>
+				<label><input type="radio" name="q35" value="A"> A) 1NF</label>
+				<label><input type="radio" name="q35" value="B"> B) 2NF</label>
+				<label><input type="radio" name="q35" value="C"> C) 3NF</label>
+				<label><input type="radio" name="q35" value="D"> D) 4NF</label>
+			</div>
+
+			<!-- Question 36 -->
+			<div class="question">
+				<h3>36. A table that is in 2NF and contains no transitive dependencies is said to be in ____.</h3>
+				<label><input type="radio" name="q36" value="A"> A) 1NF</label>
+				<label><input type="radio" name="q36" value="B"> B) 2NF</label>
+				<label><input type="radio" name="q36" value="C"> C) 3NF</label>
+				<label><input type="radio" name="q36" value="D"> D) 4NF</label>
+			</div>
+
+			<!-- Question 37 -->
+			<div class="question">
+				<h3>37. Data redundancy produces ____.</h3>
+				<label><input type="radio" name="q37" value="A"> A) slower lookups</label>
+				<label><input type="radio" name="q37" value="B"> B) robust design</label>
+				<label><input type="radio" name="q37" value="C"> C) efficient storage use</label>
+				<label><input type="radio" name="q37" value="D"> D) data integrity problems</label>
+			</div>
+
+			<!-- Question 38 -->
+			<div class="question">
+				<h3>38. Normalization works through a series of normal ____.</h3>
+				<label><input type="radio" name="q38" value="A"> A) schemas</label>
+				<label><input type="radio" name="q38" value="B"> B) entities</label>
+				<label><input type="radio" name="q38" value="C"> C) databases</label>
+				<label><input type="radio" name="q38" value="D"> D) forms</label>
+			</div>
+
+			<!-- Question 39 -->
+			<div class="question">
+				<h3>39. Dependencies based on only a part of a composite primary key are called ____ dependencies.</h3>
+				<label><input type="radio" name="q39" value="A"> A) primary</label>
+				<label><input type="radio" name="q39" value="B"> B) partial</label>
+				<label><input type="radio" name="q39" value="C"> C) incomplete</label>
+				<label><input type="radio" name="q39" value="D"> D) composite</label>
+			</div>
+
+			<!-- Question 40 with an image -->
+			<div class="question">
+				<h3>40. Given the table EMP_PROJ (PROJ_NUM, EMP_NUM, PROJ_NAME, EMP_NAME, PROJ_START, HOURS), which of the following is a partial dependency?</h3>
+				<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_40.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+				<label><input type="radio" name="q40" value="A"> A) PROJ_NUM --> PROJ_NAME</label>
+				<label><input type="radio" name="q40" value="B"> B) PROJ_NAME --> HOURS</label>
+				<label><input type="radio" name="q40" value="C"> C) PROJ_NUM, EMP_NUM --> HOURS</label>
+				<label><input type="radio" name="q40" value="D"> D) PROJ_NUM, EMP_NUM --> PROJ_NAME</label>
+			</div>
+
+			<!-- Question 41 -->
+			<div class="question">
+				<h3>41. A relation is NOT in 1NF if ____.</h3>
+				<label><input type="radio" name="q41" value="A"> A) it has multiple candidate keys</label>
+				<label><input type="radio" name="q41" value="B"> B) all of the key attributes are defined</label>
+				<label><input type="radio" name="q41" value="C"> C) there are repeating groups in the table</label>
+				<label><input type="radio" name="q41" value="D"> D) all attributes are dependent on the primary key</label>
+			</div>
+
+			<!-- Question 42 -->
+			<div class="question">
+				<h3>42. The SQL command that lets you insert data into a table, one row at a time, is ____.</h3>
+				<label><input type="radio" name="q42" value="A"> A) INSERT</label>
+				<label><input type="radio" name="q42" value="B"> B) SELECT</label>
+				<label><input type="radio" name="q42" value="C"> C) COMMIT</label>
+				<label><input type="radio" name="q42" value="D"> D) UPDATE</label>
+			</div>
+
+			<!-- Question 43 -->
+			<div class="question">
+				<h3>43. The SQL command that enables you to make changes in the data is ____.</h3>
+				<label><input type="radio" name="q43" value="A"> A) INSERT</label>
+				<label><input type="radio" name="q43" value="B"> B) SELECT</label>
+				<label><input type="radio" name="q43" value="C"> C) COMMIT</label>
+				<label><input type="radio" name="q43" value="D"> D) UPDATE</label>
+			</div>
+
+			<!-- Question 44 -->
+			<div class="question">
+				<h3>44. To list all the contents of the PRODUCT table, you would use ____.</h3>
+				<label><input type="radio" name="q44" value="A"> A) LIST * FROM PRODUCT;</label>
+				<label><input type="radio" name="q44" value="B"> B) SELECT * FROM PRODUCT;</label>
+				<label><input type="radio" name="q44" value="C"> C) DISPLAY * FROM PRODUCT;</label>
+				<label><input type="radio" name="q44" value="D"> D) SELECT ALL FROM PRODUCT;</label>
+			</div>
+
+			<!-- Question 45 -->
+			<div class="question">
+				<h3>45. Which command would you use when making corrections to the PRODUCT table?</h3>
+				<label><input type="radio" name="q45" value="A"> A) CHANGE PRODUCT SET P_INDATE = '01/18/2004' WHERE P_CODE = '13-Q2/P2';</label>
+				<label><input type="radio" name="q45" value="B"> B) ROLLBACK PRODUCT SET P_INDATE = '01/18/2004' WHERE P_CODE = '13-Q2/P2';</label>
+				<label><input type="radio" name="q45" value="C"> C) EDIT PRODUCT SET P_INDATE = '01/18/2004' WHERE P_CODE = '13-Q2/P2';</label>
+				<label><input type="radio" name="q45" value="D"> D) UPDATE PRODUCT SET P_INDATE = '01/18/2004' WHERE P_CODE = '13-Q2/P2';</label>
+			</div>
+
+			<!-- Question 46 -->
+			<div class="question">
+				<h3>46. Which command would be used to delete the table row where the P_Code = '2238/QPD'?</h3>
+				<label><input type="radio" name="q46" value="A"> A) DELETE FROM PRODUCT WHERE P_CODE = '2238/QPD';</label>
+				<label><input type="radio" name="q46" value="B"> B) REMOVE FROM PRODUCT WHERE P_CODE = '2238/QPD';</label>
+				<label><input type="radio" name="q46" value="C"> C) ERASE FROM PRODUCT WHERE P_CODE = '2238/QPD';</label>
+				<label><input type="radio" name="q46" value="D"> D) ROLLBACK FROM PRODUCT WHERE P_CODE = '2238/QPD';</label>
+			</div>
+
+			<!-- Question 47 -->
+			<div class="question">
+				<h3>47. Which command is used to select partial table contents?</h3>
+				<label><input type="radio" name="q47" value="A"> A) SELECT &lt;column(s)&gt; FROM &lt;Table name&gt; WHERE &lt;Item&gt;;</label>
+				<label><input type="radio" name="q47" value="B"> B) LIST &lt;column(s)&gt; FROM &lt;Table name&gt; WHERE &lt;Conditions&gt;;</label>
+				<label><input type="radio" name="q47" value="C"> C) SELECT &lt;column(s)&gt; FROM &lt;Table name&gt; WHERE &lt;Conditions&gt;;</label>
+				<label><input type="radio" name="q47" value="D"> D) LIST &lt;column(s)&gt; FROM &lt;Table name&gt; WHERE &lt;Item&gt;;</label>
+			</div>
+
+			<!-- Question 48 -->
+			<div class="question">
+				<h3>48. Which query will output the table contents when the value of V_CODE is less than or equal to 21344?</h3>
+				<label><input type="radio" name="q48" value="A"> A) SELECT P_DESCRIPT, P_INDATE, P_PRICE, V_CODE FROM PRODUCT WHERE V_CODE <> 21344;</label>
+				<label><input type="radio" name="q48" value="B"> B) SELECT P_DESCRIPT, P_INDATE, P_PRICE, V_CODE FROM PRODUCT WHERE V_CODE &lt;= 21344;</label>
+				<label><input type="radio" name="q48" value="C"> C) SELECT P_DESCRIPT, P_INDATE, P_PRICE, V_CODE FROM PRODUCT WHERE V_CODE &gt;= 21344;</label>
+				<label><input type="radio" name="q48" value="D"> D) SELECT P_DESCRIPT, P_INDATE, P_PRICE, V_CODE FROM PRODUCT WHERE V_CODE = 21344;</label>
+			</div>
+
+			<!-- Question 49 -->
+			<div class="question">
+				<h3>49. Which query will list all the rows in which the inventory stock dates occur on or after January 20, 2006?</h3>
+				<label><input type="radio" name="q49" value="A"> A) SELECT P_DESCRIPT, P_QOH, P_MIN, P_PRICE, P_INDATE FROM PRODUCT WHERE P_INDICATE &gt;= '01/20/2006';</label>
+				<label><input type="radio" name="q49" value="B"> B) SELECT P_DESCRIPT, P_QOH, P_MIN, P_PRICE, P_INDATE FROM PRODUCT WHERE P_INDICATE &gt;= #01/20/2004#;</label>
+				<label><input type="radio" name="q49" value="C"> C) SELECT P_DESCRIPT, P_QOH, P_MIN, P_PRICE, P_INDATE FROM PRODUCT WHERE P_INDICATE &gt;= '20-JAN-2004';</label>
+				<label><input type="radio" name="q49" value="D"> D) SELECT P_DESCRIPT, P_QOH, P_MIN, P_PRICE, P_INDATE FROM PRODUCT WHERE P_INDICATE &gt;= {01-20-2004};</label>
+			</div>
+
+			<!-- Question 50 -->
+			<div class="question">
+				<h3>50. What is the SQL syntax requirement to list the table contents for either V_CODE = 21344 or V_CODE = 24288?</h3>
+				<label><input type="radio" name="q50" value="A"> A) SELECT P_DESCRIPT, P_INDATE, P_PRICE, V_CODE FROM PRODUCT WHERE V_CODE = 21344 OR V_CODE &lt;= 24288;</label>
+				<label><input type="radio" name="q50" value="B"> B) SELECT P_DESCRIPT, P_INDATE, P_PRICE, V_CODE FROM PRODUCT WHERE V_CODE = 21344 OR V_CODE &gt;= 24288;</label>
+				<label><input type="radio" name="q50" value="C"> C) SELECT P_DESCRIPT, P_INDATE, P_PRICE, V_CODE FROM PRODUCT WHERE V_CODE = 21344 OR V_CODE &gt; 24288;</label>
+				<label><input type="radio" name="q50" value="D"> D) SELECT P_DESCRIPT, P_INDATE, P_PRICE, V_CODE FROM PRODUCT WHERE V_CODE = 21344 OR V_CODE = 24288;</label>
+			</div>
+
+			<!-- Question 51 -->
+			<div class="question">
+				<h3>51. What is the command to join the P_DESCRIPT and P_PRICE fields from the PRODUCT table and the V_NAME, V_AREACODE, V_PHONE, and V_CONTACT fields from the VENDOR table where the value of V_CODE matches?</h3>
+				<label><input type="radio" name="q51" value="A"> A) SELECT P_DESCRIPT, P_PRICE, V_NAME, V_CONTACT, V_AREACODE, V_PHONE FROM PRODUCT, VENDOR WHERE PRODUCT.V_CODE &lt;&gt; VENDOR.V_CODE;</label>
+				<label><input type="radio" name="q51" value="B"> B) SELECT P_DESCRIPT, P_PRICE, V_NAME, V_CONTACT, V_AREACODE, V_PHONE FROM PRODUCT, VENDOR WHERE PRODUCT.V_CODE = VENDOR.V_CODE;</label>
+				<label><input type="radio" name="q51" value="C"> C) SELECT P_DESCRIPT, P_PRICE, V_NAME, V_CONTACT, V_AREACODE, V_PHONE FROM PRODUCT, VENDOR WHERE PRODUCT.V_CODE &lt;= VENDOR.V_CODE;</label>
+				<label><input type="radio" name="q51" value="D"> D) SELECT P_DESCRIPT, P_PRICE, V_NAME, V_CONTACT, V_AREACODE, V_PHONE FROM PRODUCT, VENDOR WHERE PRODUCT.V_CODE &gt;= VENDOR.V_CODE;</label>
+			</div>
+
+			<!-- Question 52 -->
+			<div class="question">
+				<h3>52. SQL allows the use of special operators in conjunction with the WHERE clause. A special operator used to check for similar character strings is ____.</h3>
+				<label><input type="radio" name="q52" value="A"> A) BETWEEN</label>
+				<label><input type="radio" name="q52" value="B"> B) IS NULL</label>
+				<label><input type="radio" name="q52" value="C"> C) LIKE</label>
+				<label><input type="radio" name="q52" value="D"> D) IN</label>
+			</div>
+
+			<!-- Question 53 -->
+			<div class="question">
+				<h3>53. A table can be deleted from the database by using the ____ command.</h3>
+				<label><input type="radio" name="q53" value="A"> A) DROP</label>
+				<label><input type="radio" name="q53" value="B"> B) DELETE</label>
+				<label><input type="radio" name="q53" value="C"> C) MODIFY</label>
+				<label><input type="radio" name="q53" value="D"> D) ERASE</label>
+			</div>
+
+			<!-- Question 54 -->
+			<div class="question">
+				<h3>54. UPDATE tablename ***** WHERE conditionlist; What command replaces the ***** in the above statement?</h3>
+				<label><input type="radio" name="q54" value="A"> A) SET columnname = expression</label>
+				<label><input type="radio" name="q54" value="B"> B) columnname = expression</label>
+				<label><input type="radio" name="q54" value="C"> C) expression = columnname</label>
+				<label><input type="radio" name="q54" value="D"> D) LET columnname = expression</label>
+			</div>
+
+			<!-- Question 55 -->
+			<div class="question">
+				<h3>55. A ____ join returns rows with matching values and includes all rows from both tables (T1 and T2) with unmatched values.</h3>
+				<label><input type="radio" name="q55" value="A"> A) natural</label>
+				<label><input type="radio" name="q55" value="B"> B) cross</label>
+				<label><input type="radio" name="q55" value="C"> C) full outer</label>
+				<label><input type="radio" name="q55" value="D"> D) left outer</label>
+			</div>
+
+			<!-- Question 56 -->
+			<div class="question">
+				<h3>56. During which step in the extract, transform, load (ETL) process are raw data sets aggregated?</h3>
+				<label><input type="radio" name="q56" value="A"> A) Transformation</label>
+				<label><input type="radio" name="q56" value="B"> B) Extraction</label>
+				<label><input type="radio" name="q56" value="C"> C) Loading</label>
+				<label><input type="radio" name="q56" value="D"> D) Denormalization</label>
+			</div>
+
+			<!-- Question 57 -->
+			<div class="question">
+				<h3>57. Which is an important issue associated with the loading component of extract, transform, load (ETL)?</h3>
+				<label><input type="radio" name="q57" value="A"> A) Mapping keys from one system to another</label>
+				<label><input type="radio" name="q57" value="B"> B) Monitor refreshing volume and frequency</label>
+				<label><input type="radio" name="q57" value="C"> C) Determining the content of the data</label>
+				<label><input type="radio" name="q57" value="D"> D) Denormalizing and renormalizing data</label>
+			</div>
+
+			<!-- Question 58 with an image -->
+			<div class="question">
+				<h3>58. What change would you need to make to normalize the database to the third normal form (3NF)?</h3>
+				<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_58.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+				<label><input type="radio" name="q58" value="A"> A) Combine the FirstName and LastName columns into a single column</label>
+				<label><input type="radio" name="q58" value="B"> B) Combine the Campus, Address, City, State, Country, and PostalCode columns into a single column</label>
+				<label><input type="radio" name="q58" value="C"> C) Create a separate table for campus address information. Use the Campus as the primary key. Add a TeacherID column to the table and relate it to the Teacher ID column in the Teachers table</label>
+				<label><input type="radio" name="q58" value="D"> D) Create a separate table for campus address information. Use Campus as the primary key for the table. Create a foreign key in the Teachers table that relates teacher to the campus</label>
+			</div>
+
+			<!-- Question 59 -->
+			<div class="question">
+				<h3>59. Which statement will remove all rows from the Materials table that have a Status value of ‘Obsolete’ but do not have a value for the VendorID column?</h3>
+				<label><input type="radio" name="q59" value="A"> A) DELETE Materials WHERE Status = ‘Obsolete’ OR VendorID IS NULL</label>
+				<label><input type="radio" name="q59" value="B"> B) DELETE FROM Materials WHERE Status = ‘Obsolete’ AND VendorID IS NULL</label>
+				<label><input type="radio" name="q59" value="C"> C) DELETE MaterialID, Description, Status, VendorID FROM Materials WHERE Status = ‘Obsolete’ AND VendorID IS NULL</label>
+				<label><input type="radio" name="q59" value="D"> D) DELETE FROM Materials WHERE Status = ‘Obsolete’ WHERE VendorID IS NULL</label>
+			</div>
+
+			<!-- Question 60 with an image -->
+			<div class="question">
+				<h3>60. What column or columns should you use for the primary key in the TestScores table?</h3>
+				<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_60.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+				<label><input type="radio" name="q60" value="A"> A) StudentID, Date</label>
+				<label><input type="radio" name="q60" value="B"> B) StudentID, Test, Date, InstructorID</label>
+				<label><input type="radio" name="q60" value="C"> C) StudentID, Test, and Date</label>
+				<label><input type="radio" name="q60" value="D"> D) Test</label>
+			</div>
+
+			<!-- Question 61 with an image -->
+			<div class="question">
+				<h3>61. You are creating a relational database to store information about instructors and the courses that each instructor teaches. What should you do?</h3>
+				<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_61.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+				<label><input type="radio" name="q61" value="A"> A) Create a new column in the Instructor table</label>
+				<label><input type="radio" name="q61" value="B"> B) Create new columns in the Instructors table for each course taught</label>
+				<label><input type="radio" name="q61" value="C"> C) Create a new table that includes two columns</label>
+				<label><input type="radio" name="q61" value="D"> D) Create a new column in the Course table</label>
+			</div>
+
+			<!-- Question 62 -->
+			<div class="question">
+				<h3>62. Which of the following is structured data?</h3>
+				<label><input type="radio" name="q62" value="A"> A) Images</label>
+				<label><input type="radio" name="q62" value="B"> B) Email Attachments</label>
+				<label><input type="radio" name="q62" value="C"> C) Records in a database</label>
+				<label><input type="radio" name="q62" value="D"> D) Audio/Video</label>
+			</div>
+
+			<!-- Question 63 with an image -->
+			<div class="question">
+				<h3>63. Which kind of relationship does the diagram below depict?</h3>
+				<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_63.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+				<label><input type="radio" name="q63" value="A"> A) Unary one-to-many</label>
+				<label><input type="radio" name="q63" value="B"> B) Binary many-to-many</label>
+				<label><input type="radio" name="q63" value="C"> C) Unary many-to-many</label>
+				<label><input type="radio" name="q63" value="D"> D) Binary one-to-many</label>
+			</div>
+
+			<!-- Question 64 with an image -->
+		<div class="question">
+			<h3>64. Which kind of relationship does the diagram below depict?</h3>
+			<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_64.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+			<label><input type="radio" name="q64" value="A"> A) Unary one-to-many</label>
+			<label><input type="radio" name="q64" value="B"> B) Binary many-to-many</label>
+			<label><input type="radio" name="q64" value="C"> C) Unary one-to-one</label>
+			<label><input type="radio" name="q64" value="D"> D) Binary one-to-many</label>
+		</div>
+
+		<!-- Question 65 with an image -->
+		<div class="question">
+			<h3>65. What is the modality of appointment?</h3>
+			<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_65.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+			<label><input type="radio" name="q65" value="A"> A) At least one</label>
+			<label><input type="radio" name="q65" value="B"> B) Dependent on the quantity</label>
+			<label><input type="radio" name="q65" value="C"> C) Two</label>
+			<label><input type="radio" name="q65" value="D"> D) Two or more</label>
+		</div>
+
+		<!-- Question 66 with an image -->
+		<div class="question">
+			<h3>66. What form is this table in?</h3>
+			<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_66.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+			<label><input type="radio" name="q66" value="A"> A) Unnormalized</label>
+			<label><input type="radio" name="q66" value="B"> B) First normal form</label>
+			<label><input type="radio" name="q66" value="C"> C) Second normal form</label>
+			<label><input type="radio" name="q66" value="D"> D) Third normal form</label>
+		</div>
+
+		<!-- Question 67 with an image -->
+		<div class="question">
+			<h3>67. What form is this table in?</h3>
+			<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_67.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+			<label><input type="radio" name="q67" value="A"> A) Unnormalized</label>
+			<label><input type="radio" name="q67" value="B"> B) First normal form</label>
+			<label><input type="radio" name="q67" value="C"> C) Second normal form</label>
+			<label><input type="radio" name="q67" value="D"> D) Third normal form</label>
+		</div>
+
+		<!-- Question 68 with an image -->
+		<div class="question">
+			<h3>68. What form is this table in?</h3>
+			<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_68.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+			<label><input type="radio" name="q68" value="A"> A) Unnormalized</label>
+			<label><input type="radio" name="q68" value="B"> B) First normal form</label>
+			<label><input type="radio" name="q68" value="C"> C) Second normal form</label>
+			<label><input type="radio" name="q68" value="D"> D) Third normal form</label>
+		</div>
+
+		<!-- Question 69 with an image -->
+		<div class="question">
+			<h3>69. What form is this table in?</h3>
+			<img src="C:/Users/AdamPlayVR/Desktop/Data Management - Foundations/Data Management - Foundations 7/diagram_69.png" alt="ER Diagram for Registration" style="width:500px; height:auto;">
+			<label><input type="radio" name="q69" value="A"> A) Unnormalized</label>
+			<label><input type="radio" name="q69" value="B"> B) First normal form</label>
+			<label><input type="radio" name="q69" value="C"> C) Second normal form</label>
+			<label><input type="radio" name="q69" value="D"> D) Third normal form</label>
+		</div>
+
+<button type="button" id="submit-btn">Submit Quiz</button>
+
+
+            
+        </form>
+        
+        <!-- Results Display -->
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

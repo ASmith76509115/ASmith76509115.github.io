@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Management Concepts Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Database Management Concepts Quiz</h1>
+        <h2>by Adam Smith</h2>
+        
+        <!-- Timer Display -->
+        <p id="timer" style="font-size: 18px; color: red;">Time Remaining: 100:00</p>
+        
+        <!-- Start Button -->
+        <button type="button" id="start-btn">Start Quiz</button>
+        
+        <!-- Quiz Form -->
+        <form id="quiz-form" style="display: none;">
+             <!-- Example Question -->
+            <div class="question">
+                <h3>1. What is a Database Management System (DBMS)?</h3>
+                <label><input type="radio" name="q1" value="A"> A) A software system to define, create, maintain, and control access to a database</label>
+                <label><input type="radio" name="q1" value="B"> B) A type of computer hardware</label>
+                <label><input type="radio" name="q1" value="C"> C) A type of data storage device</label>
+                <label><input type="radio" name="q1" value="D"> D) A system for web development</label>
+            </div>
+
+            <!-- Additional Questions -->
+            <div class="question">
+                <h3>2. List three primary functions of a DBMS.</h3>
+                <label><input type="radio" name="q2" value="A"> A) Data storage, data retrieval, and data updating</label>
+                <label><input type="radio" name="q2" value="B"> B) Data creation, data deletion, and data transfer</label>
+                <label><input type="radio" name="q2" value="C"> C) File sharing, system updates, and user management</label>
+                <label><input type="radio" name="q2" value="D"> D) Hardware monitoring, security protocols, and storage management</label>
+            </div>
+            <div class="question">
+                <h3>3. What are the main objectives of a DBMS?</h3>
+                <label><input type="radio" name="q3" value="A"> A) Speed, accuracy, and size</label>
+                <label><input type="radio" name="q3" value="B"> B) Efficiency, integrity, security, and multi-user access</label>
+                <label><input type="radio" name="q3" value="C"> C) Data compression, encryption, and cost-effectiveness</label>
+                <label><input type="radio" name="q3" value="D"> D) Data backup, recovery, and mobility</label>
+            </div>
+            <div class="question">
+                <h3>4. What are the four types of DBMS?</h3>
+                <label><input type="radio" name="q4" value="A"> A) Network, Hierarchical, Distributed, Object-oriented</label>
+                <label><input type="radio" name="q4" value="B"> B) Network, Hierarchical, Relational, Object-oriented</label>
+                <label><input type="radio" name="q4" value="C"> C) Flat, Relational, Tree, Graph</label>
+                <label><input type="radio" name="q4" value="D"> D) SQL, NoSQL, NewSQL, XML</label>
+            </div>
+            <div class="question">
+                <h3>5. Describe the Hierarchical DBMS model.</h3>
+                <label><input type="radio" name="q5" value="A"> A) Data is stored as flat files</label>
+                <label><input type="radio" name="q5" value="B"> B) Data is organized in a tree-like structure</label>
+                <label><input type="radio" name="q5" value="C"> C) Data is stored in a grid format</label>
+                <label><input type="radio" name="q5" value="D"> D) Data is interconnected with multiple relationships</label>
+            </div>
+            <div class="question">
+                <h3>6. What is a Relational DBMS (RDBMS)?</h3>
+                <label><input type="radio" name="q6" value="A"> A) A DBMS that does not enforce data relationships</label>
+                <label><input type="radio" name="q6" value="B"> B) A DBMS based on the relational model with tables and keys</label>
+                <label><input type="radio" name="q6" value="C"> C) A DBMS that only uses hierarchical data structures</label>
+                <label><input type="radio" name="q6" value="D"> D) A DBMS that stores data as graphs</label>
+            <!-- Question 7 -->
+			<div class="question">
+				<h3>7. What is the purpose of SQL in an RDBMS?</h3>
+				<label><input type="radio" name="q7" value="A"> A) To manage operating system files</label>
+				<label><input type="radio" name="q7" value="B"> B) To create, read, update, and delete data</label>
+				<label><input type="radio" name="q7" value="C"> C) To handle graphic rendering</label>
+				<label><input type="radio" name="q7" value="D"> D) To manage network connections</label>
+			</div>
+
+			<!-- Question 8 -->
+			<div class="question">
+				<h3>8. What is data integrity in a DBMS?</h3>
+				<label><input type="radio" name="q8" value="A"> A) Data processing speed</label>
+				<label><input type="radio" name="q8" value="B"> B) Accuracy and consistency of data</label>
+				<label><input type="radio" name="q8" value="C"> C) Data encryption</label>
+				<label><input type="radio" name="q8" value="D"> D) Data format management</label>
+			</div>
+
+			<!-- Question 9 -->
+			<div class="question">
+				<h3>9. Describe data security in a DBMS.</h3>
+				<label><input type="radio" name="q9" value="A"> A) Protecting data from unauthorized access</label>
+				<label><input type="radio" name="q9" value="B"> B) Data storage management</label>
+				<label><input type="radio" name="q9" value="C"> C) Reducing data size</label>
+				<label><input type="radio" name="q9" value="D"> D) Improving database speed</label>
+			</div>
+
+			<!-- Question 10 -->
+			<div class="question">
+				<h3>10. What is data concurrency?</h3>
+				<label><input type="radio" name="q10" value="A"> A) Synchronizing databases between servers</label>
+				<label><input type="radio" name="q10" value="B"> B) Allowing multiple users to access data simultaneously</label>
+				<label><input type="radio" name="q10" value="C"> C) Preventing duplicate data</label>
+				<label><input type="radio" name="q10" value="D"> D) Data compression</label>
+			</div>
+
+			<!-- Question 11 -->
+			<div class="question">
+				<h3>11. What are the backup and recovery functions of a DBMS?</h3>
+				<label><input type="radio" name="q11" value="A"> A) Creating and managing users</label>
+				<label><input type="radio" name="q11" value="B"> B) Restoring data after loss or corruption</label>
+				<label><input type="radio" name="q11" value="C"> C) Managing network connections</label>
+				<label><input type="radio" name="q11" value="D"> D) Enhancing data integrity</label>
+			</div>
+
+			<!-- Question 12 -->
+			<div class="question">
+				<h3>12. What is a transaction in the context of a DBMS?</h3>
+				<label><input type="radio" name="q12" value="A"> A) A sequence of database operations treated as a single unit of work</label>
+				<label><input type="radio" name="q12" value="B"> B) A report generation process</label>
+				<label><input type="radio" name="q12" value="C"> C) A method of encrypting data</label>
+				<label><input type="radio" name="q12" value="D"> D) A query that retrieves data</label>
+			</div>
+
+			<!-- Question 13 -->
+			<div class="question">
+				<h3>13. What do the ACID properties of transactions stand for?</h3>
+				<label><input type="radio" name="q13" value="A"> A) Authentication, Connectivity, Isolation, Distribution</label>
+				<label><input type="radio" name="q13" value="B"> B) Atomicity, Consistency, Isolation, Durability</label>
+				<label><input type="radio" name="q13" value="C"> C) Access, Control, Integration, Deletion</label>
+				<label><input type="radio" name="q13" value="D"> D) Accuracy, Correctness, Integrity, Data Security</label>
+			</div>
+
+			<!-- Question 14 -->
+			<div class="question">
+				<h3>14. Define Atomicity in database transactions.</h3>
+				<label><input type="radio" name="q14" value="A"> A) The ability to split a transaction into parts</label>
+				<label><input type="radio" name="q14" value="B"> B) The requirement for all operations in a transaction to be completed or none applied</label>
+				<label><input type="radio" name="q14" value="C"> C) The time taken to process a transaction</label>
+				<label><input type="radio" name="q14" value="D"> D) The logging of transaction details</label>
+			</div>
+
+			<!-- Question 15 -->
+			<div class="question">
+				<h3>15. What is the purpose of Consistency in a transaction?</h3>
+				<label><input type="radio" name="q15" value="A"> A) To ensure database transactions are secure</label>
+				<label><input type="radio" name="q15" value="B"> B) To ensure transactions adhere to all defined rules and constraints</label>
+				<label><input type="radio" name="q15" value="C"> C) To allow multiple users access to data simultaneously</label>
+				<label><input type="radio" name="q15" value="D"> D) To encrypt transaction data</label>
+			</div>
+
+			<!-- Question 16 -->
+			<div class="question">
+				<h3>16. What does Isolation in transactions achieve?</h3>
+				<label><input type="radio" name="q16" value="A"> A) Ensuring one transaction does not affect others until complete</label>
+				<label><input type="radio" name="q16" value="B"> B) Isolating databases on different servers</label>
+				<label><input type="radio" name="q16" value="C"> C) Encrypting data during a transaction</label>
+				<label><input type="radio" name="q16" value="D"> D) Ensuring only one user can access a database at a time</label>
+			</div>
+
+			<!-- Question 17 -->
+			<div class="question">
+				<h3>17. Describe Durability in database transactions.</h3>
+				<label><input type="radio" name="q17" value="A"> A) Ensuring transactions last longer</label>
+				<label><input type="radio" name="q17" value="B"> B) Guaranteeing transaction changes are permanent after commit</label>
+				<label><input type="radio" name="q17" value="C"> C) Encrypting transaction data</label>
+				<label><input type="radio" name="q17" value="D"> D) Ensuring quick recovery from transaction errors</label>
+			</div>
+
+			<!-- Question 18 -->
+			<div class="question">
+				<h3>18. What are the main components of a DBMS?</h3>
+				<label><input type="radio" name="q18" value="A"> A) Database, Server, Hardware, and Software</label>
+				<label><input type="radio" name="q18" value="B"> B) Hardware, Software, Data, Procedures, and Database Access Language</label>
+				<label><input type="radio" name="q18" value="C"> C) Software, Data, Access Controls, and Firewalls</label>
+				<label><input type="radio" name="q18" value="D"> D) Hardware, Software, User Interfaces, and Applications</label>
+			</div>
+
+			<!-- Question 19 -->
+			<div class="question">
+				<h3>19. What is the role of hardware in a DBMS?</h3>
+				<label><input type="radio" name="q19" value="A"> A) To store and retrieve data using physical devices</label>
+				<label><input type="radio" name="q19" value="B"> B) To execute software commands</label>
+				<label><input type="radio" name="q19" value="C"> C) To manage user data</label>
+				<label><input type="radio" name="q19" value="D"> D) To enforce data encryption</label>
+			</div>
+
+			<!-- Question 20 -->
+			<div class="question">
+				<h3>20. Describe the purpose of software in a DBMS.</h3>
+				<label><input type="radio" name="q20" value="A"> A) To handle physical storage of data</label>
+				<label><input type="radio" name="q20" value="B"> B) To manage and control access to the database</label>
+				<label><input type="radio" name="q20" value="C"> C) To create user interfaces</label>
+				<label><input type="radio" name="q20" value="D"> D) To provide encryption and security</label>
+			</div>
+
+			<!-- Question 21 -->
+			<div class="question">
+				<h3>21. What is a database schema?</h3>
+				<label><input type="radio" name="q21" value="A"> A) A single record in a database</label>
+				<label><input type="radio" name="q21" value="B"> B) A visual representation of a database's structure</label>
+				<label><input type="radio" name="q21" value="C"> C) A database management tool</label>
+				<label><input type="radio" name="q21" value="D"> D) A software application for data analysis</label>
+			</div>
+
+			<!-- Question 22 -->
+			<div class="question">
+				<h3>22. What is the difference between logical and physical database schemas?</h3>
+				<label><input type="radio" name="q22" value="A"> A) Logical schema is for design, while physical schema is for actual data storage</label>
+				<label><input type="radio" name="q22" value="B"> B) Physical schema is a backup copy of the logical schema</label>
+				<label><input type="radio" name="q22" value="C"> C) Logical schema is more secure than physical schema</label>
+				<label><input type="radio" name="q22" value="D"> D) Logical schema is used only for metadata</label>
+			</div>
+
+			<!-- Question 23 -->
+			<div class="question">
+				<h3>23. What is a database view?</h3>
+				<label><input type="radio" name="q23" value="A"> A) A permanent table stored in the database</label>
+				<label><input type="radio" name="q23" value="B"> B) A virtual table created by a query</label>
+				<label><input type="radio" name="q23" value="C"> C) A software for managing databases</label>
+				<label><input type="radio" name="q23" value="D"> D) A tool for indexing data</label>
+			</div>
+
+			<!-- Question 24 -->
+			<div class="question">
+				<h3>24. What is data redundancy?</h3>
+				<label><input type="radio" name="q24" value="A"> A) The use of unique data only</label>
+				<label><input type="radio" name="q24" value="B"> B) Repetition of data within a database</label>
+				<label><input type="radio" name="q24" value="C"> C) The deletion of duplicate data</label>
+				<label><input type="radio" name="q24" value="D"> D) Encrypting data to avoid duplication</label>
+			</div>
+
+			<!-- Question 25 -->
+			<div class="question">
+				<h3>25. What is the purpose of a primary key?</h3>
+				<label><input type="radio" name="q25" value="A"> A) To encrypt data</label>
+				<label><input type="radio" name="q25" value="B"> B) To uniquely identify each record in a table</label>
+				<label><input type="radio" name="q25" value="C"> C) To store large amounts of data</label>
+				<label><input type="radio" name="q25" value="D"> D) To enable data replication</label>
+			</div>
+
+			<!-- Question 26 -->
+			<div class="question">
+				<h3>26. What is a foreign key?</h3>
+				<label><input type="radio" name="q26" value="A"> A) A key that links tables in a relational database</label>
+				<label><input type="radio" name="q26" value="B"> B) A key used for data encryption</label>
+				<label><input type="radio" name="q26" value="C"> C) A primary key for external databases</label>
+				<label><input type="radio" name="q26" value="D"> D) A key used to index a table</label>
+			</div>
+
+			<!-- Question 27 -->
+			<div class="question">
+				<h3>27. What is an entity in a database?</h3>
+				<label><input type="radio" name="q27" value="A"> A) A specific instance of a data type</label>
+				<label><input type="radio" name="q27" value="B"> B) An object about which data is stored</label>
+				<label><input type="radio" name="q27" value="C"> C) A backup of database data</label>
+				<label><input type="radio" name="q27" value="D"> D) A user of the database</label>
+			</div>
+
+			<!-- Question 28 -->
+			<div class="question">
+				<h3>28. What is an attribute in a database?</h3>
+				<label><input type="radio" name="q28" value="A"> A) A characteristic or property of an entity</label>
+				<label><input type="radio" name="q28" value="B"> B) A user role</label>
+				<label><input type="radio" name="q28" value="C"> C) A data query</label>
+				<label><input type="radio" name="q28" value="D"> D) A backup function</label>
+			</div>
+
+			<!-- Question 29 -->
+			<div class="question">
+				<h3>29. Define referential integrity.</h3>
+				<label><input type="radio" name="q29" value="A"> A) Ensuring accurate data input</label>
+				<label><input type="radio" name="q29" value="B"> B) Maintaining consistent relationships between tables</label>
+				<label><input type="radio" name="q29" value="C"> C) Encrypting data during transfer</label>
+				<label><input type="radio" name="q29" value="D"> D) Creating data backups</label>
+			</div>
+
+			<!-- Question 30 -->
+			<div class="question">
+				<h3>30. What is an index in a database?</h3>
+				<label><input type="radio" name="q30" value="A"> A) A copy of the entire database</label>
+				<label><input type="radio" name="q30" value="B"> B) A data structure that improves query performance</label>
+				<label><input type="radio" name="q30" value="C"> C) A key for encrypting data</label>
+				<label><input type="radio" name="q30" value="D"> D) A tool for data visualization</label>
+			</div>
+
+			<!-- Question 31 -->
+			<div class="question">
+				<h3>31. What is a clustered index?</h3>
+				<label><input type="radio" name="q31" value="A"> A) An index that sorts data rows in the table itself</label>
+				<label><input type="radio" name="q31" value="B"> B) An index stored separately from the table</label>
+				<label><input type="radio" name="q31" value="C"> C) An index for external data</label>
+				<label><input type="radio" name="q31" value="D"> D) An index for encrypted data</label>
+			</div>
+
+			<!-- Question 32 -->
+			<div class="question">
+				<h3>32. What is the purpose of a non-clustered index?</h3>
+				<label><input type="radio" name="q32" value="A"> A) To create a virtual table</label>
+				<label><input type="radio" name="q32" value="B"> B) To improve query speed with a separate structure for data pointers</label>
+				<label><input type="radio" name="q32" value="C"> C) To replace a clustered index</label>
+				<label><input type="radio" name="q32" value="D"> D) To store backup data</label>
+			</div>
+
+			<!-- Question 33 -->
+			<div class="question">
+				<h3>33. Describe a stored procedure.</h3>
+				<label><input type="radio" name="q33" value="A"> A) A type of database backup</label>
+				<label><input type="radio" name="q33" value="B"> B) A set of SQL statements saved for repeated execution</label>
+				<label><input type="radio" name="q33" value="C"> C) A tool for data encryption</label>
+				<label><input type="radio" name="q33" value="D"> D) A user-defined function for table indexing</label>
+			</div>
+
+			<!-- Question 34 -->
+			<div class="question">
+				<h3>34. What is a database trigger?</h3>
+				<label><input type="radio" name="q34" value="A"> A) A tool for backing up data</label>
+				<label><input type="radio" name="q34" value="B"> B) SQL code that automatically executes in response to certain events</label>
+				<label><input type="radio" name="q34" value="C"> C) A key for indexing tables</label>
+				<label><input type="radio" name="q34" value="D"> D) A way to encrypt database queries</label>
+			</div>
+
+			<!-- Question 35 -->
+			<div class="question">
+				<h3>35. What is data concurrency in a DBMS?</h3>
+				<label><input type="radio" name="q35" value="A"> A) Access control for sensitive data</label>
+				<label><input type="radio" name="q35" value="B"> B) Ensuring multiple users can access data simultaneously without conflicts</label>
+				<label><input type="radio" name="q35" value="C"> C) Storing backup copies of data</label>
+				<label><input type="radio" name="q35" value="D"> D) Encrypting data before storage</label>
+			</div>
+
+			<!-- Question 36 -->
+			<div class="question">
+				<h3>36. What is data integrity in a DBMS?</h3>
+				<label><input type="radio" name="q36" value="A"> A) The availability of data</label>
+				<label><input type="radio" name="q36" value="B"> B) The accuracy and consistency of data over its lifecycle</label>
+				<label><input type="radio" name="q36" value="C"> C) The backup of data</label>
+				<label><input type="radio" name="q36" value="D"> D) The storage of encrypted data</label>
+			</div>
+
+			<!-- Question 37 -->
+			<div class="question">
+				<h3>37. What is data security in a DBMS?</h3>
+				<label><input type="radio" name="q37" value="A"> A) Ensuring data is encrypted</label>
+				<label><input type="radio" name="q37" value="B"> B) Protecting data against unauthorized access or corruption</label>
+				<label><input type="radio" name="q37" value="C"> C) Ensuring data is backed up daily</label>
+				<label><input type="radio" name="q37" value="D"> D) Accessing data from multiple locations</label>
+			</div>
+
+			<!-- Question 38 -->
+			<div class="question">
+				<h3>38. What is data abstraction in a DBMS?</h3>
+				<label><input type="radio" name="q38" value="A"> A) The physical storage of data</label>
+				<label><input type="radio" name="q38" value="B"> B) Separating the logical structure of data from its physical storage</label>
+				<label><input type="radio" name="q38" value="C"> C) Encrypting data</label>
+				<label><input type="radio" name="q38" value="D"> D) Compressing data for storage</label>
+			</div>
+
+			<!-- Question 39 -->
+			<div class="question">
+				<h3>39. What are the three levels of data abstraction?</h3>
+				<label><input type="radio" name="q39" value="A"> A) Logical, physical, and virtual</label>
+				<label><input type="radio" name="q39" value="B"> B) Conceptual, external, and internal</label>
+				<label><input type="radio" name="q39" value="C"> C) Logical, structured, and unstructured</label>
+				<label><input type="radio" name="q39" value="D"> D) Compressed, encrypted, and decrypted</label>
+			</div>
+
+			<!-- Question 40 -->
+			<div class="question">
+				<h3>40. What is the role of the external level in data abstraction?</h3>
+				<label><input type="radio" name="q40" value="A"> A) To store data physically</label>
+				<label><input type="radio" name="q40" value="B"> B) To provide a user-specific view of the data</label>
+				<label><input type="radio" name="q40" value="C"> C) To manage database transactions</label>
+				<label><input type="radio" name="q40" value="D"> D) To backup data regularly</label>
+			</div>
+
+			<!-- Question 41 -->
+			<div class="question">
+				<h3>41. What is the conceptual level of data abstraction?</h3>
+				<label><input type="radio" name="q41" value="A"> A) It provides a physical view of data storage</label>
+				<label><input type="radio" name="q41" value="B"> B) It offers a unified view of the entire database</label>
+				<label><input type="radio" name="q41" value="C"> C) It encrypts data</label>
+				<label><input type="radio" name="q41" value="D"> D) It provides a user-specific view</label>
+			</div>
+
+			<!-- Question 42 -->
+			<div class="question">
+				<h3>42. What is the internal level of data abstraction?</h3>
+				<label><input type="radio" name="q42" value="A"> A) It details the physical storage of data on hardware</label>
+				<label><input type="radio" name="q42" value="B"> B) It shows data at a user level</label>
+				<label><input type="radio" name="q42" value="C"> C) It is used to compress data</label>
+				<label><input type="radio" name="q42" value="D"> D) It manages database security</label>
+			</div>
+
+			<!-- Question 43 -->
+			<div class="question">
+				<h3>43. What is data independence?</h3>
+				<label><input type="radio" name="q43" value="A"> A) Ensuring data is stored securely</label>
+				<label><input type="radio" name="q43" value="B"> B) Allowing changes at one level of data abstraction without affecting other levels</label>
+				<label><input type="radio" name="q43" value="C"> C) Backing up data to external storage</label>
+				<label><input type="radio" name="q43" value="D"> D) Encrypting data for transmission</label>
+			</div>
+
+			<!-- Question 44 -->
+			<div class="question">
+				<h3>44. What is logical data independence?</h3>
+				<label><input type="radio" name="q44" value="A"> A) The ability to change the physical schema without altering logical schema</label>
+				<label><input type="radio" name="q44" value="B"> B) The ability to change the conceptual schema without altering external schemas</label>
+				<label><input type="radio" name="q44" value="C"> C) The encryption of data for security</label>
+				<label><input type="radio" name="q44" value="D"> D) The process of compressing data</label>
+			</div>
+
+			<!-- Question 45 -->
+			<div class="question">
+				<h3>45. What is physical data independence?</h3>
+				<label><input type="radio" name="q45" value="A"> A) The ability to change physical storage without affecting the conceptual schema</label>
+				<label><input type="radio" name="q45" value="B"> B) The ability to change external schema without affecting conceptual schema</label>
+				<label><input type="radio" name="q45" value="C"> C) Ensuring data encryption during storage</label>
+				<label><input type="radio" name="q45" value="D"> D) A backup method for databases</label>
+			</div>
+
+			<!-- Question 46 -->
+			<div class="question">
+				<h3>46. What is a candidate key in a database?</h3>
+				<label><input type="radio" name="q46" value="A"> A) A key that could be used as a primary key</label>
+				<label><input type="radio" name="q46" value="B"> B) A key used only for encryption</label>
+				<label><input type="radio" name="q46" value="C"> C) A backup key</label>
+				<label><input type="radio" name="q46" value="D"> D) A key used for indexing</label>
+			</div>
+
+			<!-- Question 47 -->
+			<div class="question">
+				<h3>47. What is a composite key?</h3>
+				<label><input type="radio" name="q47" value="A"> A) A single column used as a primary key</label>
+				<label><input type="radio" name="q47" value="B"> B) A key consisting of two or more columns to uniquely identify records</label>
+				<label><input type="radio" name="q47" value="C"> C) A key used for encryption</label>
+				<label><input type="radio" name="q47" value="D"> D) A key used only for indexing</label>
+			</div>
+
+			<!-- Question 48 -->
+			<div class="question">
+				<h3>48. What is a surrogate key?</h3>
+				<label><input type="radio" name="q48" value="A"> A) A key generated by the system as a unique identifier</label>
+				<label><input type="radio" name="q48" value="B"> B) A key used only for encryption</label>
+				<label><input type="radio" name="q48" value="C"> C) A foreign key</label>
+				<label><input type="radio" name="q48" value="D"> D) A key made of multiple columns</label>
+			</div>
+
+			<!-- Question 49 -->
+			<div class="question">
+				<h3>49. What is referential integrity in a DBMS?</h3>
+				<label><input type="radio" name="q49" value="A"> A) Data encryption mechanism</label>
+				<label><input type="radio" name="q49" value="B"> B) Ensuring foreign keys correctly reference primary keys</label>
+				<label><input type="radio" name="q49" value="C"> C) A method of data backup</label>
+				<label><input type="radio" name="q49" value="D"> D) A process of compressing data</label>
+			</div>
+
+			<!-- Question 50 -->
+			<div class="question">
+				<h3>50. What is a foreign key in a relational database?</h3>
+				<label><input type="radio" name="q50" value="A"> A) A key that uniquely identifies each record</label>
+				<label><input type="radio" name="q50" value="B"> B) A key that links to a primary key in another table</label>
+				<label><input type="radio" name="q50" value="C"> C) A key used only for encryption</label>
+				<label><input type="radio" name="q50" value="D"> D) A key used for backup</label>
+			</div>
+
+			<!-- Question 51 -->
+			<div class="question">
+				<h3>51. What is a self-referencing relationship in a database?</h3>
+				<label><input type="radio" name="q51" value="A"> A) A relationship where a table is related to itself</label>
+				<label><input type="radio" name="q51" value="B"> B) A relationship between two different tables</label>
+				<label><input type="radio" name="q51" value="C"> C) A relationship only used for backups</label>
+				<label><input type="radio" name="q51" value="D"> D) A relationship used to encrypt data</label>
+			</div>
+
+			<!-- Question 52 -->
+			<div class="question">
+				<h3>52. What is a database view?</h3>
+				<label><input type="radio" name="q52" value="A"> A) A physical storage of data</label>
+				<label><input type="radio" name="q52" value="B"> B) A virtual table based on a query</label>
+				<label><input type="radio" name="q52" value="C"> C) An index on a table</label>
+				<label><input type="radio" name="q52" value="D"> D) A table used for backups</label>
+			</div>
+
+			<!-- Question 53 -->
+			<div class="question">
+				<h3>53. What is a database trigger?</h3>
+				<label><input type="radio" name="q53" value="A"> A) A backup mechanism</label>
+				<label><input type="radio" name="q53" value="B"> B) A set of commands that execute in response to specific events</label>
+				<label><input type="radio" name="q53" value="C"> C) A mechanism for data encryption</label>
+				<label><input type="radio" name="q53" value="D"> D) A method for indexing data</label>
+			</div>
+
+			<!-- Question 54 -->
+			<div class="question">
+				<h3>54. What is an entity in database terms?</h3>
+				<label><input type="radio" name="q54" value="A"> A) A type of index</label>
+				<label><input type="radio" name="q54" value="B"> B) A real-world object or concept about which data is stored</label>
+				<label><input type="radio" name="q54" value="C"> C) A foreign key</label>
+				<label><input type="radio" name="q54" value="D"> D) A backup strategy</label>
+			</div>
+
+			<!-- Question 55 -->
+			<div class="question">
+				<h3>55. What is an attribute in a database?</h3>
+				<label><input type="radio" name="q55" value="A"> A) A column or characteristic of an entity</label>
+				<label><input type="radio" name="q55" value="B"> B) A row in a table</label>
+				<label><input type="radio" name="q55" value="C"> C) A type of backup</label>
+				<label><input type="radio" name="q55" value="D"> D) A foreign key</label>
+			</div>
+
+			<!-- Question 56 -->
+			<div class="question">
+				<h3>56. What is a relationship in a database?</h3>
+				<label><input type="radio" name="q56" value="A"> A) A link between two or more entities</label>
+				<label><input type="radio" name="q56" value="B"> B) A type of index</label>
+				<label><input type="radio" name="q56" value="C"> C) A backup strategy</label>
+				<label><input type="radio" name="q56" value="D"> D) An encryption method</label>
+			</div>
+
+			<!-- Question 57 -->
+			<div class="question">
+				<h3>57. What is a one-to-many relationship?</h3>
+				<label><input type="radio" name="q57" value="A"> A) A relationship where one entity is linked to only one other entity</label>
+				<label><input type="radio" name="q57" value="B"> B) A relationship where one entity can be linked to multiple entities in another table</label>
+				<label><input type="radio" name="q57" value="C"> C) A type of encryption</label>
+				<label><input type="radio" name="q57" value="D"> D) A backup method</label>
+			</div>
+
+			<!-- Question 58 -->
+			<div class="question">
+				<h3>58. What is a many-to-many relationship?</h3>
+				<label><input type="radio" name="q58" value="A"> A) A relationship where one entity is linked to only one other entity</label>
+				<label><input type="radio" name="q58" value="B"> B) A relationship where multiple records in one table can relate to multiple records in another table</label>
+				<label><input type="radio" name="q58" value="C"> C) A type of index</label>
+				<label><input type="radio" name="q58" value="D"> D) A data backup method</label>
+			</div>
+
+			<!-- Question 59 -->
+			<div class="question">
+				<h3>59. What is a recursive relationship?</h3>
+				<label><input type="radio" name="q59" value="A"> A) A relationship that involves only two tables</label>
+				<label><input type="radio" name="q59" value="B"> B) A relationship where an entity is related to itself</label>
+				<label><input type="radio" name="q59" value="C"> C) A foreign key constraint</label>
+				<label><input type="radio" name="q59" value="D"> D) A backup strategy</label>
+			</div>
+
+			<!-- Question 60 -->
+			<div class="question">
+				<h3>60. What is a domain in the context of a database?</h3>
+				<label><input type="radio" name="q60" value="A"> A) A security rule applied to data</label>
+				<label><input type="radio" name="q60" value="B"> B) A set of permissible values for an attribute</label>
+				<label><input type="radio" name="q60" value="C"> C) A type of index</label>
+				<label><input type="radio" name="q60" value="D"> D) A backup strategy</label>
+			</div>
+
+			<!-- Question 61 -->
+			<div class="question">
+				<h3>61. What is data redundancy?</h3>
+				<label><input type="radio" name="q61" value="A"> A) Storing data securely</label>
+				<label><input type="radio" name="q61" value="B"> B) Storing the same data in multiple places</label>
+				<label><input type="radio" name="q61" value="C"> C) Encrypting data</label>
+				<label><input type="radio" name="q61" value="D"> D) Compressing data</label>
+			</div>
+
+			<!-- Question 62 -->
+			<div class="question">
+				<h3>62. What is a NULL value in a database?</h3>
+				<label><input type="radio" name="q62" value="A"> A) A zero value</label>
+				<label><input type="radio" name="q62" value="B"> B) A missing or undefined value</label>
+				<label><input type="radio" name="q62" value="C"> C) A backup value</label>
+				<label><input type="radio" name="q62" value="D"> D) A foreign key</label>
+			</div>
+
+			<!-- Question 63 -->
+			<div class="question">
+				<h3>63. What is a primary key in a database?</h3>
+				<label><input type="radio" name="q63" value="A"> A) A key used for indexing</label>
+				<label><input type="radio" name="q63" value="B"> B) A key that uniquely identifies each record</label>
+				<label><input type="radio" name="q63" value="C"> C) A key used only for encryption</label>
+				<label><input type="radio" name="q63" value="D"> D) A key for backup</label>
+			</div>
+
+			<!-- Question 64 -->
+			<div class="question">
+				<h3>64. What is an alternate key?</h3>
+				<label><input type="radio" name="q64" value="A"> A) A candidate key not chosen as the primary key</label>
+				<label><input type="radio" name="q64" value="B"> B) A key used only for backup</label>
+				<label><input type="radio" name="q64" value="C"> C) A key that duplicates data</label>
+				<label><input type="radio" name="q64" value="D"> D) A foreign key</label>
+			</div>
+
+			<!-- Question 65 -->
+			<div class="question">
+				<h3>65. What is a data model?</h3>
+				<label><input type="radio" name="q65" value="A"> A) A diagram that shows how data is stored physically</label>
+				<label><input type="radio" name="q65" value="B"> B) A visual representation of a database structure</label>
+				<label><input type="radio" name="q65" value="C"> C) An encryption method</label>
+				<label><input type="radio" name="q65" value="D"> D) A backup strategy</label>
+			</div>
+
+			<!-- Question 66 -->
+			<div class="question">
+				<h3>66. What is a logical data model?</h3>
+				<label><input type="radio" name="q66" value="A"> A) A model showing data storage on hardware</label>
+				<label><input type="radio" name="q66" value="B"> B) A model that defines data relationships and structures at a conceptual level</label>
+				<label><input type="radio" name="q66" value="C"> C) A model for encrypting data</label>
+				<label><input type="radio" name="q66" value="D"> D) A backup plan</label>
+			</div>
+
+			<!-- Question 67 -->
+			<div class="question">
+				<h3>67. What is a physical data model?</h3>
+				<label><input type="radio" name="q67" value="A"> A) A model that defines how data is stored and accessed on hardware</label>
+				<label><input type="radio" name="q67" value="B"> B) A model for user views</label>
+				<label><input type="radio" name="q67" value="C"> C) A data backup plan</label>
+				<label><input type="radio" name="q67" value="D"> D) A model for encrypting data</label>
+			</div>
+
+			<!-- Question 68 -->
+			<div class="question">
+				<h3>68. What is a database schema?</h3>
+				<label><input type="radio" name="q68" value="A"> A) A process for backing up data</label>
+				<label><input type="radio" name="q68" value="B"> B) A blueprint that defines the structure of a database</label>
+				<label><input type="radio" name="q68" value="C"> C) An encryption method</label>
+				<label><input type="radio" name="q68" value="D"> D) A storage location for backups</label>
+			</div>
+
+			<!-- Question 69 -->
+			<div class="question">
+				<h3>69. What is metadata in a database?</h3>
+				<label><input type="radio" name="q69" value="A"> A) Data that describes other data</label>
+				<label><input type="radio" name="q69" value="B"> B) Data used for backups</label>
+				<label><input type="radio" name="q69" value="C"> C) Encrypted data</label>
+				<label><input type="radio" name="q69" value="D"> D) Data stored in a foreign key</label>
+			</div>
+
+			<!-- Question 70 -->
+			<div class="question">
+				<h3>70. What is a database index?</h3>
+				<label><input type="radio" name="q70" value="A"> A) A table storing backup data</label>
+				<label><input type="radio" name="q70" value="B"> B) An object that speeds up data retrieval</label>
+				<label><input type="radio" name="q70" value="C"> C) A foreign key</label>
+				<label><input type="radio" name="q70" value="D"> D) A method for encrypting data</label>
+			</div>
+
+			<!-- Question 71 -->
+			<div class="question">
+				<h3>71. What is a clustered index?</h3>
+				<label><input type="radio" name="q71" value="A"> A) An index that is stored separately from the data table</label>
+				<label><input type="radio" name="q71" value="B"> B) An index that sorts and stores data rows in the table</label>
+				<label><input type="radio" name="q71" value="C"> C) A backup index</label>
+				<label><input type="radio" name="q71" value="D"> D) An index used for encryption</label>
+			</div>
+
+
+			<!-- Question 72 -->
+			<div class="question">
+				<h3>72. What is a domain in the context of a database?</h3>
+				<label><input type="radio" name="q72" value="A"> A) A security rule applied to data</label>
+				<label><input type="radio" name="q72" value="B"> B) A set of permissible values for an attribute</label>
+				<label><input type="radio" name="q72" value="C"> C) A type of index</label>
+				<label><input type="radio" name="q72" value="D"> D) A backup strategy</label>
+			</div>
+
+
+			<!-- Question 73 -->
+			<div class="question">
+				<h3>73. Explain the purpose of a composite key.</h3>
+				<label><input type="radio" name="q73" value="A"> A) A single column key used to uniquely identify records</label>
+				<label><input type="radio" name="q73" value="B"> B) A combination of columns used to uniquely identify records</label>
+				<label><input type="radio" name="q73" value="C"> C) A backup key for emergency use</label>
+				<label><input type="radio" name="q73" value="D"> D) A key used for encryption</label>
+			</div>
+
+
+			<!-- Question 74 -->
+			<div class="question">
+				<h3>74. Define data redundancy.</h3>
+				<label><input type="radio" name="q74" value="A"> A) Ensuring data is not duplicated in any form</label>
+				<label><input type="radio" name="q74" value="B"> B) Storing the same data in multiple locations</label>
+				<label><input type="radio" name="q74" value="C"> C) Compressing data to save storage</label>
+				<label><input type="radio" name="q74" value="D"> D) Encrypting data to prevent unauthorized access</label>
+			</div>
+
+			<!-- Question 75 -->
+			<div class="question">
+				<h3>75. What is logical data modeling?</h3>
+				<label><input type="radio" name="q75" value="A"> A) Focusing on the actual physical storage of data</label>
+				<label><input type="radio" name="q75" value="B"> B) Abstractly defining data structure and relationships</label>
+				<label><input type="radio" name="q75" value="C"> C) Designing user interfaces for database management</label>
+				<label><input type="radio" name="q75" value="D"> D) Encrypting data at the network level</label>
+			</div>
+
+
+            <!-- Additional Questions -->
+            <!-- Add more questions as needed following the same format -->
+            
+            <button type="button" id="submit-btn">Submit Quiz</button>
+        </form>
+        
+        <!-- Results Display -->
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

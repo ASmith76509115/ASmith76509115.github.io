@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Basics and Queries Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SQL Basics and Queries Quiz</h1>
+        <h2>by Adam Smith</h2>
+        
+        <!-- Timer Display -->
+        <p id="timer" style="font-size: 18px; color: red;">Time Remaining: 100:00</p>
+        
+        <!-- Start Button -->
+        <button type="button" id="start-btn">Start Quiz</button>
+        
+        <!-- Quiz Form -->
+        <form id="quiz-form" style="display: none;">
+            
+            <!-- Questions 1 to 76 -->
+            <div class="question">
+                <h3>1. What is SQL?</h3>
+                <label><input type="radio" name="q1" value="A"> A) SQL is a software development methodology</label>
+                <label><input type="radio" name="q1" value="B"> B) SQL (Structured Query Language) is a standard language for managing and manipulating relational databases.</label>
+                <label><input type="radio" name="q1" value="C"> C) SQL is a programming language for mobile apps</label>
+                <label><input type="radio" name="q1" value="D"> D) SQL is a database storage engine</label>
+            </div>
+
+            <div class="question">
+                <h3>2. What is the purpose of the SQL SELECT statement?</h3>
+                <label><input type="radio" name="q2" value="A"> A) To delete data from the database</label>
+                <label><input type="radio" name="q2" value="B"> B) The SELECT statement retrieves data from one or more tables, returning it as a result set.</label>
+                <label><input type="radio" name="q2" value="C"> C) To modify data in a table</label>
+                <label><input type="radio" name="q2" value="D"> D) To create a new table in the database</label>
+            </div>
+
+            <div class="question">
+                <h3>3. Describe the syntax of a basic SELECT statement.</h3>
+                <label><input type="radio" name="q3" value="A"> A) SELECT all columns FROM table_name;</label>
+                <label><input type="radio" name="q3" value="B"> B) SELECT column1, column2 FROM table_name; retrieves specified columns from a table.</label>
+                <label><input type="radio" name="q3" value="C"> C) SELECT table FROM database;</label>
+                <label><input type="radio" name="q3" value="D"> D) SELECT column_name INTO table_name;</label>
+            </div>
+
+            <div class="question">
+                <h3>4. How does the WHERE clause work?</h3>
+                <label><input type="radio" name="q4" value="A"> A) WHERE creates a new table</label>
+                <label><input type="radio" name="q4" value="B"> B) WHERE filters rows by specified conditions, limiting the data returned by a query.</label>
+                <label><input type="radio" name="q4" value="C"> C) WHERE groups rows by column values</label>
+                <label><input type="radio" name="q4" value="D"> D) WHERE sorts rows in ascending order</label>
+            </div>
+
+            <!-- Continuing from previous code, from q5 to q75 -->
+            <!-- Question 5 -->
+            <div class="question">
+                <h3>5. What operators can be used in a WHERE clause?</h3>
+                <label><input type="radio" name="q5" value="A"> A) +, -, *, /</label>
+                <label><input type="radio" name="q5" value="B"> B) =, <>, >, <, >=, <=, AND, OR, BETWEEN, LIKE, and IN.</label>
+                <label><input type="radio" name="q5" value="C"> C) INSERT, DELETE, UPDATE</label>
+                <label><input type="radio" name="q5" value="D"> D) COUNT, SUM, AVG</label>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <h3>6. Explain the use of the AND operator in SQL.</h3>
+                <label><input type="radio" name="q6" value="A"> A) It sorts data in ascending order.</label>
+                <label><input type="radio" name="q6" value="B"> B) AND combines multiple conditions in a WHERE clause, returning rows where all conditions are true.</label>
+                <label><input type="radio" name="q6" value="C"> C) It duplicates data in the table.</label>
+                <label><input type="radio" name="q6" value="D"> D) It creates a new table based on conditions.</label>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+                <h3>7. What does the OR operator do in SQL?</h3>
+                <label><input type="radio" name="q7" value="A"> A) It creates a copy of the database.</label>
+                <label><input type="radio" name="q7" value="B"> B) OR combines multiple conditions in a WHERE clause, returning rows where at least one condition is true.</label>
+                <label><input type="radio" name="q7" value="C"> C) It updates multiple rows in a table.</label>
+                <label><input type="radio" name="q7" value="D"> D) It deletes rows from a table.</label>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <h3>8. Describe the LIKE operator and its purpose.</h3>
+                <label><input type="radio" name="q8" value="A"> A) It sums values in a column.</label>
+                <label><input type="radio" name="q8" value="B"> B) LIKE is used for pattern matching in strings, often with wildcards (%) to match zero or more characters.</label>
+                <label><input type="radio" name="q8" value="C"> C) It calculates the average of numeric values.</label>
+                <label><input type="radio" name="q8" value="D"> D) It sets the data type of a column.</label>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <h3>9. What is the function of the GROUP BY clause?</h3>
+                <label><input type="radio" name="q9" value="A"> A) It deletes rows from a table.</label>
+                <label><input type="radio" name="q9" value="B"> B) GROUP BY groups rows with the same values in specified columns, often used with aggregate functions.</label>
+                <label><input type="radio" name="q9" value="C"> C) It updates data in a table.</label>
+                <label><input type="radio" name="q9" value="D"> D) It creates a new table.</label>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+                <h3>10. How is the HAVING clause different from WHERE?</h3>
+                <label><input type="radio" name="q10" value="A"> A) HAVING is used for filtering before grouping.</label>
+                <label><input type="radio" name="q10" value="B"> B) HAVING filters groups created by GROUP BY, whereas WHERE filters rows before grouping.</label>
+                <label><input type="radio" name="q10" value="C"> C) HAVING only works with single-row functions.</label>
+                <label><input type="radio" name="q10" value="D"> D) HAVING is used to sort data in descending order.</label>
+            </div>
+
+             <!-- Question 11 -->
+            <div class="question">
+                <h3>11. Describe the purpose of the COUNT function.</h3>
+                <label><input type="radio" name="q11" value="A"> A) It adds up all numeric values in a column.</label>
+                <label><input type="radio" name="q11" value="B"> B) COUNT returns the number of rows that meet a specified condition or the total number of rows if no condition is applied.</label>
+                <label><input type="radio" name="q11" value="C"> C) It retrieves all distinct values from a column.</label>
+                <label><input type="radio" name="q11" value="D"> D) It filters rows by specified conditions.</label>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="question">
+                <h3>12. What does the DISTINCT keyword do?</h3>
+                <label><input type="radio" name="q12" value="A"> A) It counts all rows in the table.</label>
+                <label><input type="radio" name="q12" value="B"> B) DISTINCT eliminates duplicate rows from the result set, returning only unique values.</label>
+                <label><input type="radio" name="q12" value="C"> C) It retrieves only the top rows based on a condition.</label>
+                <label><input type="radio" name="q12" value="D"> D) It sorts the result set by a specific column.</label>
+            </div>
+
+            <!-- Question 13 -->
+            <div class="question">
+                <h3>13. How does the JOIN clause function in SQL?</h3>
+                <label><input type="radio" name="q13" value="A"> A) JOIN deletes rows from two tables.</label>
+                <label><input type="radio" name="q13" value="B"> B) JOIN combines rows from two or more tables based on a related column between them.</label>
+                <label><input type="radio" name="q13" value="C"> C) JOIN updates data in a table.</label>
+                <label><input type="radio" name="q13" value="D"> D) JOIN selects only columns in the current table.</label>
+            </div>
+
+            <!-- Question 14 -->
+            <div class="question">
+                <h3>14. What is an INNER JOIN?</h3>
+                <label><input type="radio" name="q14" value="A"> A) It returns all rows from both tables.</label>
+                <label><input type="radio" name="q14" value="B"> B) INNER JOIN returns only rows where there is a match in both joined tables.</label>
+                <label><input type="radio" name="q14" value="C"> C) It returns all rows from the left table only.</label>
+                <label><input type="radio" name="q14" value="D"> D) It duplicates rows from both tables.</label>
+            </div>
+
+            <!-- Continue with the same structure for each question -->
+
+            <!-- Question 15 -->
+            <div class="question">
+                <h3>15. What is the purpose of the LEFT JOIN?</h3>
+                <label><input type="radio" name="q15" value="A"> A) It returns only rows from the right table.</label>
+                <label><input type="radio" name="q15" value="B"> B) LEFT JOIN returns all rows from the left table and matched rows from the right table, with NULLs for non-matching rows in the right table.</label>
+                <label><input type="radio" name="q15" value="C"> C) It returns all rows that do not match in either table.</label>
+                <label><input type="radio" name="q15" value="D"> D) It duplicates rows from the left table.</label>
+            </div>
+
+            <!-- Question 16 -->
+            <div class="question">
+                <h3>16. How does the RIGHT JOIN work?</h3>
+                <label><input type="radio" name="q16" value="A"> A) It returns all rows from the left table only.</label>
+                <label><input type="radio" name="q16" value="B"> B) RIGHT JOIN returns all rows from the right table and matched rows from the left table, with NULLs for non-matching rows in the left table.</label>
+                <label><input type="radio" name="q16" value="C"> C) It duplicates rows from both tables.</label>
+                <label><input type="radio" name="q16" value="D"> D) It only returns rows with NULL values.</label>
+            </div>
+
+            <!-- Question 17 -->
+            <div class="question">
+                <h3>17. What is the FULL OUTER JOIN used for?</h3>
+                <label><input type="radio" name="q17" value="A"> A) It returns rows only from the left table.</label>
+                <label><input type="radio" name="q17" value="B"> B) FULL OUTER JOIN returns all rows when there is a match in either table, filling in NULLs for non-matching rows from both tables.</label>
+                <label><input type="radio" name="q17" value="C"> C) It removes duplicates from the tables.</label>
+                <label><input type="radio" name="q17" value="D"> D) It selects rows with non-matching criteria only.</label>
+            </div>
+
+            <!-- Question 18 -->
+            <div class="question">
+                <h3>18. Describe the CROSS JOIN in SQL.</h3>
+                <label><input type="radio" name="q18" value="A"> A) It returns only the unique values from two tables.</label>
+                <label><input type="radio" name="q18" value="B"> B) CROSS JOIN returns the Cartesian product of two tables, combining all rows from both tables.</label>
+                <label><input type="radio" name="q18" value="C"> C) It only returns rows that are non-matching.</label>
+                <label><input type="radio" name="q18" value="D"> D) It duplicates each row in the table.</label>
+            </div>
+
+            <!-- Question 19 through 74 -->
+            <!-- Repeat the above structure for each remaining question, providing multiple choice answers -->
+
+            <!-- Example of additional questions -->
+            <div class="question">
+                <h3>19. What is a subquery in SQL?</h3>
+                <label><input type="radio" name="q19" value="A"> A) A SELECT statement used to create new columns.</label>
+                <label><input type="radio" name="q19" value="B"> B) A query nested within another query, often used in SELECT, WHERE, or FROM clauses.</label>
+                <label><input type="radio" name="q19" value="C"> C) A statement used to delete multiple rows.</label>
+                <label><input type="radio" name="q19" value="D"> D) A query that creates temporary tables.</label>
+            </div>
+
+						<!-- Question 20 -->
+			<div class="question">
+				<h3>20. What is a self-join?</h3>
+				<label><input type="radio" name="q20" value="A"> A) A join between two unrelated tables.</label>
+				<label><input type="radio" name="q20" value="B"> B) A join of a table with itself.</label>
+				<label><input type="radio" name="q20" value="C"> C) A join that requires multiple keys.</label>
+				<label><input type="radio" name="q20" value="D"> D) A join that requires no conditions.</label>
+			</div>
+
+			<!-- Question 21 -->
+			<div class="question">
+				<h3>21. What is an aggregate function?</h3>
+				<label><input type="radio" name="q21" value="A"> A) A function that returns individual rows.</label>
+				<label><input type="radio" name="q21" value="B"> B) A function that performs calculations on multiple rows and returns a single value.</label>
+				<label><input type="radio" name="q21" value="C"> C) A function used only in subqueries.</label>
+				<label><input type="radio" name="q21" value="D"> D) A function that filters rows by conditions.</label>
+			</div>
+
+			<!-- Question 22 -->
+			<div class="question">
+				<h3>22. How does the GROUP BY clause function?</h3>
+				<label><input type="radio" name="q22" value="A"> A) It orders the result set by a specified column.</label>
+				<label><input type="radio" name="q22" value="B"> B) It groups rows that have the same values in specified columns.</label>
+				<label><input type="radio" name="q22" value="C"> C) It limits the result set to a specified number of rows.</label>
+				<label><input type="radio" name="q22" value="D"> D) It joins two tables based on a condition.</label>
+			</div>
+
+			<!-- Question 23 -->
+			<div class="question">
+				<h3>23. What is the purpose of the HAVING clause?</h3>
+				<label><input type="radio" name="q23" value="A"> A) It filters rows before they are grouped.</label>
+				<label><input type="radio" name="q23" value="B"> B) It filters groups after they are created by the GROUP BY clause.</label>
+				<label><input type="radio" name="q23" value="C"> C) It sorts the result set.</label>
+				<label><input type="radio" name="q23" value="D"> D) It limits the number of returned rows.</label>
+			</div>
+
+			<!-- Question 24 -->
+			<div class="question">
+				<h3>24. What is the difference between WHERE and HAVING clauses?</h3>
+				<label><input type="radio" name="q24" value="A"> A) WHERE filters groups, HAVING filters individual rows.</label>
+				<label><input type="radio" name="q24" value="B"> B) WHERE filters rows before grouping, HAVING filters groups after grouping.</label>
+				<label><input type="radio" name="q24" value="C"> C) WHERE is used with ORDER BY, HAVING is not.</label>
+				<label><input type="radio" name="q24" value="D"> D) WHERE applies to SELECT statements only, HAVING applies to JOIN statements only.</label>
+			</div>
+
+			<!-- Question 25 -->
+			<div class="question">
+				<h3>25. How is the ORDER BY clause used in SQL?</h3>
+				<label><input type="radio" name="q25" value="A"> A) To limit the number of rows returned.</label>
+				<label><input type="radio" name="q25" value="B"> B) To sort the result set by one or more columns.</label>
+				<label><input type="radio" name="q25" value="C"> C) To group rows with similar values.</label>
+				<label><input type="radio" name="q25" value="D"> D) To filter groups created by GROUP BY.</label>
+			</div>
+
+			<!-- Question 26 -->
+			<div class="question">
+				<h3>26. What is a subquery?</h3>
+				<label><input type="radio" name="q26" value="A"> A) A query within a query that can be used to return data to the main query.</label>
+				<label><input type="radio" name="q26" value="B"> B) A query that joins multiple tables without conditions.</label>
+				<label><input type="radio" name="q26" value="C"> C) A query that runs independently and is not related to any other query.</label>
+				<label><input type="radio" name="q26" value="D"> D) A query that deletes data from multiple tables.</label>
+			</div>
+
+			<!-- Question 27 -->
+			<div class="question">
+				<h3>27. What does the UNION operator do?</h3>
+				<label><input type="radio" name="q27" value="A"> A) It returns only duplicate rows between two queries.</label>
+				<label><input type="radio" name="q27" value="B"> B) UNION combines the result sets of two or more SELECT statements, eliminating duplicates.</label>
+				<label><input type="radio" name="q27" value="C"> C) It returns rows from the first query that do not exist in the second query.</label>
+				<label><input type="radio" name="q27" value="D"> D) It limits the result set to only one row.</label>
+			</div>
+
+			<!-- Question 28 -->
+			<div class="question">
+				<h3>28. How does UNION ALL differ from UNION?</h3>
+				<label><input type="radio" name="q28" value="A"> A) UNION ALL only returns distinct rows.</label>
+				<label><input type="radio" name="q28" value="B"> B) UNION ALL includes duplicates, while UNION eliminates duplicates.</label>
+				<label><input type="radio" name="q28" value="C"> C) UNION ALL requires the same number of columns, UNION does not.</label>
+				<label><input type="radio" name="q28" value="D"> D) UNION ALL only works with numeric data types.</label>
+			</div>
+
+			<!-- Question 29 -->
+			<div class="question">
+				<h3>29. What is a correlated subquery?</h3>
+				<label><input type="radio" name="q29" value="A"> A) A subquery that runs only once and is not related to the outer query.</label>
+				<label><input type="radio" name="q29" value="B"> B) A subquery that refers to columns from the outer query, executing once for each row processed by the outer query.</label>
+				<label><input type="radio" name="q29" value="C"> C) A subquery that creates a new table.</label>
+				<label><input type="radio" name="q29" value="D"> D) A subquery that deletes rows from multiple tables.</label>
+			</div>
+
+			<!-- Question 30 -->
+			<div class="question">
+				<h3>30. What does the EXISTS keyword do?</h3>
+				<label><input type="radio" name="q30" value="A"> A) It checks if a column exists in a table.</label>
+				<label><input type="radio" name="q30" value="B"> B) EXISTS checks for the existence of rows returned by a subquery.</label>
+				<label><input type="radio" name="q30" value="C"> C) It updates rows in a table.</label>
+				<label><input type="radio" name="q30" value="D"> D) It sorts the result set in ascending order.</label>
+			</div>
+
+			<!-- Question 31 -->
+			<div class="question">
+				<h3>31. What is the purpose of the DISTINCT keyword?</h3>
+				<label><input type="radio" name="q31" value="A"> A) To count the total rows.</label>
+				<label><input type="radio" name="q31" value="B"> B) To eliminate duplicate rows from the result set.</label>
+				<label><input type="radio" name="q31" value="C"> C) To join multiple tables.</label>
+				<label><input type="radio" name="q31" value="D"> D) To filter rows before grouping.</label>
+			</div>
+
+			<!-- Question 32 -->
+			<div class="question">
+				<h3>32. How is the LIKE operator used in SQL?</h3>
+				<label><input type="radio" name="q32" value="A"> A) To delete rows based on a condition.</label>
+				<label><input type="radio" name="q32" value="B"> B) LIKE is used for pattern matching, often with wildcards.</label>
+				<label><input type="radio" name="q32" value="C"> C) To sort rows alphabetically.</label>
+				<label><input type="radio" name="q32" value="D"> D) To group rows with similar values.</label>
+			</div>
+
+			<!-- Question 33 -->
+			<div class="question">
+				<h3>33. What does the % wildcard represent in a LIKE query?</h3>
+				<label><input type="radio" name="q33" value="A"> A) A single character.</label>
+				<label><input type="radio" name="q33" value="B"> B) Zero, one, or multiple characters.</label>
+				<label><input type="radio" name="q33" value="C"> C) Only numeric characters.</label>
+				<label><input type="radio" name="q33" value="D"> D) A single digit.</label>
+			</div>
+
+			<!-- Question 34 -->
+			<div class="question">
+				<h3>34. What does the _ wildcard represent in a LIKE query?</h3>
+				<label><input type="radio" name="q34" value="A"> A) Zero or more characters.</label>
+				<label><input type="radio" name="q34" value="B"> B) Exactly one character.</label>
+				<label><input type="radio" name="q34" value="C"> C) Only alphabetic characters.</label>
+				<label><input type="radio" name="q34" value="D"> D) Only numeric characters.</label>
+			</div>
+
+			<!-- Question 35 -->
+			<div class="question">
+				<h3>35. What is an INNER JOIN?</h3>
+				<label><input type="radio" name="q35" value="A"> A) A join that returns all rows from the left table and matched rows from the right table.</label>
+				<label><input type="radio" name="q35" value="B"> B) A join that returns only rows where there is a match in both tables.</label>
+				<label><input type="radio" name="q35" value="C"> C) A join that returns all rows from both tables.</label>
+				<label><input type="radio" name="q35" value="D"> D) A join that returns only unmatched rows.</label>
+			</div>
+
+			<!-- Question 36 -->
+			<div class="question">
+				<h3>36. What is a LEFT JOIN?</h3>
+				<label><input type="radio" name="q36" value="A"> A) A join that returns only unmatched rows from the left table.</label>
+				<label><input type="radio" name="q36" value="B"> B) A join that returns all rows from the left table and matched rows from the right table.</label>
+				<label><input type="radio" name="q36" value="C"> C) A join that returns only rows where there is a match in both tables.</label>
+				<label><input type="radio" name="q36" value="D"> D) A join that returns all rows from the right table and matched rows from the left table.</label>
+			</div>
+
+			<!-- Question 37 -->
+			<div class="question">
+				<h3>37. What is a RIGHT JOIN?</h3>
+				<label><input type="radio" name="q37" value="A"> A) A join that returns only rows where there is a match in both tables.</label>
+				<label><input type="radio" name="q37" value="B"> B) A join that returns all rows from the right table and matched rows from the left table.</label>
+				<label><input type="radio" name="q37" value="C"> C) A join that returns only unmatched rows from the right table.</label>
+				<label><input type="radio" name="q37" value="D"> D) A join that returns all rows from both tables.</label>
+			</div>
+
+			<!-- Question 38 -->
+			<div class="question">
+				<h3>38. What is a FULL OUTER JOIN?</h3>
+				<label><input type="radio" name="q38" value="A"> A) A join that returns only rows where there is a match in both tables.</label>
+				<label><input type="radio" name="q38" value="B"> B) A join that returns all rows when there is a match in either table, filling in NULLs for unmatched rows.</label>
+				<label><input type="radio" name="q38" value="C"> C) A join that returns unmatched rows from both tables only.</label>
+				<label><input type="radio" name="q38" value="D"> D) A join that removes all duplicate rows from the result set.</label>
+			</div>
+
+			<!-- Question 39 -->
+			<div class="question">
+				<h3>39. What is a CROSS JOIN?</h3>
+				<label><input type="radio" name="q39" value="A"> A) A join that returns only rows where there is a match in both tables.</label>
+				<label><input type="radio" name="q39" value="B"> B) A join that returns the Cartesian product of two tables, combining all rows from both tables.</label>
+				<label><input type="radio" name="q39" value="C"> C) A join that returns unmatched rows only.</label>
+				<label><input type="radio" name="q39" value="D"> D) A join that returns a specified number of rows.</label>
+			</div>
+
+			<!-- Question 40 -->
+			<div class="question">
+				<h3>40. What does the COUNT function do?</h3>
+				<label><input type="radio" name="q40" value="A"> A) It returns the total number of columns in a table.</label>
+				<label><input type="radio" name="q40" value="B"> B) COUNT returns the number of rows that meet a specified condition or the total number of rows if no condition is applied.</label>
+				<label><input type="radio" name="q40" value="C"> C) It returns the sum of a column’s values.</label>
+				<label><input type="radio" name="q40" value="D"> D) It returns unique values from a column.</label>
+			</div>
+
+			<!-- Question 41 -->
+			<div class="question">
+				<h3>41. How do you count distinct values in a column?</h3>
+				<label><input type="radio" name="q41" value="A"> A) Use COUNT(column_name) without DISTINCT.</label>
+				<label><input type="radio" name="q41" value="B"> B) Use COUNT(DISTINCT column_name) to count unique values in a column.</label>
+				<label><input type="radio" name="q41" value="C"> C) Use SUM(column_name) to count distinct values.</label>
+				<label><input type="radio" name="q41" value="D"> D) Use COUNT(ALL column_name).</label>
+			</div>
+
+			<!-- Question 42 -->
+			<div class="question">
+				<h3>42. What is the SUM function used for?</h3>
+				<label><input type="radio" name="q42" value="A"> A) To count all rows in a table.</label>
+				<label><input type="radio" name="q42" value="B"> B) SUM adds up all numeric values in a specified column.</label>
+				<label><input type="radio" name="q42" value="C"> C) To return the highest value in a column.</label>
+				<label><input type="radio" name="q42" value="D"> D) To find the average value of a column.</label>
+			</div>
+
+			<!-- Question 43 -->
+			<div class="question">
+				<h3>43. What does the AVG function return?</h3>
+				<label><input type="radio" name="q43" value="A"> A) The total sum of all column values.</label>
+				<label><input type="radio" name="q43" value="B"> B) AVG calculates the average of numeric values in a specified column.</label>
+				<label><input type="radio" name="q43" value="C"> C) The number of rows in a table.</label>
+				<label><input type="radio" name="q43" value="D"> D) The distinct values in a column.</label>
+			</div>
+
+			<!-- Question 44 -->
+			<div class="question">
+				<h3>44. How is the MIN function used in SQL?</h3>
+				<label><input type="radio" name="q44" value="A"> A) MIN returns the smallest value in a specified column.</label>
+				<label><input type="radio" name="q44" value="B"> B) It returns the sum of all values.</label>
+				<label><input type="radio" name="q44" value="C"> C) To count distinct values in a column.</label>
+				<label><input type="radio" name="q44" value="D"> D) To calculate the average value of a column.</label>
+			</div>
+
+			<!-- Question 45 -->
+			<div class="question">
+				<h3>45. What does the MAX function return?</h3>
+				<label><input type="radio" name="q45" value="A"> A) The sum of all values in a column.</label>
+				<label><input type="radio" name="q45" value="B"> B) MAX returns the largest value in a specified column.</label>
+				<label><input type="radio" name="q45" value="C"> C) The total number of rows.</label>
+				<label><input type="radio" name="q45" value="D"> D) The number of distinct values in a column.</label>
+			</div>
+
+			<!-- Question 46 -->
+			<div class="question">
+				<h3>46. What is a primary key constraint?</h3>
+				<label><input type="radio" name="q46" value="A"> A) It ensures that a column contains only numeric values.</label>
+				<label><input type="radio" name="q46" value="B"> B) It ensures that a column or combination of columns uniquely identifies each row in a table.</label>
+				<label><input type="radio" name="q46" value="C"> C) It allows duplicate values in a column.</label>
+				<label><input type="radio" name="q46" value="D"> D) It enforces data type restrictions.</label>
+			</div>
+
+			<!-- Question 47 -->
+			<div class="question">
+				<h3>47. How is the foreign key constraint used?</h3>
+				<label><input type="radio" name="q47" value="A"> A) It ensures that a column contains unique values.</label>
+				<label><input type="radio" name="q47" value="B"> B) It establishes a link between columns in two tables, enforcing referential integrity.</label>
+				<label><input type="radio" name="q47" value="C"> C) It removes duplicate rows.</label>
+				<label><input type="radio" name="q47" value="D"> D) It enforces the use of default values.</label>
+			</div>
+
+			<!-- Question 48 -->
+			<div class="question">
+				<h3>48. What is the UNIQUE constraint?</h3>
+				<label><input type="radio" name="q48" value="A"> A) It allows duplicate values in a column.</label>
+				<label><input type="radio" name="q48" value="B"> B) UNIQUE prevents duplicate values in a column and allows NULL values.</label>
+				<label><input type="radio" name="q48" value="C"> C) It enforces foreign key relationships.</label>
+				<label><input type="radio" name="q48" value="D"> D) It ensures only positive values in a column.</label>
+			</div>
+
+			<!-- Question 49 -->
+			<div class="question">
+				<h3>49. What is a default constraint?</h3>
+				<label><input type="radio" name="q49" value="A"> A) It ensures data is unique.</label>
+				<label><input type="radio" name="q49" value="B"> B) It provides a default value for a column when no value is specified.</label>
+				<label><input type="radio" name="q49" value="C"> C) It enforces primary key constraints.</label>
+				<label><input type="radio" name="q49" value="D"> D) It allows multiple values for a column.</label>
+			</div>
+
+			<!-- Question 50 -->
+			<div class="question">
+				<h3>50. Explain the CHECK constraint.</h3>
+				<label><input type="radio" name="q50" value="A"> A) CHECK enforces a condition that each value in a column must meet.</label>
+				<label><input type="radio" name="q50" value="B"> B) It allows only non-NULL values.</label>
+				<label><input type="radio" name="q50" value="C"> C) It automatically generates unique values for a column.</label>
+				<label><input type="radio" name="q50" value="D"> D) It enforces foreign key relationships.</label>
+			</div>
+
+			<!-- Question 51 -->
+			<div class="question">
+				<h3>51. What does the ROLLBACK command do?</h3>
+				<label><input type="radio" name="q51" value="A"> A) It saves all changes made in the current transaction.</label>
+				<label><input type="radio" name="q51" value="B"> B) ROLLBACK undoes changes made in the current transaction, restoring the database to its previous state.</label>
+				<label><input type="radio" name="q51" value="C"> C) It deletes all data from a table.</label>
+				<label><input type="radio" name="q51" value="D"> D) It renames a table.</label>
+			</div>
+
+			<!-- Question 52 -->
+			<div class="question">
+				<h3>52. Describe the COMMIT command.</h3>
+				<label><input type="radio" name="q52" value="A"> A) COMMIT permanently saves all changes made during the current transaction.</label>
+				<label><input type="radio" name="q52" value="B"> B) It rolls back all changes made during the current transaction.</label>
+				<label><input type="radio" name="q52" value="C"> C) It removes a table from the database.</label>
+				<label><input type="radio" name="q52" value="D"> D) It restores a table to its original state.</label>
+			</div>
+
+			<!-- Question 53 -->
+			<div class="question">
+				<h3>53. What is the purpose of a transaction?</h3>
+				<label><input type="radio" name="q53" value="A"> A) A transaction deletes all data from a table.</label>
+				<label><input type="radio" name="q53" value="B"> B) A transaction is a sequence of SQL statements executed as a single unit, ensuring data integrity.</label>
+				<label><input type="radio" name="q53" value="C"> C) It adds duplicate rows to a table.</label>
+				<label><input type="radio" name="q53" value="D"> D) It only updates foreign key columns.</label>
+			</div>
+
+			<!-- Question 54 -->
+			<div class="question">
+				<h3>54. How does the BETWEEN operator function in SQL?</h3>
+				<label><input type="radio" name="q54" value="A"> A) BETWEEN is used for pattern matching.</label>
+				<label><input type="radio" name="q54" value="B"> B) BETWEEN selects values within a specified range, including the endpoints.</label>
+				<label><input type="radio" name="q54" value="C"> C) It joins tables based on matching values.</label>
+				<label><input type="radio" name="q54" value="D"> D) It sorts the result set.</label>
+			</div>
+
+			<!-- Question 55 -->
+			<div class="question">
+				<h3>55. What is the function of the IN operator?</h3>
+				<label><input type="radio" name="q55" value="A"> A) It limits the result set to unique values only.</label>
+				<label><input type="radio" name="q55" value="B"> B) IN checks if a value exists within a specified list of values.</label>
+				<label><input type="radio" name="q55" value="C"> C) It returns only NULL values.</label>
+				<label><input type="radio" name="q55" value="D"> D) It removes rows that match a condition.</label>
+			</div>
+
+			<!-- Question 56 -->
+			<div class="question">
+				<h3>56. What is a JOIN clause used for?</h3>
+				<label><input type="radio" name="q56" value="A"> A) To delete rows from multiple tables.</label>
+				<label><input type="radio" name="q56" value="B"> B) JOIN combines rows from two or more tables based on a related column between them.</label>
+				<label><input type="radio" name="q56" value="C"> C) To count the number of rows in a table.</label>
+				<label><input type="radio" name="q56" value="D"> D) To sort rows alphabetically.</label>
+			</div>
+
+			<!-- Question 57 -->
+			<div class="question">
+				<h3>57. Explain the use of the CASE statement in SQL.</h3>
+				<label><input type="radio" name="q57" value="A"> A) CASE allows for conditional logic within a query, returning values based on specified conditions.</label>
+				<label><input type="radio" name="q57" value="B"> B) It only selects distinct values.</label>
+				<label><input type="radio" name="q57" value="C"> C) It updates rows in a table.</label>
+				<label><input type="radio" name="q57" value="D"> D) It filters rows before they are grouped.</label>
+			</div>
+
+			<!-- Question 58 -->
+			<div class="question">
+				<h3>58. What is a correlated subquery?</h3>
+				<label><input type="radio" name="q58" value="A"> A) A subquery that runs independently and is not related to any other query.</label>
+				<label><input type="radio" name="q58" value="B"> B) A subquery that refers to columns from the outer query, executing once for each row processed by the outer query.</label>
+				<label><input type="radio" name="q58" value="C"> C) A subquery that creates a new table.</label>
+				<label><input type="radio" name="q58" value="D"> D) A subquery that deletes rows from multiple tables.</label>
+			</div>
+
+			<!-- Question 59 -->
+			<div class="question">
+				<h3>59. Describe the UNION operator.</h3>
+				<label><input type="radio" name="q59" value="A"> A) UNION only returns rows that are unique to one table.</label>
+				<label><input type="radio" name="q59" value="B"> B) UNION combines the result sets of two or more SELECT statements, eliminating duplicates by default.</label>
+				<label><input type="radio" name="q59" value="C"> C) UNION returns rows only from the first query.</label>
+				<label><input type="radio" name="q59" value="D"> D) UNION sorts the result set in descending order.</label>
+			</div>
+
+			<!-- Question 60 -->
+			<div class="question">
+				<h3>60. Explain the use of the TOP clause in SQL.</h3>
+				<label><input type="radio" name="q60" value="A"> A) TOP deletes a specific number of rows.</label>
+				<label><input type="radio" name="q60" value="B"> B) TOP limits the number of rows returned by a query.</label>
+				<label><input type="radio" name="q60" value="C"> C) TOP groups rows with the same values.</label>
+				<label><input type="radio" name="q60" value="D"> D) TOP joins rows from multiple tables.</label>
+			</div>
+
+			<!-- Question 61 -->
+			<div class="question">
+				<h3>61. What does the CONCAT function do?</h3>
+				<label><input type="radio" name="q61" value="A"> A) CONCAT adds up numeric values.</label>
+				<label><input type="radio" name="q61" value="B"> B) CONCAT concatenates two or more strings into one string.</label>
+				<label><input type="radio" name="q61" value="C"> C) CONCAT filters rows by conditions.</label>
+				<label><input type="radio" name="q61" value="D"> D) CONCAT counts distinct values in a column.</label>
+			</div>
+
+			<!-- Question 62 -->
+			<div class="question">
+				<h3>62. Describe the purpose of the SUBSTRING function.</h3>
+				<label><input type="radio" name="q62" value="A"> A) SUBSTRING removes rows based on a condition.</label>
+				<label><input type="radio" name="q62" value="B"> B) SUBSTRING extracts a portion of a string from a specified starting point and length.</label>
+				<label><input type="radio" name="q62" value="C"> C) SUBSTRING adds up numeric values in a column.</label>
+				<label><input type="radio" name="q62" value="D"> D) SUBSTRING groups rows with similar values.</label>
+			</div>
+
+			<!-- Question 63 -->
+			<div class="question">
+				<h3>63. What is the COALESCE function used for?</h3>
+				<label><input type="radio" name="q63" value="A"> A) COALESCE removes NULL values from a table.</label>
+				<label><input type="radio" name="q63" value="B"> B) COALESCE returns the first non-NULL value from a list of arguments.</label>
+				<label><input type="radio" name="q63" value="C"> C) COALESCE joins tables based on related columns.</label>
+				<label><input type="radio" name="q63" value="D"> D) COALESCE filters rows before grouping.</label>
+			</div>
+
+			<!-- Question 64 -->
+			<div class="question">
+				<h3>64. What does the IFNULL or ISNULL function do?</h3>
+				<label><input type="radio" name="q64" value="A"> A) IFNULL/ISNULL removes all NULL values from a table.</label>
+				<label><input type="radio" name="q64" value="B"> B) IFNULL (MySQL) or ISNULL (SQL Server) replaces NULL values with a specified value.</label>
+				<label><input type="radio" name="q64" value="C"> C) IFNULL/ISNULL adds up numeric values in a column.</label>
+				<label><input type="radio" name="q64" value="D"> D) IFNULL/ISNULL filters rows by conditions.</label>
+			</div>
+
+			<!-- Question 65 -->
+			<div class="question">
+				<h3>65. What is a view in SQL?</h3>
+				<label><input type="radio" name="q65" value="A"> A) A table that contains only numeric data.</label>
+				<label><input type="radio" name="q65" value="B"> B) A view is a virtual table based on a query that presents data from one or more tables.</label>
+				<label><input type="radio" name="q65" value="C"> C) A table that stores all database transactions.</label>
+				<label><input type="radio" name="q65" value="D"> D) A table that contains only unique values.</label>
+			</div>
+
+			<!-- Question 66 -->
+			<div class="question">
+				<h3>66. How does an index benefit query performance?</h3>
+				<label><input type="radio" name="q66" value="A"> A) It slows down data retrieval.</label>
+				<label><input type="radio" name="q66" value="B"> B) An index speeds up data retrieval by allowing the database to locate rows more quickly.</label>
+				<label><input type="radio" name="q66" value="C"> C) It only works with numeric values.</label>
+				<label><input type="radio" name="q66" value="D"> D) It adds duplicates to the result set.</label>
+			</div>
+
+			<!-- Question 67 -->
+			<div class="question">
+				<h3>67. What is the difference between a primary key and a unique key?</h3>
+				<label><input type="radio" name="q67" value="A"> A) A unique key allows NULL values, whereas a primary key does not.</label>
+				<label><input type="radio" name="q67" value="B"> B) A primary key ensures each row is unique and does not allow NULLs, while a unique key allows NULL values.</label>
+				<label><input type="radio" name="q67" value="C"> C) A primary key allows duplicates, while a unique key does not.</label>
+				<label><input type="radio" name="q67" value="D"> D) Both keys function identically and have no differences.</label>
+			</div>
+
+			<!-- Question 68 -->
+			<div class="question">
+				<h3>68. What does the TRUNCATE TABLE command do?</h3>
+				<label><input type="radio" name="q68" value="A"> A) It removes a specific number of rows based on a condition.</label>
+				<label><input type="radio" name="q68" value="B"> B) TRUNCATE TABLE removes all rows from a table, resetting any auto-increment counters, but retains the table structure.</label>
+				<label><input type="radio" name="q68" value="C"> C) It deletes the entire table including its structure.</label>
+				<label><input type="radio" name="q68" value="D"> D) It updates the data in a table.</label>
+			</div>
+
+			<!-- Question 69 -->
+			<div class="question">
+				<h3>69. Describe the difference between DROP and DELETE commands.</h3>
+				<label><input type="radio" name="q69" value="A"> A) DROP deletes specific rows, while DELETE removes the table structure.</label>
+				<label><input type="radio" name="q69" value="B"> B) DROP removes the entire table structure, while DELETE removes specific rows from a table.</label>
+				<label><input type="radio" name="q69" value="C"> C) Both commands remove specific rows.</label>
+				<label><input type="radio" name="q69" value="D"> D) Both commands remove the entire table structure.</label>
+			</div>
+
+			<!-- Question 70 -->
+			<div class="question">
+				<h3>70. What is a stored procedure?</h3>
+				<label><input type="radio" name="q70" value="A"> A) A saved result set of a SELECT query.</label>
+				<label><input type="radio" name="q70" value="B"> B) A stored procedure is a set of SQL statements saved in the database that can be executed as a unit.</label>
+				<label><input type="radio" name="q70" value="C"> C) A query that retrieves data from a table.</label>
+				<label><input type="radio" name="q70" value="D"> D) A constraint that enforces data integrity.</label>
+			</div>
+
+			<!-- Question 71 -->
+			<div class="question">
+				<h3>71. Explain the purpose of a trigger in SQL.</h3>
+				<label><input type="radio" name="q71" value="A"> A) A trigger is a type of index.</label>
+				<label><input type="radio" name="q71" value="B"> B) A trigger is a set of SQL statements that automatically executes in response to specific database events.</label>
+				<label><input type="radio" name="q71" value="C"> C) A trigger removes duplicate rows from a table.</label>
+				<label><input type="radio" name="q71" value="D"> D) A trigger sorts data in a table.</label>
+			</div>
+
+			<!-- Question 72 -->
+			<div class="question">
+				<h3>72. What is a cursor in SQL?</h3>
+				<label><input type="radio" name="q72" value="A"> A) A tool to permanently delete data from a table.</label>
+				<label><input type="radio" name="q72" value="B"> B) A cursor is a database object used to retrieve and manipulate rows in a result set one at a time.</label>
+				<label><input type="radio" name="q72" value="C"> C) A tool to create indexes on columns.</label>
+				<label><input type="radio" name="q72" value="D"> D) A tool to merge two tables into one.</label>
+			</div>
+
+			<!-- Question 73 -->
+			<div class="question">
+				<h3>73. What does the FETCH command do with cursors?</h3>
+				<label><input type="radio" name="q73" value="A"> A) FETCH retrieves a specified number of rows based on a condition.</label>
+				<label><input type="radio" name="q73" value="B"> B) FETCH retrieves the next row from the cursor result set, enabling row-by-row processing.</label>
+				<label><input type="radio" name="q73" value="C"> C) FETCH permanently deletes rows from a table.</label>
+				<label><input type="radio" name="q73" value="D"> D) FETCH joins rows from multiple tables.</label>
+			</div>
+
+            <div class="question">
+                <h3>74. How is the CHECK constraint used in SQL?</h3>
+                <label><input type="radio" name="q74" value="A"> A) It enforces data uniqueness in a column.</label>
+                <label><input type="radio" name="q74" value="B"> B) CHECK ensures that all values in a column meet a specified condition.</label>
+                <label><input type="radio" name="q74" value="C"> C) It creates indexes automatically.</label>
+                <label><input type="radio" name="q74" value="D"> D) It prevents NULL values in a column.</label>
+            </div>
+            
+            <!-- Question 75 -->
+            <div class="question">
+                <h3>75. What is a default constraint in SQL?</h3>
+                <label><input type="radio" name="q75" value="A"> A) A rule for sorting query results.</label>
+                <label><input type="radio" name="q75" value="B"> B) A default constraint provides a default value for a column when no value is specified.</label>
+                <label><input type="radio" name="q75" value="C"> C) It enforces uniqueness in a column.</label>
+                <label><input type="radio" name="q75" value="D"> D) It automatically creates an index for the column.</label>
+            </div>
+
+
+            <div class="question">
+                <h3>76. What is the purpose of the NOW() function in SQL?</h3>
+                <label><input type="radio" name="q76" value="A"> A) It returns a random number</label>
+                <label><input type="radio" name="q76" value="B"> B) NOW() returns the current date and time, useful for timestamping or comparing with other date values.</label>
+                <label><input type="radio" name="q76" value="C"> C) It returns the name of the current user</label>
+                <label><input type="radio" name="q76" value="D"> D) It returns the current database name</label>
+            </div>
+            
+            <button type="button" id="submit-btn">Submit Quiz</button>
+        </form>
+        
+        <!-- Results Display -->
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

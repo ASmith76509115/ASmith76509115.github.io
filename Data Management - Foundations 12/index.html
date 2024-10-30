@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management Quiz 12</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Management Quiz 12</h1>
+        <h2>By Adam Smith</h2>
+        
+        <!-- Timer Display -->
+        <p id="timer" style="font-size: 18px; color: red;">Time Remaining: 100:00</p>
+        
+        <!-- Start Button -->
+        <button type="button" id="start-btn">Start Quiz</button>
+        
+        <!-- Quiz Form -->
+        <form id="quiz-form" style="display: none;">
+
+        <!-- Questions from 1 to 75 -->
+
+        <div class="question">
+            <h3>1. What is a database?</h3>
+            <label><input type="radio" name="q1" value="A"> A) A structured collection of data.</label><br>
+            <label><input type="radio" name="q1" value="B"> B) A list of files.</label><br>
+            <label><input type="radio" name="q1" value="C"> C) A collection of text files.</label><br>
+            <label><input type="radio" name="q1" value="D"> D) A type of spreadsheet.</label>
+        </div>
+
+        <div class="question">
+            <h3>2. The LIKE operator is used to:</h3>
+            <label><input type="radio" name="q2" value="A"> A) Compare two values for equality.</label><br>
+            <label><input type="radio" name="q2" value="B"> B) Search for a specified pattern in a column.</label><br>
+            <label><input type="radio" name="q2" value="C"> C) Convert data types.</label><br>
+            <label><input type="radio" name="q2" value="D"> D) Create a new table.</label>
+        </div>
+
+        <div class="question">
+            <h3>3. In which type of table is no specific order imposed on rows?</h3>
+            <label><input type="radio" name="q3" value="A"> A) Sorted table.</label><br>
+            <label><input type="radio" name="q3" value="B"> B) Hash table.</label><br>
+            <label><input type="radio" name="q3" value="C"> C) Table cluster.</label><br>
+            <label><input type="radio" name="q3" value="D"> D) Heap table.</label>
+        </div>
+
+        <div class="question">
+            <h3>4. How does a database organize data?</h3>
+            <label><input type="radio" name="q4" value="A"> A) In rows and columns, often in tables.</label><br>
+            <label><input type="radio" name="q4" value="B"> B) In a flat file structure.</label><br>
+            <label><input type="radio" name="q4" value="C"> C) In a list format.</label><br>
+            <label><input type="radio" name="q4" value="D"> D) In binary format only.</label>
+        </div>
+
+        <div class="question">
+            <h3>5. What makes a database accessible to authorized users?</h3>
+            <label><input type="radio" name="q5" value="A"> A) A Database Management System (DBMS).</label><br>
+            <label><input type="radio" name="q5" value="B"> B) A login screen.</label><br>
+            <label><input type="radio" name="q5" value="C"> C) Access control lists (ACLs).</label><br>
+            <label><input type="radio" name="q5" value="D"> D) File encryption software.</label>
+        </div>
+
+        <div class="question">
+            <h3>6. What is the primary purpose of a database?</h3>
+            <label><input type="radio" name="q6" value="A"> A) To store, organize, and manage large amounts of data efficiently.</label><br>
+            <label><input type="radio" name="q6" value="B"> B) To provide graphical interfaces for users.</label><br>
+            <label><input type="radio" name="q6" value="C"> C) To run complex calculations.</label><br>
+            <label><input type="radio" name="q6" value="D"> D) To perform system backups.</label>
+        </div>
+
+        <div class="question">
+            <h3>7. How do databases minimize redundancy?</h3>
+            <label><input type="radio" name="q7" value="A"> A) By organizing data logically and avoiding duplicate storage.</label><br>
+            <label><input type="radio" name="q7" value="B"> B) By using multiple servers for storage.</label><br>
+            <label><input type="radio" name="q7" value="C"> C) By compressing data.</label><br>
+            <label><input type="radio" name="q7" value="D"> D) By using encryption algorithms.</label>
+        </div>
+
+        <div class="question">
+            <h3>8. What operations do databases allow users to perform?</h3>
+            <label><input type="radio" name="q8" value="A"> A) Searching, filtering, sorting, and generating reports.</label><br>
+            <label><input type="radio" name="q8" value="B"> B) Data encryption and backups.</label><br>
+            <label><input type="radio" name="q8" value="C"> C) File management and version control.</label><br>
+            <label><input type="radio" name="q8" value="D"> D) Network diagnostics and testing.</label>
+        </div>
+
+        <div class="question">
+            <h3>9. What techniques ensure the efficiency of databases?</h3>
+            <label><input type="radio" name="q9" value="A"> A) Indexing, queries, and optimization techniques.</label><br>
+            <label><input type="radio" name="q9" value="B"> B) File compression and archiving.</label><br>
+            <label><input type="radio" name="q9" value="C"> C) Data replication and mirroring.</label><br>
+            <label><input type="radio" name="q9" value="D"> D) Data sorting and backup.</label>
+        </div>
+
+        <div class="question">
+            <h3>10. What is a relational database?</h3>
+            <label><input type="radio" name="q10" value="A"> A) A database that organizes data into tables with structured relationships via keys.</label><br>
+            <label><input type="radio" name="q10" value="B"> B) A database that stores data in a flat structure.</label><br>
+            <label><input type="radio" name="q10" value="C"> C) A system for managing operating systems.</label><br>
+            <label><input type="radio" name="q10" value="D"> D) A system that performs network management.</label>
+        </div>
+
+        <div class="question">
+            <h3>11. What is a primary key?</h3>
+            <label><input type="radio" name="q11" value="A"> A) A unique identifier for each record in a table.</label><br>
+            <label><input type="radio" name="q11" value="B"> B) A field used to encrypt data.</label><br>
+            <label><input type="radio" name="q11" value="C"> C) A backup method for databases.</label><br>
+            <label><input type="radio" name="q11" value="D"> D) A table used for user permissions.</label>
+        </div>
+
+        <div class="question">
+            <h3>12. What is a foreign key?</h3>
+            <label><input type="radio" name="q12" value="A"> A) A field in one table that links to the primary key in another table.</label><br>
+            <label><input type="radio" name="q12" value="B"> B) A column used to store encrypted data.</label><br>
+            <label><input type="radio" name="q12" value="C"> C) A record that references international users.</label><br>
+            <label><input type="radio" name="q12" value="D"> D) A method for recovering lost data.</label>
+        </div>
+
+        <div class="question">
+            <h3>13. What does ACID stand for in relational databases?</h3>
+            <label><input type="radio" name="q13" value="A"> A) Atomicity, Consistency, Isolation, Durability.</label><br>
+            <label><input type="radio" name="q13" value="B"> B) Access, Consistency, Indexing, Durability.</label><br>
+            <label><input type="radio" name="q13" value="C"> C) Accuracy, Connectivity, Isolation, Data Integrity.</label><br>
+            <label><input type="radio" name="q13" value="D"> D) Allocation, Compression, Integrity, Duplication.</label>
+        </div>
+
+        <div class="question">
+            <h3>14. Which popular databases use the relational model?</h3>
+            <label><input type="radio" name="q14" value="A"> A) MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server.</label><br>
+            <label><input type="radio" name="q14" value="B"> B) MongoDB, Redis, Neo4j.</label><br>
+            <label><input type="radio" name="q14" value="C"> C) Microsoft Excel, Google Sheets.</label><br>
+            <label><input type="radio" name="q14" value="D"> D) Couchbase, Apache Cassandra.</label>
+        </div>
+
+        <div class="question">
+            <h3>15. What type of data does a NoSQL database handle?</h3>
+            <label><input type="radio" name="q15" value="A"> A) Unstructured or semi-structured data.</label><br>
+            <label><input type="radio" name="q15" value="B"> B) Structured data only.</label><br>
+            <label><input type="radio" name="q15" value="C"> C) Binary data only.</label><br>
+            <label><input type="radio" name="q15" value="D"> D) Encrypted data only.</label>
+        </div>
+
+        <div class="question">
+            <h3>16. What is a document-based NoSQL database?</h3>
+            <label><input type="radio" name="q16" value="A"> A) A database that stores data in documents, often in JSON or BSON formats.</label><br>
+            <label><input type="radio" name="q16" value="B"> B) A database that uses flat files for storage.</label><br>
+            <label><input type="radio" name="q16" value="C"> C) A system for managing word documents.</label><br>
+            <label><input type="radio" name="q16" value="D"> D) A database that stores data in PDFs.</label>
+        </div>
+
+        <div class="question">
+            <h3>17. What is a key-value store?</h3>
+            <label><input type="radio" name="q17" value="A"> A) A type of NoSQL database that stores data as key-value pairs.</label><br>
+            <label><input type="radio" name="q17" value="B"> B) A database that organizes data by geographic location.</label><br>
+            <label><input type="radio" name="q17" value="C"> C) A relational database that stores binary keys.</label><br>
+            <label><input type="radio" name="q17" value="D"> D) A system that stores passwords securely.</label>
+        </div>
+
+        <div class="question">
+            <h3>18. How do graph databases store data?</h3>
+            <label><input type="radio" name="q18" value="A"> A) In nodes and edges, ideal for data with complex relationships.</label><br>
+            <label><input type="radio" name="q18" value="B"> B) In flat tables without relationships.</label><br>
+            <label><input type="radio" name="q18" value="C"> C) In geographic maps and coordinates.</label><br>
+            <label><input type="radio" name="q18" value="D"> D) As files stored in folders.</label>
+        </div>
+
+        <div class="question">
+            <h3>19. How do NoSQL databases scale?</h3>
+            <label><input type="radio" name="q19" value="A"> A) They scale horizontally by distributing data across multiple servers.</label><br>
+            <label><input type="radio" name="q19" value="B"> B) They scale vertically by upgrading server hardware.</label><br>
+            <label><input type="radio" name="q19" value="C"> C) They scale by compressing data.</label><br>
+            <label><input type="radio" name="q19" value="D"> D) They scale by reducing queries.</label>
+        </div>
+
+        <div class="question">
+            <h3>20. What is a Database Management System (DBMS)?</h3>
+            <label><input type="radio" name="q20" value="A"> A) Software that interacts with users and applications to manage and organize data in a database.</label><br>
+            <label><input type="radio" name="q20" value="B"> B) A program for performing system backups.</label><br>
+            <label><input type="radio" name="q20" value="C"> C) A graphical tool for creating reports.</label><br>
+            <label><input type="radio" name="q20" value="D"> D) An operating system that controls a database.</label>
+        </div>
+
+                <div class="question">
+            <h3>21. What are the key functions of a DBMS?</h3>
+            <label><input type="radio" name="q21" value="A"> A) Data storage, query processing, transaction management, backup, recovery, and security management.</label><br>
+            <label><input type="radio" name="q21" value="B"> B) Data compression, user management, and system backup.</label><br>
+            <label><input type="radio" name="q21" value="C"> C) User interface design and network security.</label><br>
+            <label><input type="radio" name="q21" value="D"> D) None of the above.</label>
+        </div>
+
+        <div class="question">
+            <h3>22. What is query processing in a DBMS?</h3>
+            <label><input type="radio" name="q22" value="A"> A) It allows users to retrieve specific data by running queries (e.g., SELECT statements).</label><br>
+            <label><input type="radio" name="q22" value="B"> B) It allows users to create queries automatically.</label><br>
+            <label><input type="radio" name="q22" value="C"> C) It is used to manage database performance issues.</label><br>
+            <label><input type="radio" name="q22" value="D"> D) It automates the backup process.</label>
+        </div>
+
+        <div class="question">
+            <h3>23. What is transaction management in a DBMS?</h3>
+            <label><input type="radio" name="q23" value="A"> A) The process of managing multiple transactions while ensuring data integrity.</label><br>
+            <label><input type="radio" name="q23" value="B"> B) Managing queries to improve performance.</label><br>
+            <label><input type="radio" name="q23" value="C"> C) Automating data backups for multiple users.</label><br>
+            <label><input type="radio" name="q23" value="D"> D) Managing user access to the database.</label>
+        </div>
+
+        <div class="question">
+            <h3>24. What is the purpose of backup and recovery in a DBMS?</h3>
+            <label><input type="radio" name="q24" value="A"> A) To provide tools for backing up the database and recovering data in case of failure.</label><br>
+            <label><input type="radio" name="q24" value="B"> B) To archive older versions of the database.</label><br>
+            <label><input type="radio" name="q24" value="C"> C) To enable automated indexing.</label><br>
+            <label><input type="radio" name="q24" value="D"> D) To optimize query processing.</label>
+        </div>
+
+        <div class="question">
+            <h3>25. Which DBMS software is commonly used for relational databases?</h3>
+            <label><input type="radio" name="q25" value="A"> A) MySQL, Microsoft SQL Server, Oracle Database.</label><br>
+            <label><input type="radio" name="q25" value="B"> B) MongoDB, Couchbase, Cassandra.</label><br>
+            <label><input type="radio" name="q25" value="C"> C) Excel, Google Sheets.</label><br>
+            <label><input type="radio" name="q25" value="D"> D) None of the above.</label>
+        </div>
+
+        <div class="question">
+            <h3>26. Which DBMS is used for handling large-scale document-oriented data?</h3>
+            <label><input type="radio" name="q26" value="A"> A) MongoDB (a NoSQL database).</label><br>
+            <label><input type="radio" name="q26" value="B"> B) MySQL.</label><br>
+            <label><input type="radio" name="q26" value="C"> C) Microsoft SQL Server.</label><br>
+            <label><input type="radio" name="q26" value="D"> D) Oracle Database.</label>
+        </div>
+
+        <div class="question">
+            <h3>27. What does CRUD stand for?</h3>
+            <label><input type="radio" name="q27" value="A"> A) Create, Read, Update, Delete.</label><br>
+            <label><input type="radio" name="q27" value="B"> B) Create, Remove, Update, Delete.</label><br>
+            <label><input type="radio" name="q27" value="C"> C) Combine, Review, Update, Define.</label><br>
+            <label><input type="radio" name="q27" value="D"> D) Calculate, Review, Update, Destroy.</label>
+        </div>
+
+        <div class="question">
+            <h3>28. What SQL command is used to create a new record in a database?</h3>
+            <label><input type="radio" name="q28" value="A"> A) INSERT INTO.</label><br>
+            <label><input type="radio" name="q28" value="B"> B) CREATE NEW.</label><br>
+            <label><input type="radio" name="q28" value="C"> C) ADD RECORD.</label><br>
+            <label><input type="radio" name="q28" value="D"> D) NEW ROW.</label>
+        </div>
+
+        <div class="question">
+            <h3>29. What SQL command is used to read or retrieve data from a database?</h3>
+            <label><input type="radio" name="q29" value="A"> A) SELECT.</label><br>
+            <label><input type="radio" name="q29" value="B"> B) FETCH.</label><br>
+            <label><input type="radio" name="q29" value="C"> C) RETRIEVE.</label><br>
+            <label><input type="radio" name="q29" value="D"> D) QUERY.</label>
+        </div>
+
+        <div class="question">
+            <h3>30. What SQL command is used to update an existing record in a database?</h3>
+            <label><input type="radio" name="q30" value="A"> A) UPDATE.</label><br>
+            <label><input type="radio" name="q30" value="B"> B) CHANGE.</label><br>
+            <label><input type="radio" name="q30" value="C"> C) MODIFY.</label><br>
+            <label><input type="radio" name="q30" value="D"> D) ALTER.</label>
+        </div>
+
+        <div class="question">
+            <h3>31. What SQL command is used to delete a record from a database?</h3>
+            <label><input type="radio" name="q31" value="A"> A) DELETE.</label><br>
+            <label><input type="radio" name="q31" value="B"> B) REMOVE.</label><br>
+            <label><input type="radio" name="q31" value="C"> C) DESTROY.</label><br>
+            <label><input type="radio" name="q31" value="D"> D) ERASE.</label>
+        </div>
+
+        <div class="question">
+            <h3>32. What is data integrity?</h3>
+            <label><input type="radio" name="q32" value="A"> A) Ensuring the accuracy and consistency of data throughout its lifecycle.</label><br>
+            <label><input type="radio" name="q32" value="B"> B) Encrypting the database to protect data.</label><br>
+            <label><input type="radio" name="q32" value="C"> C) Ensuring user access is controlled.</label><br>
+            <label><input type="radio" name="q32" value="D"> D) Creating database indexes.</label>
+        </div>
+
+        <div class="question">
+            <h3>33. What is referential integrity?</h3>
+            <label><input type="radio" name="q33" value="A"> A) Ensures that relationships between tables remain consistent.</label><br>
+            <label><input type="radio" name="q33" value="B"> B) Ensures the primary key is unique.</label><br>
+            <label><input type="radio" name="q33" value="C"> C) Ensures that table rows are deleted correctly.</label><br>
+            <label><input type="radio" name="q33" value="D"> D) Ensures that only authorized users can access the database.</label>
+        </div>
+
+        <div class="question">
+            <h3>34. What are constraints in a database?</h3>
+            <label><input type="radio" name="q34" value="A"> A) Rules applied to ensure that data entered into the database is valid (e.g., primary key, foreign key, unique constraints).</label><br>
+            <label><input type="radio" name="q34" value="B"> B) Encryption methods used to protect data.</label><br>
+            <label><input type="radio" name="q34" value="C"> C) Permissions applied to user accounts.</label><br>
+            <label><input type="radio" name="q34" value="D"> D) System-level security policies.</label>
+        </div>
+
+        <div class="question">
+            <h3>35. What is a unique constraint in a database?</h3>
+            <label><input type="radio" name="q35" value="A"> A) A rule that ensures all values in a column are unique and no duplicates exist.</label><br>
+            <label><input type="radio" name="q35" value="B"> B) A constraint that requires all fields to be indexed.</label><br>
+            <label><input type="radio" name="q35" value="C"> C) A rule for deleting duplicate rows.</label><br>
+            <label><input type="radio" name="q35" value="D"> D) A method of compressing data.</label>
+        </div>
+
+        <div class="question">
+            <h3>36. What is authentication in database security?</h3>
+            <label><input type="radio" name="q36" value="A"> A) The process of verifying the identity of a user (e.g., using a username and password).</label><br>
+            <label><input type="radio" name="q36" value="B"> B) Encrypting all user data.</label><br>
+            <label><input type="radio" name="q36" value="C"> C) Creating backups of user accounts.</label><br>
+            <label><input type="radio" name="q36" value="D"> D) Assigning user roles and permissions.</label>
+        </div>
+
+        <div class="question">
+            <h3>37. What is authorization in database security?</h3>
+            <label><input type="radio" name="q37" value="A"> A) Ensuring that authenticated users have the correct permissions to access or modify data.</label><br>
+            <label><input type="radio" name="q37" value="B"> B) Assigning usernames and passwords to users.</label><br>
+            <label><input type="radio" name="q37" value="C"> C) Encrypting sensitive user data.</label><br>
+            <label><input type="radio" name="q37" value="D"> D) Verifying the integrity of the database schema.</label>
+        </div>
+
+        <div class="question">
+            <h3>38. What is encryption in databases?</h3>
+            <label><input type="radio" name="q38" value="A"> A) Protecting sensitive data (e.g., passwords, personal details) by converting it into unreadable code to prevent unauthorized access.</label><br>
+            <label><input type="radio" name="q38" value="B"> B) Compressing data to reduce storage size.</label><br>
+            <label><input type="radio" name="q38" value="C"> C) Assigning a key to each data record.</label><br>
+            <label><input type="radio" name="q38" value="D"> D) Removing duplicates from a database.</label>
+        </div>
+
+        <div class="question">
+            <h3>39. What is database auditing?</h3>
+            <label><input type="radio" name="q39" value="A"> A) The process of monitoring and logging activities in the database to track who accessed or modified the data.</label><br>
+            <label><input type="radio" name="q39" value="B"> B) The process of creating backups of the database.</label><br>
+            <label><input type="radio" name="q39" value="C"> C) Verifying the integrity of database transactions.</label><br>
+            <label><input type="radio" name="q39" value="D"> D) Encrypting user passwords.</label>
+        </div>
+
+        <div class="question">
+            <h3>40. What is data modeling?</h3>
+            <label><input type="radio" name="q40" value="A"> A) The process of creating a visual representation of data structures and relationships.</label><br>
+            <label><input type="radio" name="q40" value="B"> B) The process of visualizing data analytics.</label><br>
+            <label><input type="radio" name="q40" value="C"> C) Designing the physical layout of databases.</label><br>
+            <label><input type="radio" name="q40" value="D"> D) The process of merging multiple databases.</label>
+        </div>
+
+        <div class="question">
+            <h3>41. What is an Entity-Relationship Diagram (ERD)?</h3>
+            <label><input type="radio" name="q41" value="A"> A) A diagram that visually represents tables (entities) and the relationships between them.</label><br>
+            <label><input type="radio" name="q41" value="B"> B) A diagram showing the performance of the database.</label><br>
+            <label><input type="radio" name="q41" value="C"> C) A visual representation of user access levels.</label><br>
+            <label><input type="radio" name="q41" value="D"> D) A graph showing database storage use.</label>
+        </div>
+
+        <div class="question">
+            <h3>42. What is the purpose of normalization?</h3>
+            <label><input type="radio" name="q42" value="A"> A) To reduce redundancy and improve data integrity by organizing data into logical, non-redundant structures.</label><br>
+            <label><input type="radio" name="q42" value="B"> B) To improve the security of the database.</label><br>
+            <label><input type="radio" name="q42" value="C"> C) To create indexes for faster queries.</label><br>
+            <label><input type="radio" name="q42" value="D"> D) To compress data for storage.</label>
+        </div>
+
+        <div class="question">
+            <h3>43. What is 1NF (First Normal Form)?</h3>
+            <label><input type="radio" name="q43" value="A"> A) A table that contains no repeating groups and has atomic values in each field.</label><br>
+            <label><input type="radio" name="q43" value="B"> B) A table where no duplicate rows exist.</label><br>
+            <label><input type="radio" name="q43" value="C"> C) A table that contains fully normalized data.</label><br>
+            <label><input type="radio" name="q43" value="D"> D) A table with no foreign keys.</label>
+        </div>
+
+        <div class="question">
+            <h3>44. What is 2NF (Second Normal Form)?</h3>
+            <label><input type="radio" name="q44" value="A"> A) A table in 1NF where all non-key attributes are fully dependent on the primary key.</label><br>
+            <label><input type="radio" name="q44" value="B"> B) A table that contains atomic values.</label><br>
+            <label><input type="radio" name="q44" value="C"> C) A table with no duplicate data.</label><br>
+            <label><input type="radio" name="q44" value="D"> D) A table without any foreign key dependencies.</label>
+        </div>
+
+        <div class="question">
+            <h3>45. What is 3NF (Third Normal Form)?</h3>
+            <label><input type="radio" name="q45" value="A"> A) A table in 2NF where no transitive dependencies exist (no attribute is dependent on a non-primary key).</label><br>
+            <label><input type="radio" name="q45" value="B"> B) A table without any duplicate rows.</label><br>
+            <label><input type="radio" name="q45" value="C"> C) A table that contains atomic data only.</label><br>
+            <label><input type="radio" name="q45" value="D"> D) A table without foreign key constraints.</label>
+        </div>
+
+        <div class="question">
+            <h3>46. What is denormalization?</h3>
+            <label><input type="radio" name="q46" value="A"> A) The process of intentionally introducing redundancy to improve read performance, often used in data warehousing.</label><br>
+            <label><input type="radio" name="q46" value="B"> B) Removing redundancy from a database structure.</label><br>
+            <label><input type="radio" name="q46" value="C"> C) Adding additional indexes to a database.</label><br>
+            <label><input type="radio" name="q46" value="D"> D) Creating a backup of a normalized table.</label>
+        </div>
+
+        <div class="question">
+            <h3>47. What is an SQL JOIN?</h3>
+            <label><input type="radio" name="q47" value="A"> A) A SQL operation used to combine rows from two or more tables based on a related column.</label><br>
+            <label><input type="radio" name="q47" value="B"> B) A method for concatenating data.</label><br>
+            <label><input type="radio" name="q47" value="C"> C) A tool for merging indexes.</label><br>
+            <label><input type="radio" name="q47" value="D"> D) A way to link rows from a table to itself.</label>
+        </div>
+
+        <div class="question">
+            <h3>48. What is an INNER JOIN?</h3>
+            <label><input type="radio" name="q48" value="A"> A) Returns rows when there is a match in both joined tables.</label><br>
+            <label><input type="radio" name="q48" value="B"> B) Returns all rows from the left table, and matched rows from the right table.</label><br>
+            <label><input type="radio" name="q48" value="C"> C) Returns all rows from the right table, and matched rows from the left table.</label><br>
+            <label><input type="radio" name="q48" value="D"> D) Returns rows when there is a match in one of the tables.</label>
+        </div>
+
+        <div class="question">
+            <h3>49. What is a LEFT JOIN?</h3>
+            <label><input type="radio" name="q49" value="A"> A) Returns all rows from the left table, and matched rows from the right table.</label><br>
+            <label><input type="radio" name="q49" value="B"> B) Returns rows when there is a match in both joined tables.</label><br>
+            <label><input type="radio" name="q49" value="C"> C) Returns rows when there is a match in one of the tables.</label><br>
+            <label><input type="radio" name="q49" value="D"> D) Returns all rows from the right table, and matched rows from the left table.</label>
+        </div>
+
+        <div class="question">
+            <h3>50. What is a RIGHT JOIN?</h3>
+            <label><input type="radio" name="q50" value="A"> A) Returns all rows from the right table, and matched rows from the left table.</label><br>
+            <label><input type="radio" name="q50" value="B"> B) Returns rows when there is a match in both joined tables.</label><br>
+            <label><input type="radio" name="q50" value="C"> C) Returns rows when there is a match in one of the tables.</label><br>
+            <label><input type="radio" name="q50" value="D"> D) Returns all rows from the left table, and matched rows from the right table.</label>
+        </div>
+
+        <div class="question">
+            <h3>51. What is a FULL JOIN?</h3>
+            <label><input type="radio" name="q51" value="A"> A) Returns rows when there is a match in one of the tables.</label><br>
+            <label><input type="radio" name="q51" value="B"> B) Returns all rows from the left table, and matched rows from the right table.</label><br>
+            <label><input type="radio" name="q51" value="C"> C) Returns all rows from both tables.</label><br>
+            <label><input type="radio" name="q51" value="D"> D) Returns rows when there is a match in both joined tables.</label>
+        </div>
+
+        <div class="question">
+            <h3>52. What is an index in a database?</h3>
+            <label><input type="radio" name="q52" value="A"> A) A structure that improves the speed of data retrieval operations on a table.</label><br>
+            <label><input type="radio" name="q52" value="B"> B) A method for compressing data in a database.</label><br>
+            <label><input type="radio" name="q52" value="C"> C) A way to create backups of database tables.</label><br>
+            <label><input type="radio" name="q52" value="D"> D) A tool for managing database security.</label>
+        </div>
+
+        <div class="question">
+            <h3>53. What is an aggregate function in SQL?</h3>
+            <label><input type="radio" name="q53" value="A"> A) A function that performs calculations on a set of values and returns a single result (e.g., COUNT, SUM, AVG).</label><br>
+            <label><input type="radio" name="q53" value="B"> B) A function that aggregates rows from multiple tables.</label><br>
+            <label><input type="radio" name="q53" value="C"> C) A function that compresses data in the database.</label><br>
+            <label><input type="radio" name="q53" value="D"> D) A function that modifies a column's attributes.</label>
+        </div>
+
+        <div class="question">
+            <h3>54. What is the purpose of the GROUP BY clause?</h3>
+            <label><input type="radio" name="q54" value="A"> A) To group rows that have the same values in specified columns and allow aggregate functions to be applied.</label><br>
+            <label><input type="radio" name="q54" value="B"> B) To order rows in the database.</label><br>
+            <label><input type="radio" name="q54" value="C"> C) To filter rows based on conditions.</label><br>
+            <label><input type="radio" name="q54" value="D"> D) To delete duplicate rows in a table.</label>
+        </div>
+
+        <div class="question">
+            <h3>55. What is a subquery in SQL?</h3>
+            <label><input type="radio" name="q55" value="A"> A) A query nested inside another query to retrieve data used by the outer query.</label><br>
+            <label><input type="radio" name="q55" value="B"> B) A query used to retrieve all data in a table.</label><br>
+            <label><input type="radio" name="q55" value="C"> C) A query used to delete data from multiple tables.</label><br>
+            <label><input type="radio" name="q55" value="D"> D) A query used to backup the database.</label>
+        </div>
+
+        <div class="question">
+            <h3>56. What are the ACID properties in database transactions?</h3>
+            <label><input type="radio" name="q56" value="A"> A) Atomicity, Consistency, Isolation, Durability.</label><br>
+            <label><input type="radio" name="q56" value="B"> B) Accuracy, Consistency, Isolation, Durability.</label><br>
+            <label><input type="radio" name="q56" value="C"> C) Allocation, Connectivity, Isolation, Duplication.</label><br>
+            <label><input type="radio" name="q56" value="D"> D) Access, Compression, Indexing, Duplication.</label>
+        </div>
+
+        <div class="question">
+            <h3>57. What is atomicity in database transactions?</h3>
+            <label><input type="radio" name="q57" value="A"> A) Ensures that all parts of a transaction are completed; if one part fails, the entire transaction fails.</label><br>
+            <label><input type="radio" name="q57" value="B"> B) Ensures data is consistent across all tables.</label><br>
+            <label><input type="radio" name="q57" value="C"> C) Ensures data is available for users.</label><br>
+            <label><input type="radio" name="q57" value="D"> D) Ensures database transactions are optimized.</label>
+        </div>
+
+        <div class="question">
+            <h3>58. What is consistency in database transactions?</h3>
+            <label><input type="radio" name="q58" value="A"> A) Ensures that a transaction takes the database from one valid state to another, maintaining database rules.</label><br>
+            <label><input type="radio" name="q58" value="B"> B) Ensures that data is available for querying.</label><br>
+            <label><input type="radio" name="q58" value="C"> C) Ensures that backups are available for recovery.</label><br>
+            <label><input type="radio" name="q58" value="D"> D) Ensures that multiple users can access the database simultaneously.</label>
+        </div>
+
+        <div class="question">
+            <h3>59. What is isolation in database transactions?</h3>
+            <label><input type="radio" name="q59" value="A"> A) Ensures that transactions are processed independently of one another, preventing conflicts.</label><br>
+            <label><input type="radio" name="q59" value="B"> B) Ensures that transactions are executed concurrently.</label><br>
+            <label><input type="radio" name="q59" value="C"> C) Ensures that transactions are processed together.</label><br>
+            <label><input type="radio" name="q59" value="D"> D) Ensures that transactions are backed up.</label>
+        </div>
+
+        <div class="question">
+            <h3>60. What is durability in database transactions?</h3>
+            <label><input type="radio" name="q60" value="A"> A) Guarantees that once a transaction is committed, it remains permanent, even in the event of a system failure.</label><br>
+            <label><input type="radio" name="q60" value="B"> B) Ensures that transactions are written to a backup system.</label><br>
+            <label><input type="radio" name="q60" value="C"> C) Ensures that data is encrypted after a transaction is completed.</label><br>
+            <label><input type="radio" name="q60" value="D"> D) Ensures that transactions are optimized for performance.</label>
+        </div>
+
+        <div class="question">
+            <h3>61. What is a full backup in database management?</h3>
+            <label><input type="radio" name="q61" value="A"> A) A complete copy of the entire database.</label><br>
+            <label><input type="radio" name="q61" value="B"> B) A backup that copies only the data that has changed since the last backup.</label><br>
+            <label><input type="radio" name="q61" value="C"> C) A backup that archives all old data.</label><br>
+            <label><input type="radio" name="q61" value="D"> D) A backup that compresses the entire database.</label>
+        </div>
+
+        <div class="question">
+            <h3>62. What is an incremental backup?</h3>
+            <label><input type="radio" name="q62" value="A"> A) A backup that copies only the data that has changed since the last backup.</label><br>
+            <label><input type="radio" name="q62" value="B"> B) A complete backup of the entire database.</label><br>
+            <label><input type="radio" name="q62" value="C"> C) A backup that archives all old data.</label><br>
+            <label><input type="radio" name="q62" value="D"> D) A compressed version of the last backup.</label>
+        </div>
+
+        <div class="question">
+            <h3>63. What is a restore operation in a database?</hh3>
+            <label><input type="radio" name="q63" value="A"> A) The process of recovering the database from a backup after a failure.</label><br>
+            <label><input type="radio" name="q63" value="B"> B) The process of backing up a database.</label><br>
+            <label><input type="radio" name="q63" value="C"> C) The process of compressing a backup.</label><br>
+            <label><input type="radio" name="q63" value="D"> D) The process of optimizing database transactions.</label>
+        </div>
+
+        <div class="question">
+            <h3>64. What is client-server architecture in databases?</h3>
+            <label><input type="radio" name="q64" value="A"> A) A distributed system where the client sends requests to the server, and the server processes those requests and returns data.</label><br>
+            <label><input type="radio" name="q64" value="B"> B) A system where the server sends queries to the client for execution.</label><br>
+            <label><input type="radio" name="q64" value="C"> C) A system where multiple users access the same database from a single location.</label><br>
+            <label><input type="radio" name="q64" value="D"> D) A system where clients and servers share processing power equally.</label>
+        </div>
+
+        <div class="question">
+            <h3>65. What is a distributed database?</h3>
+            <label><input type="radio" name="q65" value="A"> A) A database that is spread across multiple locations to improve performance and reliability.</label><br>
+            <label><input type="radio" name="q65" value="B"> B) A database stored on a single server with distributed queries.</label><br>
+            <label><input type="radio" name="q65" value="C"> C) A database designed for handling multimedia files.</label><br>
+            <label><input type="radio" name="q65" value="D"> D) A database used for client-server applications.</label>
+        </div>
+
+        <div class="question">
+            <h3>66. What is replication in a database?</h3>
+            <label><input type="radio" name="q66" value="A"> A) The process of copying data across multiple servers to ensure availability and fault tolerance.</label><br>
+            <label><input type="radio" name="q66" value="B"> B) The process of creating backup copies of data on the same server.</label><br>
+            <label><input type="radio" name="q66" value="C"> C) The process of creating an index of database transactions.</label><br>
+            <label><input type="radio" name="q66" value="D"> D) The process of optimizing query performance.</label>
+        </div>
+
+        <div class="question">
+            <h3>67. What is database partitioning?</h3>
+            <label><input type="radio" name="q67" value="A"> A) Dividing a large database into smaller, more manageable pieces for improved performance.</label><br>
+            <label><input type="radio" name="q67" value="B"> B) Copying database data across multiple servers.</label><br>
+            <label><input type="radio" name="q67" value="C"> C) Compressing large tables into smaller partitions.</label><br>
+            <label><input type="radio" name="q67" value="D"> D) Distributing database queries across multiple servers.</label>
+        </div>
+
+        <div class="question">
+            <h3>68. What is database sharding?</h3>
+            <label><input type="radio" name="q68" value="A"> A) A type of partitioning where data is distributed across multiple servers to improve performance and scalability.</label><br>
+            <label><input type="radio" name="q68" value="B"> B) A process for merging database backups.</label><br>
+            <label><input type="radio" name="q68" value="C"> C) A method for compressing database tables.</label><br>
+            <label><input type="radio" name="q68" value="D"> D) A process for optimizing database queries.</label>
+        </div>
+
+        <div class="question">
+            <h3>69. What is role-based access control (RBAC)?</h3>
+            <label><input type="radio" name="q69" value="A"> A) A security model that assigns permissions to users based on their role within an organization.</label><br>
+            <label><input type="radio" name="q69" value="B"> B) A model for creating database indexes based on roles.</label><br>
+            <label><input type="radio" name="q69" value="C"> C) A system for encrypting user data based on roles.</label><br>
+            <label><input type="radio" name="q69" value="D"> D) A method for optimizing query performance based on user roles.</label>
+        </div>
+
+        <div class="question">
+            <h3>70. What is a database schema?</h3>
+            <label><input type="radio" name="q70" value="A"> A) The structure that defines the organization of data in a database, including tables, relationships, and constraints.</label><br>
+            <label><input type="radio" name="q70" value="B"> B) A method for indexing database tables.</label><br>
+            <label><input type="radio" name="q70" value="C"> C) A structure for compressing data in a database.</label><br>
+            <label><input type="radio" name="q70" value="D"> D) A model for encrypting database tables.</label>
+        </div>
+
+        <div class="question">
+            <h3>71. What is data encryption at rest?</h3>
+            <label><input type="radio" name="q71" value="A"> A) Encrypting data stored in the database to protect it from unauthorized access.</label><br>
+            <label><input type="radio" name="q71" value="B"> B) Encrypting data during transmission.</label><br>
+            <label><input type="radio" name="q71" value="C"> C) Creating backups of encrypted data.</label><br>
+            <label><input type="radio" name="q71" value="D"> D) Compressing encrypted data for storage.</label>
+        </div>
+
+        <div class="question">
+            <h3>72. What is an SQL subquery?</h3>
+            <label><input type="radio" name="q72" value="A"> A) A query nested inside another query to retrieve data used by the outer query.</label><br>
+            <label><input type="radio" name="q72" value="B"> B) A tool for merging database tables.</label><br>
+            <label><input type="radio" name="q72" value="C"> C) A method for compressing query results.</label><br>
+            <label><input type="radio" name="q72" value="D"> D) A backup process for SQL databases.</label>
+        </div>
+
+        <div class="question">
+            <h3>73. What is the purpose of the ON clause in SQL joins?</h3>
+            <label><input type="radio" name="q73" value="A"> A) Specifies the condition for the join between the two tables.</label><br>
+            <label><input type="radio" name="q73" value="B"> B) Defines the columns to retrieve.</label><br>
+            <label><input type="radio" name="q73" value="C"> C) Sets the filter criteria.</label><br>
+            <label><input type="radio" name="q73" value="D"> D) Aggregates results for the JOIN.</label>
+        </div>
+
+        <!-- Question 74 -->
+        <div class="question">
+            <h3>74. What represents a relationship in an ER Diagram?</h3>
+            <label><input type="radio" name="q74" value="A"> A) A line connecting entities.</label><br>
+            <label><input type="radio" name="q74" value="B"> B) A circle representing an attribute.</label><br>
+            <label><input type="radio" name="q74" value="C"> C) A double rectangle for weak entities.</label><br>
+            <label><input type="radio" name="q74" value="D"> D) A diamond shape representing a foreign key.</label>
+        </div>
+
+        <div class="question">
+            <h3>75. What is intersection data in an ER Diagram?</h3>
+            <label><input type="radio" name="q75" value="A"> A) Data that describes the relationship between two entities.</label><br>
+            <label><input type="radio" name="q75" value="B"> B) Data stored across two tables.</label><br>
+            <label><input type="radio" name="q75" value="C"> C) Data used to connect foreign keys.</label><br>
+            <label><input type="radio" name="q75" value="D"> D) None of the above.</label>
+        </div> 
+		        <!-- Question 76 -->
+        <div class="question">
+            <h3>76. What is a database?</h3>
+            <label><input type="radio" name="q76" value="A"> A) A structured collection of data that is organized for easy access, management, and updating.</label><br>
+            <label><input type="radio" name="q76" value="B"> B) A list of files.</label><br>
+            <label><input type="radio" name="q76" value="C"> C) A collection of text files.</label><br>
+            <label><input type="radio" name="q76" value="D"> D) A type of spreadsheet.</label>
+        </div>
+
+        <!-- Question 77 -->
+        <div class="question">
+            <h3>77. What is a Database Management System (DBMS)?</h3>
+            <label><input type="radio" name="q77" value="A"> A) Software that interacts with users and applications to manage and organize data in a database.</label><br>
+            <label><input type="radio" name="q77" value="B"> B) A method for compressing database data.</label><br>
+            <label><input type="radio" name="q77" value="C"> C) A system for visualizing database records.</label><br>
+            <label><input type="radio" name="q77" value="D"> D) A method for indexing tables.</label>
+        </div>
+
+        <!-- Question 78 -->
+        <div class="question">
+            <h3>78. What is database auditing?</h3>
+            <label><input type="radio" name="q78" value="A"> A) Monitoring and logging actions on a database to track who accessed, modified, or deleted data.</label><br>
+            <label><input type="radio" name="q78" value="B"> B) Encrypting user passwords.</label><br>
+            <label><input type="radio" name="q78" value="C"> C) Creating backups of database data.</label><br>
+            <label><input type="radio" name="q78" value="D"> D) Monitoring query performance.</label>
+        </div>
+
+        <!-- Question 79 -->
+        <div class="question">
+            <h3>79. What is the primary purpose of a database?</h3>
+            <label><input type="radio" name="q79" value="A"> A) To store, organize, and manage large amounts of data efficiently.</label><br>
+            <label><input type="radio" name="q79" value="B"> B) To generate random data.</label><br>
+            <label><input type="radio" name="q79" value="C"> C) To provide an environment for testing data algorithms.</label><br>
+            <label><input type="radio" name="q79" value="D"> D) To create files for user storage.</label>
+        </div>
+
+        <!-- Question 80 -->
+        <div class="question">
+            <h3>80. What is a full backup in database management?</h3>
+            <label><input type="radio" name="q80" value="A"> A) A complete copy of the entire database.</label><br>
+            <label><input type="radio" name="q80" value="B"> B) A backup of only modified data.</label><br>
+            <label><input type="radio" name="q80" value="C"> C) A backup that stores only database schema.</label><br>
+            <label><input type="radio" name="q80" value="D"> D) A backup of the operating system files.</label>
+        </div>
+
+        <!-- Question 81 -->
+        <div class="question">
+            <h3>81. What is an incremental backup?</h3>
+            <label><input type="radio" name="q81" value="A"> A) A backup that copies only the data that has changed since the last backup.</label><br>
+            <label><input type="radio" name="q81" value="B"> B) A backup that copies all data every time.</label><br>
+            <label><input type="radio" name="q81" value="C"> C) A backup that compresses all data.</label><br>
+            <label><input type="radio" name="q81" value="D"> D) A backup of the operating system.</label>
+        </div>
+
+        <!-- Question 82 -->
+        <div class="question">
+            <h3>82. What is a subquery in SQL?</h3>
+            <label><input type="radio" name="q82" value="A"> A) A query nested inside another query to retrieve data used by the outer query.</label><br>
+            <label><input type="radio" name="q82" value="B"> B) A function to compress database records.</label><br>
+            <label><input type="radio" name="q82" value="C"> C) A tool for merging multiple queries.</label><br>
+            <label><input type="radio" name="q82" value="D"> D) A method for creating indexes on queries.</label>
+        </div>
+
+        <!-- Question 83 -->
+        <div class="question">
+            <h3>83. What is denormalization in databases?</h3>
+            <label><input type="radio" name="q83" value="A"> A) The process of intentionally introducing redundancy to improve read performance, often used in data warehousing.</label><br>
+            <label><input type="radio" name="q83" value="B"> B) Removing duplicate records from the database.</label><br>
+            <label><input type="radio" name="q83" value="C"> C) Combining database indexes.</label><br>
+            <label><input type="radio" name="q83" value="D"> D) Encrypting sensitive database fields.</label>
+        </div>
+
+        <!-- Question 84 -->
+        <div class="question">
+            <h3>84. What is the ACID property 'Durability' in databases?</h3>
+            <label><input type="radio" name="q84" value="A"> A) Guarantees that once a transaction is committed, it remains permanent, even in the event of a system failure.</label><br>
+            <label><input type="radio" name="q84" value="B"> B) Ensures the data is stored temporarily.</label><br>
+            <label><input type="radio" name="q84" value="C"> C) Deletes incomplete transactions.</label><br>
+            <label><input type="radio" name="q84" value="D"> D) Encrypts the transaction logs.</label>
+        </div>
+
+
+
+        <!-- End of quiz form -->
+        <button type="submit" id="submit-btn">Submit Quiz</button>
+        </form>
+        
+        <!-- Results Display -->
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

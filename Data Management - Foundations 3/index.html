@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Management Concepts Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Database Management Concepts Quiz</h1>
+        <h2>by Adam Smith</h2>
+        
+        <!-- Timer Display -->
+        <p id="timer" style="font-size: 18px; color: red;">Time Remaining: 100:00</p>
+        
+        <!-- Start Button -->
+        <button type="button" id="start-btn">Start Quiz</button>
+        
+        <!-- Quiz Form -->
+        <form id="quiz-form" style="display: none;">
+             <!-- Example Question -->
+            <!-- Question 1 -->
+			<div class="question">
+				<h3>1. What is an Entity-Relationship Diagram (ERD)?</h3>
+				<label><input type="radio" name="q1" value="A"> A) A textual document that describes entities</label>
+				<label><input type="radio" name="q1" value="B"> B) A visual representation outlining entities, attributes, and relationships in a database</label>
+				<label><input type="radio" name="q1" value="C"> C) A code snippet defining database structure</label>
+				<label><input type="radio" name="q1" value="D"> D) A document outlining the entire database schema</label>
+			</div>
+
+			<!-- Question 2 -->
+			<div class="question">
+				<h3>2. Why are ERDs important in database design?</h3>
+				<label><input type="radio" name="q2" value="A"> A) They automatically generate database code</label>
+				<label><input type="radio" name="q2" value="B"> B) They help designers understand data structure and relationships, aiding efficient design and communication with stakeholders</label>
+				<label><input type="radio" name="q2" value="C"> C) They only apply to relational databases</label>
+				<label><input type="radio" name="q2" value="D"> D) They simplify programming languages</label>
+			</div>
+
+			<!-- Question 3 -->
+			<div class="question">
+				<h3>3. What is an entity in an ERD?</h3>
+				<label><input type="radio" name="q3" value="A"> A) A specific instance of data</label>
+				<label><input type="radio" name="q3" value="B"> B) An object or concept, represented as a table in the database</label>
+				<label><input type="radio" name="q3" value="C"> C) A column in a table</label>
+				<label><input type="radio" name="q3" value="D"> D) A relationship between two tables</label>
+			</div>
+
+			<!-- Question 4 -->
+			<div class="question">
+				<h3>4. Define a relationship in an ERD.</h3>
+				<label><input type="radio" name="q4" value="A"> A) A connection between two databases</label>
+				<label><input type="radio" name="q4" value="B"> B) An association between two entities indicating how they interact</label>
+				<label><input type="radio" name="q4" value="C"> C) A field in a database table</label>
+				<label><input type="radio" name="q4" value="D"> D) A unique identifier for each entity</label>
+			</div>
+
+			<!-- Question 5 -->
+			<div class="question">
+				<h3>5. What are the main types of relationships in ERDs?</h3>
+				<label><input type="radio" name="q5" value="A"> A) Relational, Network, Hierarchical</label>
+				<label><input type="radio" name="q5" value="B"> B) One-to-one, one-to-many, many-to-many</label>
+				<label><input type="radio" name="q5" value="C"> C) Atomic, Composite, Multivalued</label>
+				<label><input type="radio" name="q5" value="D"> D) Logical, Physical, Conceptual</label>
+			</div>
+
+			<!-- Question 6 -->
+			<div class="question">
+				<h3>6. Explain a one-to-one relationship in an ERD.</h3>
+				<label><input type="radio" name="q6" value="A"> A) Each entity in one table is associated with multiple entities in another table</label>
+				<label><input type="radio" name="q6" value="B"> B) Each entity in one table is associated with a single entity in another table</label>
+				<label><input type="radio" name="q6" value="C"> C) Each entity can be linked to itself only</label>
+				<label><input type="radio" name="q6" value="D"> D) All entities in both tables are interlinked</label>
+			</div>
+
+			<!-- Question 7 -->
+		<div class="question">
+			<h3>7. What is a one-to-many relationship in an ERD?</h3>
+			<label><input type="radio" name="q7" value="A"> A) Each entity in one table is associated with a single entity in another table</label>
+			<label><input type="radio" name="q7" value="B"> B) One entity in a table is associated with multiple entities in another table</label>
+			<label><input type="radio" name="q7" value="C"> C) Multiple entities in one table are associated with a single entity in another table</label>
+			<label><input type="radio" name="q7" value="D"> D) Each entity is associated with itself</label>
+		</div>
+
+		<!-- Question 8 -->
+		<div class="question">
+			<h3>8. Describe a many-to-many relationship in an ERD.</h3>
+			<label><input type="radio" name="q8" value="A"> A) One entity in a table is associated with multiple entities in another table</label>
+			<label><input type="radio" name="q8" value="B"> B) Multiple records in one table are associated with multiple records in another table</label>
+			<label><input type="radio" name="q8" value="C"> C) An entity is associated with itself</label>
+			<label><input type="radio" name="q8" value="D"> D) Each entity in one table is associated with a single entity in another table</label>
+		</div>
+
+		<!-- Question 9 -->
+		<div class="question">
+			<h3>9. How is cardinality represented in an ERD?</h3>
+			<label><input type="radio" name="q9" value="A"> A) With numbers indicating the minimum and maximum instances in a relationship</label>
+			<label><input type="radio" name="q9" value="B"> B) Using colors to differentiate relationships</label>
+			<label><input type="radio" name="q9" value="C"> C) Through arrows pointing between entities</label>
+			<label><input type="radio" name="q9" value="D"> D) By listing all possible relationships</label>
+		</div>
+
+		<!-- Question 10 -->
+		<div class="question">
+			<h3>10. What is a minimum cardinality constraint?</h3>
+			<label><input type="radio" name="q10" value="A"> A) It defines the maximum number of times an entity can participate in a relationship</label>
+			<label><input type="radio" name="q10" value="B"> B) It specifies the minimum number of times an entity can participate in a relationship</label>
+			<label><input type="radio" name="q10" value="C"> C) It indicates how often an entity is duplicated</label>
+			<label><input type="radio" name="q10" value="D"> D) It lists all entities in a relationship</label>
+		</div>
+
+		<!-- Question 11 -->
+		<div class="question">
+			<h3>11. Define maximum cardinality constraint.</h3>
+			<label><input type="radio" name="q11" value="A"> A) It specifies the maximum number of times an entity can be involved in a relationship</label>
+			<label><input type="radio" name="q11" value="B"> B) It determines the minimum number of entities in a table</label>
+			<label><input type="radio" name="q11" value="C"> C) It shows how many attributes an entity has</label>
+			<label><input type="radio" name="q11" value="D"> D) It counts the number of relationships an entity has</label>
+		</div>
+
+		<!-- Question 12 -->
+		<div class="question">
+			<h3>12. What is the purpose of a primary key in a database?</h3>
+			<label><input type="radio" name="q12" value="A"> A) To link multiple tables together</label>
+			<label><input type="radio" name="q12" value="B"> B) To uniquely identify each record within a table</label>
+			<label><input type="radio" name="q12" value="C"> C) To store duplicate data for reference</label>
+			<label><input type="radio" name="q12" value="D"> D) To automatically delete records</label>
+		</div>
+
+		<!-- Question 13 -->
+		<div class="question">
+			<h3>13. What characteristics must a primary key have?</h3>
+			<label><input type="radio" name="q13" value="A"> A) It must allow NULL values and duplicate entries</label>
+			<label><input type="radio" name="q13" value="B"> B) It must contain unique values, cannot be NULL, and should be stable over time</label>
+			<label><input type="radio" name="q13" value="C"> C) It should be the longest column in the table</label>
+			<label><input type="radio" name="q13" value="D"> D) It should only contain numeric values</label>
+		</div>
+
+		<!-- Question 14 -->
+		<div class="question">
+			<h3>14. What is a foreign key?</h3>
+			<label><input type="radio" name="q14" value="A"> A) A field in a table that uniquely identifies a row in the same table</label>
+			<label><input type="radio" name="q14" value="B"> B) A field in one table that uniquely identifies a row in another table</label>
+			<label><input type="radio" name="q14" value="C"> C) A unique identifier for an entity within the same table</label>
+			<label><input type="radio" name="q14" value="D"> D) A field used only for indexing</label>
+		</div>
+
+		<!-- Question 15 -->
+		<div class="question">
+			<h3>15. How do foreign keys maintain referential integrity?</h3>
+			<label><input type="radio" name="q15" value="A"> A) By ensuring each value in a foreign key column is unique</label>
+			<label><input type="radio" name="q15" value="B"> B) By ensuring that every value in a foreign key column corresponds to an existing value in the referenced table’s primary key</label>
+			<label><input type="radio" name="q15" value="C"> C) By deleting related records automatically</label>
+			<label><input type="radio" name="q15" value="D"> D) By creating duplicate records</label>
+		</div>
+
+		<!-- Question 16 -->
+		<div class="question">
+			<h3>16. Explain the concept of a composite key.</h3>
+			<label><input type="radio" name="q16" value="A"> A) A single attribute that uniquely identifies a record</label>
+			<label><input type="radio" name="q16" value="B"> B) A combination of two or more columns that uniquely identifies a record</label>
+			<label><input type="radio" name="q16" value="C"> C) A duplicate key used as a backup</label>
+			<label><input type="radio" name="q16" value="D"> D) A key used solely for indexing</label>
+		</div>
+
+		<!-- Question 17 -->
+		<div class="question">
+			<h3>17. In what scenario would you use a composite key?</h3>
+			<label><input type="radio" name="q17" value="A"> A) When a single column cannot uniquely identify a record</label>
+			<label><input type="radio" name="q17" value="B"> B) When there are multiple primary keys</label>
+			<label><input type="radio" name="q17" value="C"> C) To improve query performance</label>
+			<label><input type="radio" name="q17" value="D"> D) To reduce storage size</label>
+		</div>
+
+		<!-- Question 18 -->
+		<div class="question">
+			<h3>18. Describe a strong entity.</h3>
+			<label><input type="radio" name="q18" value="A"> A) An entity that cannot exist without another entity</label>
+			<label><input type="radio" name="q18" value="B"> B) An entity that can exist independently and has a unique identifier</label>
+			<label><input type="radio" name="q18" value="C"> C) An entity that is used as a reference only</label>
+			<label><input type="radio" name="q18" value="D"> D) An entity without a primary key</label>
+		</div>
+
+		<!-- Question 19 -->
+		<div class="question">
+			<h3>19. What is a weak entity?</h3>
+			<label><input type="radio" name="q19" value="A"> A) An entity that has multiple primary keys</label>
+			<label><input type="radio" name="q19" value="B"> B) An entity that cannot exist independently and relies on a strong entity</label>
+			<label><input type="radio" name="q19" value="C"> C) An entity that contains no attributes</label>
+			<label><input type="radio" name="q19" value="D"> D) An entity that has no relationships</label>
+		</div>
+
+		<!-- Question 20 -->
+		<div class="question">
+			<h3>20. How is a weak entity represented in an ERD?</h3>
+			<label><input type="radio" name="q20" value="A"> A) By a single rectangle</label>
+			<label><input type="radio" name="q20" value="B"> B) By a double rectangle, indicating dependency on a strong entity</label>
+			<label><input type="radio" name="q20" value="C"> C) By an oval</label>
+			<label><input type="radio" name="q20" value="D"> D) By a dashed line</label>
+		</div>
+
+		<!-- Question 21 -->
+		<div class="question">
+			<h3>21. Define a partial key.</h3>
+			<label><input type="radio" name="q21" value="A"> A) A key that uniquely identifies a record on its own</label>
+			<label><input type="radio" name="q21" value="B"> B) A key that uniquely identifies weak entity records, in combination with a strong entity’s primary key</label>
+			<label><input type="radio" name="q21" value="C"> C) A key that is used only as a foreign key</label>
+			<label><input type="radio" name="q21" value="D"> D) A key that has no unique attributes</label>
+		</div>
+
+		<!-- Question 22 -->
+		<div class="question">
+			<h3>22. What is a supertype in an ERD?</h3>
+			<label><input type="radio" name="q22" value="A"> A) A general entity that has multiple specialized subtypes</label>
+			<label><input type="radio" name="q22" value="B"> B) A specific entity that inherits attributes from a general entity</label>
+			<label><input type="radio" name="q22" value="C"> C) An entity that has no subtypes</label>
+			<label><input type="radio" name="q22" value="D"> D) A temporary entity for data storage</label>
+		</div>
+
+		<!-- Question 23 -->
+		<div class="question">
+			<h3>23. Explain the concept of a subtype.</h3>
+			<label><input type="radio" name="q23" value="A"> A) A type of entity with no attributes</label>
+			<label><input type="radio" name="q23" value="B"> B) A specialized entity that inherits attributes from a supertype</label>
+			<label><input type="radio" name="q23" value="C"> C) An entity that contains a primary key</label>
+			<label><input type="radio" name="q23" value="D"> D) An entity that cannot have relationships</label>
+		</div>
+
+		<!-- Question 24 -->
+		<div class="question">
+			<h3>24. How is a supertype-subtype relationship indicated in an ERD?</h3>
+			<label><input type="radio" name="q24" value="A"> A) With a circle</label>
+			<label><input type="radio" name="q24" value="B"> B) With a triangle symbol and connecting lines</label>
+			<label><input type="radio" name="q24" value="C"> C) With a square</label>
+			<label><input type="radio" name="q24" value="D"> D) With a dashed line</label>
+		</div>
+
+		<!-- Question 25 -->
+		<div class="question">
+			<h3>25. Describe an identifying relationship.</h3>
+			<label><input type="radio" name="q25" value="A"> A) A relationship between two strong entities</label>
+			<label><input type="radio" name="q25" value="B"> B) A relationship where the weak entity’s primary key includes the strong entity’s primary key</label>
+			<label><input type="radio" name="q25" value="C"> C) A relationship that requires both entities to have composite keys</label>
+			<label><input type="radio" name="q25" value="D"> D) A relationship that does not involve primary keys</label>
+		</div>
+
+		<!-- Question 26 -->
+		<div class="question">
+			<h3>26. What is a non-identifying relationship?</h3>
+			<label><input type="radio" name="q26" value="A"> A) A relationship where entities do not share any attributes</label>
+			<label><input type="radio" name="q26" value="B"> B) A relationship where the primary key of one entity does not contain the primary key of the related entity</label>
+			<label><input type="radio" name="q26" value="C"> C) A relationship only used in temporary tables</label>
+			<label><input type="radio" name="q26" value="D"> D) A relationship only found in many-to-many relationships</label>
+		</div>
+
+		<!-- Question 27 -->
+		<div class="question">
+			<h3>27. Define an associative entity.</h3>
+			<label><input type="radio" name="q27" value="A"> A) An entity that represents a strong relationship between two tables</label>
+			<label><input type="radio" name="q27" value="B"> B) An entity that breaks down many-to-many relationships into two one-to-many relationships</label>
+			<label><input type="radio" name="q27" value="C"> C) An entity with no attributes</label>
+			<label><input type="radio" name="q27" value="D"> D) An entity only used as a foreign key</label>
+		</div>
+
+		<!-- Question 28 -->
+		<div class="question">
+			<h3>28. How is an associative entity represented in an ERD?</h3>
+			<label><input type="radio" name="q28" value="A"> A) By a square</label>
+			<label><input type="radio" name="q28" value="B"> B) By a rectangle with rounded corners</label>
+			<label><input type="radio" name="q28" value="C"> C) By a double line</label>
+			<label><input type="radio" name="q28" value="D"> D) By an oval</label>
+		</div>
+
+		<!-- Question 29 -->
+		<div class="question">
+			<h3>29. What is the purpose of normalization in database design?</h3>
+			<label><input type="radio" name="q29" value="A"> A) To increase data redundancy</label>
+			<label><input type="radio" name="q29" value="B"> B) To reduce redundancy and ensure data integrity</label>
+			<label><input type="radio" name="q29" value="C"> C) To create composite keys</label>
+			<label><input type="radio" name="q29" value="D"> D) To avoid using primary keys</label>
+		</div>
+
+		<!-- Question 30 -->
+		<div class="question">
+			<h3>30. How does normalization relate to ERDs?</h3>
+			<label><input type="radio" name="q30" value="A"> A) It adds redundancy to the ERD</label>
+			<label><input type="radio" name="q30" value="B"> B) It helps clarify relationships and optimize the data model</label>
+			<label><input type="radio" name="q30" value="C"> C) It simplifies attribute names</label>
+			<label><input type="radio" name="q30" value="D"> D) It removes relationships from the ERD</label>
+		</div>
+
+		<!-- Question 31 -->
+		<div class="question">
+			<h3>31. What is the first step in creating an ERD?</h3>
+			<label><input type="radio" name="q31" value="A"> A) Defining attributes for each entity</label>
+			<label><input type="radio" name="q31" value="B"> B) Identifying entities and relationships based on system requirements</label>
+			<label><input type="radio" name="q31" value="C"> C) Creating foreign keys</label>
+			<label><input type="radio" name="q31" value="D"> D) Normalizing data</label>
+		</div>
+
+		<!-- Question 32 -->
+		<div class="question">
+			<h3>32. How do you represent attributes in an ERD?</h3>
+			<label><input type="radio" name="q32" value="A"> A) As rectangles connected to entities</label>
+			<label><input type="radio" name="q32" value="B"> B) As ovals connected to their respective entities</label>
+			<label><input type="radio" name="q32" value="C"> C) As triangles connected to relationships</label>
+			<label><input type="radio" name="q32" value="D"> D) As lines connecting two entities</label>
+		</div>
+
+		<!-- Question 33 -->
+		<div class="question">
+			<h3>33. What is a derived attribute?</h3>
+			<label><input type="radio" name="q33" value="A"> A) An attribute stored permanently in the database</label>
+			<label><input type="radio" name="q33" value="B"> B) An attribute whose value can be calculated from other attributes</label>
+			<label><input type="radio" name="q33" value="C"> C) An attribute that must be unique</label>
+			<label><input type="radio" name="q33" value="D"> D) An attribute used as a foreign key</label>
+		</div>
+
+		<!-- Question 34 -->
+		<div class="question">
+			<h3>34. Explain the difference between a single-valued and a multi-valued attribute.</h3>
+			<label><input type="radio" name="q34" value="A"> A) A single-valued attribute contains one value, while a multi-valued attribute can contain multiple values</label>
+			<label><input type="radio" name="q34" value="B"> B) A single-valued attribute can contain multiple values, while a multi-valued attribute contains one value</label>
+			<label><input type="radio" name="q34" value="C"> C) A single-valued attribute is only used in temporary tables</label>
+			<label><input type="radio" name="q34" value="D"> D) A multi-valued attribute only exists in composite keys</label>
+		</div>
+
+		<!-- Question 35 -->
+		<div class="question">
+			<h3>35. How is a multi-valued attribute depicted in an ERD?</h3>
+			<label><input type="radio" name="q35" value="A"> A) With a dashed rectangle</label>
+			<label><input type="radio" name="q35" value="B"> B) With a double oval connected to the entity</label>
+			<label><input type="radio" name="q35" value="C"> C) With a square containing multiple attributes</label>
+			<label><input type="radio" name="q35" value="D"> D) With a line connecting two ovals</label>
+		</div>
+
+		<!-- Question 36 -->
+		<div class="question">
+			<h3>36. What is an optional attribute?</h3>
+			<label><input type="radio" name="q36" value="A"> A) An attribute that must have a value for each entity instance</label>
+			<label><input type="radio" name="q36" value="B"> B) An attribute that may or may not have a value for each entity instance</label>
+			<label><input type="radio" name="q36" value="C"> C) An attribute that is always a foreign key</label>
+			<label><input type="radio" name="q36" value="D"> D) An attribute that can only contain numeric values</label>
+		</div>
+
+		<!-- Question 37 -->
+		<div class="question">
+			<h3>37. Describe a key attribute.</h3>
+			<label><input type="radio" name="q37" value="A"> A) An attribute that stores multiple values</label>
+			<label><input type="radio" name="q37" value="B"> B) An attribute that uniquely identifies an entity instance</label>
+			<label><input type="radio" name="q37" value="C"> C) An attribute that has no unique values</label>
+			<label><input type="radio" name="q37" value="D"> D) An attribute that can be NULL</label>
+		</div>
+
+		<!-- Question 38 -->
+		<div class="question">
+			<h3>38. How is a composite attribute represented in an ERD?</h3>
+			<label><input type="radio" name="q38" value="A"> A) By a single rectangle</label>
+			<label><input type="radio" name="q38" value="B"> B) By an oval with connected sub-ovals for each component</label>
+			<label><input type="radio" name="q38" value="C"> C) By a dashed oval</label>
+			<label><input type="radio" name="q38" value="D"> D) By a single oval with no connections</label>
+		</div>
+
+		<!-- Question 39 -->
+		<div class="question">
+			<h3>39. What is the purpose of an ERD in the database development lifecycle?</h3>
+			<label><input type="radio" name="q39" value="A"> A) To create a physical storage plan</label>
+			<label><input type="radio" name="q39" value="B"> B) To serve as a blueprint for database structure and design</label>
+			<label><input type="radio" name="q39" value="C"> C) To eliminate all relationships between entities</label>
+			<label><input type="radio" name="q39" value="D"> D) To create the database software</label>
+		</div>
+
+		<!-- Question 40 -->
+		<div class="question">
+			<h3>40. How do ERDs facilitate database normalization?</h3>
+			<label><input type="radio" name="q40" value="A"> A) By creating multiple copies of each entity</label>
+			<label><input type="radio" name="q40" value="B"> B) By visually clarifying relationships and data structures</label>
+			<label><input type="radio" name="q40" value="C"> C) By removing attributes from entities</label>
+			<label><input type="radio" name="q40" value="D"> D) By ignoring cardinality</label>
+		</div>
+
+		<!-- Question 41 -->
+		<div class="question">
+			<h3>41. What is an exclusive subtype relationship?</h3>
+			<label><input type="radio" name="q41" value="A"> A) A relationship where an entity can belong to only one subtype at a time</label>
+			<label><input type="radio" name="q41" value="B"> B) A relationship where an entity can belong to multiple subtypes simultaneously</label>
+			<label><input type="radio" name="q41" value="C"> C) A relationship between two weak entities</label>
+			<label><input type="radio" name="q41" value="D"> D) A relationship that does not involve attributes</label>
+		</div>
+
+		<!-- Question 42 -->
+		<div class="question">
+			<h3>42. Describe an inclusive subtype relationship.</h3>
+			<label><input type="radio" name="q42" value="A"> A) A relationship where an entity must belong to a subtype</label>
+			<label><input type="radio" name="q42" value="B"> B) A relationship where an entity can belong to multiple subtypes simultaneously</label>
+			<label><input type="radio" name="q42" value="C"> C) A relationship with only strong entities</label>
+			<label><input type="radio" name="q42" value="D"> D) A relationship between two unrelated entities</label>
+		</div>
+
+		<!-- Question 43 -->
+		<div class="question">
+			<h3>43. What is specialization in database design?</h3>
+			<label><input type="radio" name="q43" value="A"> A) The process of generalizing a set of subtypes</label>
+			<label><input type="radio" name="q43" value="B"> B) The process of defining subtypes from a supertype</label>
+			<label><input type="radio" name="q43" value="C"> C) The process of removing relationships between entities</label>
+			<label><input type="radio" name="q43" value="D"> D) The process of eliminating attributes from entities</label>
+		</div>
+
+		<!-- Question 44 -->
+		<div class="question">
+			<h3>44. Explain the concept of generalization in database design.</h3>
+			<label><input type="radio" name="q44" value="A"> A) The process of merging subtypes into a single supertype</label>
+			<label><input type="radio" name="q44" value="B"> B) The process of defining subtypes from multiple supertypes</label>
+			<label><input type="radio" name="q44" value="C"> C) The process of eliminating attributes from a supertype</label>
+			<label><input type="radio" name="q44" value="D"> D) The process of creating unique keys for subtypes</label>
+		</div>
+
+		<!-- Question 45 -->
+		<div class="question">
+			<h3>45. How is generalization represented in an ERD?</h3>
+			<label><input type="radio" name="q45" value="A"> A) By using a line with a diamond shape</label>
+			<label><input type="radio" name="q45" value="B"> B) By merging subtypes into a single supertype and showing shared attributes</label>
+			<label><input type="radio" name="q45" value="C"> C) By adding multiple relationships between supertypes and subtypes</label>
+			<label><input type="radio" name="q45" value="D"> D) By eliminating cardinality</label>
+		</div>
+
+		<!-- Question 46 -->
+		<div class="question">
+			<h3>46. Define a participation constraint.</h3>
+			<label><input type="radio" name="q46" value="A"> A) A rule that determines whether an entity instance must participate in a relationship</label>
+			<label><input type="radio" name="q46" value="B"> B) A rule that eliminates weak entities</label>
+			<label><input type="radio" name="q46" value="C"> C) A rule that ensures each entity has a primary key</label>
+			<label><input type="radio" name="q46" value="D"> D) A rule that allows multiple attributes in an entity</label>
+		</div>
+
+		<!-- Question 47 -->
+		<div class="question">
+			<h3>47. What is an entity integrity constraint?</h3>
+			<label><input type="radio" name="q47" value="A"> A) A rule that ensures foreign keys match primary keys in related tables</label>
+			<label><input type="radio" name="q47" value="B"> B) A rule that ensures each entity has a unique identifier</label>
+			<label><input type="radio" name="q47" value="C"> C) A rule that eliminates all relationships</label>
+			<label><input type="radio" name="q47" value="D"> D) A rule that allows multiple subtypes</label>
+		</div>
+
+		<!-- Question 48 -->
+		<div class="question">
+			<h3>48. Describe referential integrity.</h3>
+			<label><input type="radio" name="q48" value="A"> A) Ensuring primary keys are unique</label>
+			<label><input type="radio" name="q48" value="B"> B) Ensuring foreign keys correctly reference primary keys in other tables</label>
+			<label><input type="radio" name="q48" value="C"> C) Ensuring all relationships are one-to-one</label>
+			<label><input type="radio" name="q48" value="D"> D) Ensuring attributes are composite</label>
+		</div>
+
+		<!-- Question 49 -->
+		<div class="question">
+			<h3>49. What is a relationship role name?</h3>
+			<label><input type="radio" name="q49" value="A"> A) A label that clarifies the purpose of an entity in a relationship</label>
+			<label><input type="radio" name="q49" value="B"> B) A name for all attributes in a relationship</label>
+			<label><input type="radio" name="q49" value="C"> C) A label used only for primary keys</label>
+			<label><input type="radio" name="q49" value="D"> D) A label for cardinality</label>
+		</div>
+
+		<!-- Question 50 -->
+		<div class="question">
+			<h3>50. What is a recursive relationship in an ERD?</h3>
+			<label><input type="radio" name="q50" value="A"> A) A relationship between two unrelated entities</label>
+			<label><input type="radio" name="q50" value="B"> B) A relationship where an entity is associated with itself</label>
+			<label><input type="radio" name="q50" value="C"> C) A relationship with three entities</label>
+			<label><input type="radio" name="q50" value="D"> D) A relationship that includes only weak entities</label>
+		</div>
+
+		<!-- Question 51 -->
+		<div class="question">
+			<h3>51. How is a recursive relationship depicted in an ERD?</h3>
+			<label><input type="radio" name="q51" value="A"> A) With a loopback line to the entity itself</label>
+			<label><input type="radio" name="q51" value="B"> B) With a triangle symbol</label>
+			<label><input type="radio" name="q51" value="C"> C) With a dashed rectangle</label>
+			<label><input type="radio" name="q51" value="D"> D) With a diamond shape</label>
+		</div>
+
+		<!-- Question 52 -->
+		<div class="question">
+			<h3>52. Define a weak relationship in an ERD.</h3>
+			<label><input type="radio" name="q52" value="A"> A) A relationship that contains no attributes</label>
+			<label><input type="radio" name="q52" value="B"> B) A relationship where a weak entity is dependent on a strong entity</label>
+			<label><input type="radio" name="q52" value="C"> C) A relationship that only exists in optional entities</label>
+			<label><input type="radio" name="q52" value="D"> D) A relationship with composite keys</label>
+		</div>
+
+		<!-- Question 53 -->
+		<div class="question">
+			<h3>53. What is the role of a junction table in an ERD?</h3>
+			<label><input type="radio" name="q53" value="A"> A) To store primary keys only</label>
+			<label><input type="radio" name="q53" value="B"> B) To resolve many-to-many relationships by breaking them into one-to-many relationships</label>
+			<label><input type="radio" name="q53" value="C"> C) To create one-to-one relationships</label>
+			<label><input type="radio" name="q53" value="D"> D) To enforce referential integrity</label>
+		</div>
+
+		<!-- Question 54 -->
+		<div class="question">
+			<h3>54. How does an ERD represent optional participation?</h3>
+			<label><input type="radio" name="q54" value="A"> A) With a crow’s foot notation</label>
+			<label><input type="radio" name="q54" value="B"> B) With a line indicating zero minimum cardinality next to the entity</label>
+			<label><input type="radio" name="q54" value="C"> C) With a triangle symbol</label>
+			<label><input type="radio" name="q54" value="D"> D) With a composite attribute</label>
+		</div>
+
+		<!-- Question 55 -->
+		<div class="question">
+			<h3>55. What symbol represents a one-to-many relationship in crow's foot notation?</h3>
+			<label><input type="radio" name="q55" value="A"> A) A single line for "one" and a crow’s foot for "many"</label>
+			<label><input type="radio" name="q55" value="B"> B) Two parallel lines</label>
+			<label><input type="radio" name="q55" value="C"> C) A dashed line with a crow’s foot</label>
+			<label><input type="radio" name="q55" value="D"> D) A triangle with a line</label>
+		</div>
+
+		<!-- Question 56 -->
+		<div class="question">
+			<h3>56. How do you identify a composite attribute in an ERD?</h3>
+			<label><input type="radio" name="q56" value="A"> A) By connecting sub-attributes to the main composite attribute</label>
+			<label><input type="radio" name="q56" value="B"> B) By using a dashed oval</label>
+			<label><input type="radio" name="q56" value="C"> C) By using a rectangle</label>
+			<label><input type="radio" name="q56" value="D"> D) By connecting a square to the entity</label>
+		</div>
+
+		<!-- Question 57 -->
+		<div class="question">
+			<h3>57. Describe a business rule in the context of ERD design.</h3>
+			<label><input type="radio" name="q57" value="A"> A) A policy dictating how data is created, stored, and maintained</label>
+			<label><input type="radio" name="q57" value="B"> B) A rule for composite attributes</label>
+			<label><input type="radio" name="q57" value="C"> C) A key used in junction tables</label>
+			<label><input type="radio" name="q57" value="D"> D) A tool for enforcing normalization</label>
+		</div>
+
+		<!-- Question 58 -->
+		<div class="question">
+			<h3>58. Define a domain in an ERD.</h3>
+			<label><input type="radio" name="q58" value="A"> A) The specific table in which data is stored</label>
+			<label><input type="radio" name="q58" value="B"> B) The set of allowable values for an attribute</label>
+			<label><input type="radio" name="q58" value="C"> C) A unique identifier for an attribute</label>
+			<label><input type="radio" name="q58" value="D"> D) A constraint on foreign keys</label>
+		</div>
+
+		<!-- Question 59 -->
+		<div class="question">
+			<h3>59. How is a ternary relationship depicted in an ERD?</h3>
+			<label><input type="radio" name="q59" value="A"> A) By using a triangle symbol</label>
+			<label><input type="radio" name="q59" value="B"> B) By connecting three entities to a single relationship diamond</label>
+			<label><input type="radio" name="q59" value="C"> C) By using three parallel lines</label>
+			<label><input type="radio" name="q59" value="D"> D) By creating multiple rectangles</label>
+		</div>
+
+		<!-- Question 60 -->
+		<div class="question">
+			<h3>60. What is an attribute domain?</h3>
+			<label><input type="radio" name="q60" value="A"> A) A set of permissible values for an attribute</label>
+			<label><input type="radio" name="q60" value="B"> B) A foreign key</label>
+			<label><input type="radio" name="q60" value="C"> C) A table with only unique attributes</label>
+			<label><input type="radio" name="q60" value="D"> D) An attribute used in a composite key</label>
+		</div>
+
+		<!-- Question 61 -->
+		<div class="question">
+			<h3>61. Define a surrogate key in database design.</h3>
+			<label><input type="radio" name="q61" value="A"> A) A natural primary key</label>
+			<label><input type="radio" name="q61" value="B"> B) A system-generated unique identifier</label>
+			<label><input type="radio" name="q61" value="C"> C) A foreign key used exclusively in junction tables</label>
+			<label><input type="radio" name="q61" value="D"> D) A composite key</label>
+		</div>
+
+		<!-- Question 62 -->
+		<div class="question">
+			<h3>62. What is a candidate key?</h3>
+			<label><input type="radio" name="q62" value="A"> A) A backup of the primary key</label>
+			<label><input type="radio" name="q62" value="B"> B) An attribute that can uniquely identify records and could be chosen as the primary key</label>
+			<label><input type="radio" name="q62" value="C"> C) A key used only for encryption</label>
+			<label><input type="radio" name="q62" value="D"> D) A key that contains foreign keys</label>
+		</div>
+
+		<!-- Question 63 -->
+		<div class="question">
+			<h3>63. Explain the concept of an alternate key.</h3>
+			<label><input type="radio" name="q63" value="A"> A) A primary key</label>
+			<label><input type="radio" name="q63" value="B"> B) A candidate key that was not chosen as the primary key</label>
+			<label><input type="radio" name="q63" value="C"> C) A composite key</label>
+			<label><input type="radio" name="q63" value="D"> D) A key with no unique attributes</label>
+		</div>
+
+		<!-- Question 64 -->
+		<div class="question">
+			<h3>64. What is a lookup table?</h3>
+			<label><input type="radio" name="q64" value="A"> A) A table that contains only primary keys</label>
+			<label><input type="radio" name="q64" value="B"> B) A supporting table that stores commonly referenced data</label>
+			<label><input type="radio" name="q64" value="C"> C) A table that is only used for indexing</label>
+			<label><input type="radio" name="q64" value="D"> D) A table that contains composite keys</label>
+		</div>
+
+		<!-- Question 65 -->
+		<div class="question">
+			<h3>65. How is inheritance depicted in an ERD?</h3>
+			<label><input type="radio" name="q65" value="A"> A) With a solid rectangle</label>
+			<label><input type="radio" name="q65" value="B"> B) By connecting a supertype to subtypes with a triangle symbol</label>
+			<label><input type="radio" name="q65" value="C"> C) With dashed lines only</label>
+			<label><input type="radio" name="q65" value="D"> D) With no connections</label>
+		</div>
+
+		<!-- Question 66 -->
+		<div class="question">
+			<h3>66. Describe the use of a foreign key constraint in an ERD.</h3>
+			<label><input type="radio" name="q66" value="A"> A) It enforces data uniqueness within a table</label>
+			<label><input type="radio" name="q66" value="B"> B) It enforces referential integrity by matching values in a foreign key column to primary keys in another table</label>
+			<label><input type="radio" name="q66" value="C"> C) It eliminates redundancy</label>
+			<label><input type="radio" name="q66" value="D"> D) It only applies to weak entities</label>
+		</div>
+
+		<!-- Question 67 -->
+		<div class="question">
+			<h3>67. What is the role of an intersection table in a many-to-many relationship?</h3>
+			<label><input type="radio" name="q67" value="A"> A) It stores only primary keys</label>
+			<label><input type="radio" name="q67" value="B"> B) It stores foreign keys from two related tables to establish the many-to-many relationship</label>
+			<label><input type="radio" name="q67" value="C"> C) It prevents normalization</label>
+			<label><input type="radio" name="q67" value="D"> D) It creates new composite attributes</label>
+		</div>
+
+		<!-- Question 68 -->
+		<div class="question">
+			<h3>68. Define entity clustering in database design.</h3>
+			<label><input type="radio" name="q68" value="A"> A) The process of creating unique keys</label>
+			<label><input type="radio" name="q68" value="B"> B) Combining multiple entities into a single abstract entity</label>
+			<label><input type="radio" name="q68" value="C"> C) Separating composite keys</label>
+			<label><input type="radio" name="q68" value="D"> D) Using subtypes and supertypes</label>
+		</div>
+
+		<!-- Question 69 -->
+		<div class="question">
+			<h3>69. What is a dependent entity in an ERD?</h3>
+			<label><input type="radio" name="q69" value="A"> A) An entity that does not have any relationships</label>
+			<label><input type="radio" name="q69" value="B"> B) An entity that relies on another entity for identification</label>
+			<label><input type="radio" name="q69" value="C"> C) An entity that has a composite key</label>
+			<label><input type="radio" name="q69" value="D"> D) An entity with only single-valued attributes</label>
+		</div>
+
+		<!-- Question 70 -->
+		<div class="question">
+			<h3>70. How is an identifying relationship different from a non-identifying relationship?</h3>
+			<label><input type="radio" name="q70" value="A"> A) An identifying relationship does not contain foreign keys</label>
+			<label><input type="radio" name="q70" value="B"> B) An identifying relationship includes the parent entity’s primary key as part of the child entity’s primary key</label>
+			<label><input type="radio" name="q70" value="C"> C) A non-identifying relationship contains only weak entities</label>
+			<label><input type="radio" name="q70" value="D"> D) A non-identifying relationship eliminates primary keys</label>
+		</div>
+
+
+            
+            <button type="button" id="submit-btn">Submit Quiz</button>
+        </form>
+        
+        <!-- Results Display -->
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
