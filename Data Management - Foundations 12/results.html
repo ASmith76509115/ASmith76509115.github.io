@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Attempts History</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Attempts History</h1>
+        <ul id="attempts-list"></ul>
+    </div>
+    
+    <script>
+        function loadAttempts() {
+            const attemptsList = document.getElementById("attempts-list");
+            const attempts = JSON.parse(localStorage.getItem("quizAttempts")) || [];
+            attempts.forEach((attempt, index) => {
+                const attemptItem = document.createElement("li");
+                attemptItem.textContent = `Attempt ${index + 1} - Score: ${attempt.score}/${attempt.total} - Date: ${attempt.date}`;
+                attemptsList.appendChild(attemptItem);
+            });
+        }
+        
+        loadAttempts();
+    </script>
+</body>
+</html>
